@@ -1,0 +1,114 @@
+[
+	{
+		"id" : 1,
+		"breweryName" : "Collective Arts Brewing",
+		"address" : "503 Burlington Ave",
+		"state" : "ON",
+		"country" : "Canada"
+	},
+	{
+		"id" : 2,
+		"breweryName" : "Blood Brothers Brewing",
+		"address" : "1414 Main St.",
+		"state" : "Toronto, ON",
+		"country" : "Canada"
+	},
+	{
+		"id" : 3,
+		"breweryName" : "Lake of Bays",
+		"address" : "913 Wellington Ave",
+		"state" : "Huntsville, ON",
+		"country" : "Canada"
+	},
+	{
+		"id" : 4,
+		"breweryName" : "Hippie Brews",
+		"address" : "128 Alger St SE",
+		"state" : "Grand Rapids, MI",
+		"country" : "USA"
+	},
+	{
+		"id" : 5,
+		"breweryName" : "Indie Brewing Company",
+		"address" : "2301 7th St.",
+		"state" : "Los Angeles, CA",
+		"country" : "USA"
+	},
+	{
+		"id" : 6,
+		"breweryName" : "Bell's Brewery",
+		"address" : "828 Trafalger Road",
+		"state" : "San Francisco, CA",
+		"country" : "USA"
+	},
+	{
+		"id" : 7,
+		"breweryName" : "Furnace Room",
+		"address" : "1A Elgin St.",
+		"state" : "Georgetown, ON",
+		"country" : "Canada"
+	},
+	{
+		"id" : 8,
+		"breweryName" : "Brightwood Brewing",
+		"address" : "35 Portland St.",
+		"state" : "Halifax, NS",
+		"country" : "Canada"
+	},
+	{
+		"id" : 9,
+		"breweryName" : "Horns of Odin Craft Brewery",
+		"address" : "1372 Peters Rd",
+		"state" : "Mount Steward, PE",
+		"country" : "Canada"
+	},
+	{
+		"id" : 10,
+		"breweryName" : "Ellipsis Brewing",
+		"address" : "7500 Tropic Blvd",
+		"state" : "Orlando, FL",
+		"country" : "USA"
+	},
+	{
+		"id" : 11,
+		"breweryName" : "Megaton Brewing",
+		"address" : "Russell Palmer Rd",
+		"state" : "Houston, TX",
+		"country" : "USA"
+	},
+	{
+		"id" : 12,
+		"breweryName" : "Snake River Brewing",
+		"address" : "7286 S Yosemite St",
+		"state" : "Yellowstone, CO",
+		"country" : "USA"
+	},
+	{
+		"id" : 13,
+		"breweryName" : "Long Brewing LLC",
+		"address" : "29380 NE Owls Ln",
+		"state" : "Portland, OR",
+		"country" : "USA"
+	},
+	{
+		"id" : 14,
+		"breweryName" : "Townsite Brewing",
+		"address" : "5824 Ash Ave",
+		"state" : "Powell River, BC",
+		"country" : "Canada"
+	},
+	{
+		"id" : 15,
+		"breweryName" : "Granville Island Brewing",
+		"address" : "1441 Cartwright St.",
+		"state" : "Vancouver, BC",
+		"country" : "Canada"
+	},
+	{
+		"id" : 16,
+		"breweryName" : "Farmhouse Brewing",
+		"address" : "6385 Lickman Rd",
+		"state" : "Chilliwack, BC",
+		"country" : "Canada"
+	}
+]

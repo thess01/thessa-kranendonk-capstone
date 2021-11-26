@@ -1,15 +1,14 @@
-const express = require("express");
+// const express = require("express");
 const router = express.Router();
-const fs = require("fs");
-const { v4: uuidv4 } = require("uuid");
+const beersController = require('../controllers/foods');
 // Middleware
-router.use(express.json());
+// router.use(express.json());
 // Config
-require("dotenv").config();
+// require("dotenv").config();
 port = process.env.port;
 
-router.route("/").get((req, res) => {
-  let beers = fs.readFileSync("./data/warehouses.json");
-  beers = JSON.parse(beers);
-  return res.json(beers);
-});
+router.get('/', foodsController.getAll);
+
+router.get('/:foodId', foodsController.getOne);
+
+module.exports = router;
