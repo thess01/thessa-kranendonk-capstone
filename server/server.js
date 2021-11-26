@@ -7,9 +7,7 @@ const beersRoutes = require("./routes/beers");
 const foodsRoutes = require("./routes/foods");
 app.use(cors());
 app.use(express.json());
-app.use(require("./routes/record"));
-// mongoDB connection
-const dbo = require("./db/conn");
+app.use(require("./routes/beers"));
 
 app.use("/api/beers", beersRoutes);
 app.use("/api/foods", foodsRoutes);
