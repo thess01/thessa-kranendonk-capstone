@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const knex = require('knex')(require('./knexfile').development);
 // require("dotenv").config();
 const port = process.env.PORT || 8080;
 const beersRoutes = require("./routes/beers");
@@ -12,7 +13,9 @@ app.use(require("./routes/beers"));
 app.use("/api/beers", beersRoutes);
 app.use("/api/foods", foodsRoutes);
 
-
+app.get('/', (req, res) => {
+   res.send('Welcome to my API');
+ });
 
 app.listen(port, () => {
    console.log(`Server is running on port: ${port}`);

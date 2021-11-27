@@ -5,7 +5,7 @@ exports.up = function(knex) {
             table.increments("id");
             table.string("breweryName").notNullable();
             table.string("address").notNullable();
-            table.string('state').notNullable();
+            table.string('cityState').notNullable();
             table.string('country').notNullable();
             table.timestamp('updated_at').defaultTo(knex.fn.now());
         })
@@ -41,14 +41,15 @@ exports.up = function(knex) {
                 .onDelete('SET NULL');
             table.string('beerType').notNullable();
             table.string('season').notNullable();
+            table.string('image').notNullable().defaultTo("../public/beer_1");;
             table.integer('rating').notNullable().defaultTo(0);
-            table
-                .integer('food_id')
-                .unsigned()
-                .references('id')
-                .inTable('foods')
-                .onUpdate('CASCADE')
-                .onDelete('SET NULL');
+            // table
+            //     .integer('food_id')
+            //     .unsigned()
+            //     .references('id')
+            //     .inTable('foods')
+            //     .onUpdate('CASCADE')
+            //     .onDelete('SET NULL');
             table.timestamp('updated_at').defaultTo(knex.fn.now());
     })
 
