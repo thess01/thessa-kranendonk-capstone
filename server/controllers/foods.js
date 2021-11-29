@@ -1,10 +1,6 @@
 const knex = require('knex')(require("../knexfile").development);
 
-
-
-
-
-    exports.getAll = (_req, res) => {
+    exports.getAllFoods = (_req, res) => {
         knex("foods")
         .then((data) => {
             res.json(data);
@@ -17,7 +13,7 @@ const knex = require('knex')(require("../knexfile").development);
         })
     }
 
-    exports.getOne = (req, res) => {
+    exports.getOneFood = (req, res) => {
         const foodId = req.params.id;
     
     knex("foods")

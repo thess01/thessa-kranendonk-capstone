@@ -115,25 +115,25 @@ module.exports = [
 	},
 	{
 		id: 20,
-		beerType: "India Pale Ale",
+		beerType: "Pale Ale",
 		dish: "Grilled Pork Chops with Pineapple Glaze",
 		cuisine: "American"
 	},
 	{
 		id: 21,
-		beerType: "India Pale Ale",
+		beerType: "Pale Ale",
 		dish: "Steakburger with Caramelized Onions",
 		cuisine: "American"
 	},
 	{
 		id: 22,
-		beerType: "India Pale Ale",
+		beerType: "Pale Ale",
 		dish: "Coconut Chicken Curry",
 		cuisine: "Indian"
 	},
 	{
 		id: 23,
-		beerType: "India Pale Ale",
+		beerType: "Pale Ale",
 		dish: "Buffalo Wings",
 		cuisine: "American"
 	},

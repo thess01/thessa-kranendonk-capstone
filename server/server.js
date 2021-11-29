@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(require("./routes/beers"));
 
 app.use("/api/beers", beersRoutes);
-app.use("/api/foods", foodsRoutes);
+// app.use("/api/foods", foodsRoutes);
 
 app.get('/', (_req, res) => {
    console.log('Hello')

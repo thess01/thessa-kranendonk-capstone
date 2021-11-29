@@ -13,20 +13,23 @@ exports.getAllBeers = (_req, res) => {
     })
 }
 
+// display one beer by Id and show foods by beerType
 exports.getOneBeer = (req, res) => {
-    const beerId = req.params.id;
+    // const beerId = req.params.id;
 
     knex("beers")
-    .where({id: beerId})
+    .where({id: req.params.id})
+    // .join('foods', "foods.beerType", "=", "beers.beerType")
     .then(data => {
         if(!data.length) {
             return res.status(404).json({
                 message: "Beer does not exist"
             })
         }
-        res.json(data[0]);
+        res.json(data);
     })
 }
+
 
 exports.postBeer = (req, res) => {
     knex("beers")
