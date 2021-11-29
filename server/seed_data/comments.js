@@ -26,7 +26,7 @@ module.exports = [
 	{
 		id: 5,
         beer_id: "3",
-        userName: "Ben parker",
+        userName: "Jessie Golem",
         comment: "This beer is quite alright, but it's not as fruity as expected"
 	},
 	{

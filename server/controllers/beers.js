@@ -1,6 +1,6 @@
 const knex = require('knex')(require("../knexfile").development);
 
-exports.getAll = (_req, res) => {
+exports.getAllBeers = (_req, res) => {
     knex("beers")
     .then((data) => {
         res.json(data);
@@ -13,7 +13,7 @@ exports.getAll = (_req, res) => {
     })
 }
 
-exports.getOne = (req, res) => {
+exports.getOneBeer = (req, res) => {
     const beerId = req.params.id;
 
     knex("beers")
@@ -26,4 +26,18 @@ exports.getOne = (req, res) => {
         }
         res.json(data[0]);
     })
+}
+
+exports.postBeer = (req, res) => {
+    knex("beers")
+    .insert(req.body)
+    .then((data) => {
+        res.status(201).json(data);
+    })
+    .catch(() => {
+        res.status(400).json({
+            message: `Error creating ${req.body.beerName}`
+        })
+    })
+
 }

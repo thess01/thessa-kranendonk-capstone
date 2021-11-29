@@ -1,8 +1,7 @@
 const knex = require('knex')(require("../knexfile").development);
 
 
-exports.getOne = (req, res) => {
-    const foodId = req.params.id;
+
 
 
     exports.getAll = (_req, res) => {
@@ -18,6 +17,8 @@ exports.getOne = (req, res) => {
         })
     }
 
+    exports.getOne = (req, res) => {
+        const foodId = req.params.id;
     
     knex("foods")
     .where({id: foodId})

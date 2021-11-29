@@ -1,4 +1,4 @@
-// const express = require("express");
+const express = require("express");
 const router = express.Router();
 const foodsController = require('../controllers/foods');
 // Middleware
@@ -9,6 +9,6 @@ port = process.env.port;
 
 router.get('/', foodsController.getAll);
 
-router.get('/:foodId', foodsController.getOne);
+router.get('/:id', foodsController.getOne);
 
 module.exports = router;
