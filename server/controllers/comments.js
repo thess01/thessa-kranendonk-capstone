@@ -15,9 +15,11 @@ exports.getAllComments = (req, res) => {
 }
 
 exports.postComment = (req, res) => {
+    const beer_id = req.params.id
     knex("comments")
     .insert(req.body)
     .then((data) => {
+        // get beer by id
         res.status(201).json(data);
     })
     .catch(() => {

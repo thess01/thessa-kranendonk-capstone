@@ -16,6 +16,8 @@ router.post('/', beersController.postBeer);
 
 router.get('/:id/comments', commentsController.getAllComments);
 
+router.post('/:id', commentsController.postComment);
+
 
 
 module.exports = router;
