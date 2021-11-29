@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 const PageFooter = () => {
     <footer className="footer">
         <div className="footer__wrapper-left">

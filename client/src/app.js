@@ -1,5 +1,6 @@
 import { Route, Switch } from "react-router-dom";
-import "./App.scss";
+import "./App.css";
+import Home from "./pages/Home/Home"
 import PageFooter from "./components/PageFooter/PageFooter";
 import PageHeader from "./components/PageHeader/PageHeader";
 document.title = "Brews & Bites";
@@ -7,18 +8,18 @@ document.title = "Brews & Bites";
 const App = () => {
   return (
     <>
-      <PageHeader />
+      {/* <PageHeader /> */}
       <main className="main-content">
         <Switch>
-          <Route path="/" exact component={} />
+          <Route path="/" exact component={Home} />
 
-          <Route path="/beers/:beerId" component={} />
+          {/* <Route path="/beers/:beerId" component={} /> */}
 
-          <Route path="/upload" component={} />
+          {/* <Route path="/upload" component={} /> */}
 
         </Switch>
       </main>
-      <PageFooter />
+      {/* <PageFooter /> */}
     </>
   );
 };

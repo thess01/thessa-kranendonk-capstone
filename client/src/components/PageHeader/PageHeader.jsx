@@ -1,11 +1,12 @@
 import { NavLink, Link } from "react-router-dom";
+import logo from "../../assets/images/Logo_1.png";
 import "./PageHeader.scss";
 
 const PageHeader = () => {
     return (
         <header className="pageheader">
             <div className="pageheader-wrapper">
-                <Link to="/"><img className="pageheader-logo" src="" alt="Brews And Bites" /></Link>
+                <Link to="/"><img className="pageheader-logo" src={logo} alt="Brews And Bites" /></Link>
                 <ul className="pageheader__list">
                     <li className="pageheader__list-item">
                         <NavLink to="/" exact className={(isActive) => "pageheader__link" + (isActive ? "--active" : "")}>
