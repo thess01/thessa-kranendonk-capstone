@@ -1,4 +1,5 @@
 module.exports =[
+
     {
         id: 1,
         beerType: "IPA",
@@ -8,7 +9,7 @@ module.exports =[
         season: "fall",
         ABV: "5.5%",
         flavor: "Citrus",
-        image: "../public/beer_1",
+        image: "http://localhost:8080/public/beer_1.jpg",
         brewery_id: 2
     },
     {
@@ -20,7 +21,7 @@ module.exports =[
         season: "not specified",
         ABV: "6.1%",
         flavor: "Citrus",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 1
     },
     {
@@ -32,7 +33,7 @@ module.exports =[
         season: "fall",
         ABV: "5.8%",
         flavor: "Mango, Pineapple, Peach",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 4
     },
     {
@@ -44,7 +45,7 @@ module.exports =[
         season: "spring",
         ABV: "4.8%",
         flavor: "Citrus, Caramel",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 12
     },
     {
@@ -56,7 +57,7 @@ module.exports =[
         season: "fall",
         ABV: "6.1%",
         flavor: "Mango, Citrus",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 13
     },
     {
@@ -68,7 +69,7 @@ module.exports =[
         season: "fall",
         ABV: "5.1%",
         flavor: "Berry, Melon, Banana",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 11
     },
     {
@@ -80,7 +81,7 @@ module.exports =[
         season: "fall",
         ABV: "5.6%",
         flavor: "Pineapple, Apricot, Lychee",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 9
     },
     {
@@ -92,7 +93,7 @@ module.exports =[
         season: "fall",
         ABV: "6.6%",
         flavor: "Citrus, Caramel",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 7
     },
     {
@@ -104,7 +105,7 @@ module.exports =[
         season: "summer",
         ABV: "5.0%",
         flavor: "Lemon, Melon, Honey",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 2
     },
     {
@@ -116,7 +117,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.2%",
         flavor: "Citrus, Mandarin",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 1
     },
     {
@@ -128,7 +129,7 @@ module.exports =[
         season: "summer",
         ABV: "4.2%",
         flavor: "Baked Bread",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 3
     },
     {
@@ -140,7 +141,7 @@ module.exports =[
         season: "summer",
         ABV: "4.0%",
         flavor: "Citrus, Biscuit",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 5
     },
     {
@@ -152,7 +153,7 @@ module.exports =[
         season: "winter",
         ABV: "5.9%",
         flavor: "Coffee, Burned Sugar, Chocolate",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 6
     },
     {
@@ -164,6 +165,7 @@ module.exports =[
         season: "winter",
         ABV: "6.3%",
         flavor: "Coffee, Nuts, Chocolate",
+        image: "../public/beer_1.jpg",
         brewery_id: 3
     },
     {
@@ -175,7 +177,7 @@ module.exports =[
         season: "winter",
         ABV: "4.5%",
         flavor: "Coffee, Nuts, Chocolate",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 4 
     },
     {
@@ -187,7 +189,7 @@ module.exports =[
         season: "winter",
         ABV: "5.8%",
         flavor: "Chocolate",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 8
     },
     {
@@ -199,6 +201,7 @@ module.exports =[
         season: "winter",
         ABV: "6.4%",
         flavor: "Malty, Smoky",
+        image: "../public/beer_1.jpg",
         brewery_id: 11
     },
     {
@@ -210,7 +213,7 @@ module.exports =[
         season: "winter",
         ABV: "6.2%",
         flavor: "Chocolate, Coffee",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 12
     },
     {
@@ -222,7 +225,7 @@ module.exports =[
         season: "winter",
         ABV: "5.2%",
         flavor: "Chocolate",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 16
     },
     {
@@ -234,7 +237,7 @@ module.exports =[
         season: "not specified",
         ABV: "4.2%",
         flavor: "Grapefruit, Honey, Caramel",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 16
     },
     {
@@ -246,7 +249,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.9%",
         flavor: "Citrus, Hops",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 5
     },
     {
@@ -258,7 +261,7 @@ module.exports =[
         season: "not specified",
         ABV: "6.9%",
         flavor: "Grapefruit, Caramel",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 7
     },
     {
@@ -270,7 +273,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.4%",
         flavor: "Oatmeal",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 6
     },
     {
@@ -282,7 +285,7 @@ module.exports =[
         season: "summer",
         ABV: "6.4%",
         flavor: "Tangerine, Peach, Cedar",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 6
     },
     {
@@ -294,6 +297,7 @@ module.exports =[
         season: "summer",
         ABV: "4.4%",
         flavor: "Lemon, Guava, Mango",
+        image: "../public/beer_1.jpg",
         brewery_id: 10
     },
     {
@@ -305,7 +309,7 @@ module.exports =[
         season: "summer",
         ABV: "5.6%",
         flavor: "Coconut, Passionfruit",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 11
     },
     {
@@ -317,7 +321,7 @@ module.exports =[
         season: "summer",
         ABV: "5.8%",
         flavor: "Orange, Grapefruit",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 12
     },
     {
@@ -329,7 +333,7 @@ module.exports =[
         season: "summer",
         ABV: "4.8%",
         flavor: "Plum, Boysenberry",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 9
     },
     {
@@ -341,7 +345,7 @@ module.exports =[
         season: "summer",
         ABV: "4.3%",
         flavor: "Clementine",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 15
     },
     {
@@ -353,7 +357,7 @@ module.exports =[
         season: "not specified",
         ABV: "6.5%",
         flavor: "Pineapple, Citrus",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 5
 
     },
@@ -366,7 +370,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.7%",
         flavor: "Pineapple, Grapefruit, Orange",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 7
 
     },
@@ -379,7 +383,7 @@ module.exports =[
         season: "fall",
         ABV: "6.4%",
         flavor: "Mango, Citrus",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 8
 
     },
@@ -392,7 +396,7 @@ module.exports =[
         season: "fall",
         ABV: "4.4%",
         flavor: "Caramel, Toffee",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 14
 
     },
@@ -405,7 +409,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.0%",
         flavor: "Melon",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 16
 
     },
@@ -418,7 +422,7 @@ module.exports =[
         season: "not specified",
         ABV: "7.2%",
         flavor: "Melon, Honey, Nuts",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 14
 
     },
@@ -431,7 +435,7 @@ module.exports =[
         season: "winter",
         ABV: "6.1%",
         flavor: "Caramel, Sea Salt",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 13
 
     },
@@ -444,7 +448,7 @@ module.exports =[
         season: "winter",
         ABV: "6.1%",
         flavor: "Coffee, Chocolate",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 10
 
     },
@@ -457,7 +461,7 @@ module.exports =[
         season: "winter",
         ABV: "4.8%",
         flavor: "Chocolate, Cinnamon, Vanilla, Peppers",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 3
     },
     {
@@ -469,7 +473,7 @@ module.exports =[
         season: "winter",
         ABV: "6.0%",
         flavor: "Grapes, Cocoa, Molasses, Figs",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 7
     },
     {
@@ -481,7 +485,7 @@ module.exports =[
         season: "spring",
         ABV: "5.5%",
         flavor: "Grapefruit, Lemon, Pineapple",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 11
     },
     {
@@ -493,7 +497,7 @@ module.exports =[
         season: "spring",
         ABV: "5.8%",
         flavor: "Grapefruit, Tangering, Peach",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 15
     },
     {
@@ -505,7 +509,7 @@ module.exports =[
         season: "spring",
         ABV: "4.3%",
         flavor: "Citrus, Passionfruit, Pineapple",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 6
     },
     {
@@ -517,7 +521,7 @@ module.exports =[
         season: "summer",
         ABV: "5.1%",
         flavor: "Lime, Pineapple, Orange, Raspberry",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 16
     },
     {
@@ -529,7 +533,7 @@ module.exports =[
         season: "summer",
         ABV: "4.1%",
         flavor: "Citrus, Guava",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 8
     },
     {
@@ -541,7 +545,7 @@ module.exports =[
         season: "spring",
         ABV: "5.2%",
         flavor: "Citrus, Mango, Apricot",
-        image: "../public/beer_1",
+        image: "../public/beer_1.jpg",
         brewery_id: 14
     }
 ];
