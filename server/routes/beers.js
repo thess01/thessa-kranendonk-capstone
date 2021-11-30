@@ -10,16 +10,16 @@ const foodsController = require('../controllers/foods');
 port = process.env.port;
 
 router.get('/', beersController.getAllBeers);
+router.post('/', beersController.postBeer);
 
 router.get('/foods', foodsController.getAllFoods);
 
 router.get('/:id', beersController.getOneBeer);
-
-router.post('/', beersController.postBeer);
+router.post('/:id', commentsController.postComment);
 
 router.get('/:id/comments', commentsController.getAllComments);
 
-router.post('/:id', commentsController.postComment);
+
 
 
 

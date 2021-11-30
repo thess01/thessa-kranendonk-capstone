@@ -21,6 +21,7 @@ exports.getOneBeer = (req, res) => {
     // .where({id: req.params.id})
     // .select('*')
     .where({"beers.id": req.params.id})
+    .join('breweries', 'beers.brewery_id', 'breweries.id')
     // .join('foods', "beers.beerType", "foods.beerType")
     .then(data => {
         if(!data.length) {
