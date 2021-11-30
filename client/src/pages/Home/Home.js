@@ -12,6 +12,7 @@ class Home extends Component {
     axios
       .get("/api/beers")
       .then((response) => {
+        console.log(response.data)
         this.setState({
           beers: response.data,
         });

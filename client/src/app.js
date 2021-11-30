@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home/Home"
 import PageFooter from "./components/PageFooter/PageFooter";
 import PageHeader from "./components/PageHeader/PageHeader";
+import SingleBeerPage from "./pages/SingleBeerPage/SingleBeerPage";
 document.title = "Brews & Bites";
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Home} />
 
-          {/* <Route path="/beers/:beerId" component={} /> */}
+          <Route path="/beers/:id" component={SingleBeerPage} />
 
           {/* <Route path="/upload" component={} /> */}
 

@@ -7,7 +7,7 @@ export default function BeerCard({ beers }) {
       <ul className="beercard">
         {beers.map((beer) => {
           return (
-            <Link to={`/beer/` + beer.id} key={beer.id}>
+            <Link to={`/beers/` + beer.id} key={beer.id}>
               <li>
                 <div className="beercard-wrapper">
                   <img

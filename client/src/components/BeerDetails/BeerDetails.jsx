@@ -1,22 +1,25 @@
 import "./BeerDetails.scss";
 
-const BeerDetails = (beer, clickHandler) => {
+const BeerDetails = ({beer}) => {
+  console.log({beer});
   return (
     <div className="beer-details">
-      <h4 className="beer-details__beer-name">{beer.beerName}</h4>
-      <p className="beer-details__brewery-info">`by{beer.description}, {beer.cityState}{beer.country}`</p>
-      <p className="beer-details__beer-type">{beer.beerType}</p>
+     <img className="beer-details__image" src={beer[0].image} alt={beer[0].beerName}/>
+      <h4 className="beer-details__beer-name">{beer[0].beerName}</h4>
+      {/* <p className="beer-details__brewery-info">by{beer.description}, {beer.cityState}{beer.country}</p> */}
+      <p className="beer-details__beer-type">{beer[0].beerType}</p>
 
       <div className="beer-details__wrapper">
           <div className="beer-details__description-wrap">
-              <p className="beer-details__description">{beer.description}</p>
+              <p className="beer-details__description">{beer[0].description}</p>
           </div>
           <div className="beer-details__details-wrap">
-            <p className="beer-details__category">Category{beer.beerType}</p>
-            <p className="beer-details__season">Season{beer.season}</p>
-            <p className="beer-details__flavor">Flavor{beer.flavor}</p>
-            <p className="beer-details__abv">ABV{beer.abv}</p>
-            <p className="beer-details__rating">Rating{beer.rating}</p>
+            <p className="beer-details__category">Category{beer[0].beerType}</p>
+            <p className="beer-details__season">Season{beer[0].season}</p>
+            <p className="beer-details__flavor">Flavor{beer[0].flavor}</p>
+            <p className="beer-details__abv">ABV{beer[0].abv}</p>
+            <p className="beer-details__rating">Rating{beer[0].rating}</p>
+
           </div>
 
       </div>
