@@ -15,7 +15,7 @@ exports.getAllComments = (req, res) => {
 }
 
 exports.postComment = (req, res) => {
-    const beer_id = req.params.id
+    // const beer_id = req.params.id
     knex("comments")
     .insert(req.body)
     .then((data) => {

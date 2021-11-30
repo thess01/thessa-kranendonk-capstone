@@ -18,20 +18,29 @@ exports.getOneBeer = (req, res) => {
     // const beerId = req.params.id;
 
     knex("beers")
-    // .where({id: req.params.id})
-    // .select('*')
+   
     .where({"beers.id": req.params.id})
     .join('breweries', 'beers.brewery_id', 'breweries.id')
-    // .join('foods', "beers.beerType", "foods.beerType")
     .then(data => {
         if(!data.length) {
             return res.status(404).json({
                 message: "Beer does not exist"
             })
         }
+        knex("foods")
+        .where({"beerType": data[0].beerType})
+        .then(newData => {
+            console.log(newData)
+            data[0].foods = newData
+            console.log(data[0]);
+            res.json(data[0]);
+        })
         // return data;
-        res.json(data);
+        
     })
+
+
+
     // .then(data => {
     //     console.log(data)
     //     knex("foods")

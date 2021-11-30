@@ -9,7 +9,7 @@ exports.up = function(knex) {
             table.string('country').notNullable();
             table.string("email").notNullable().unique();
             table.string("password").notNullable();
-            table.string("phone");
+            table.string("phone").notNullable();
             table.timestamp('updated_at').defaultTo(knex.fn.now());
         })
         .createTable("foods", (table) => {

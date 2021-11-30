@@ -13,7 +13,7 @@ app.use(express.json());
 // app.use(require("./routes/beers"));
 
 app.use("/api/beers", beersRoutes);
-app.use("/api/breweries", breweriesRoutes)
+app.use("/api", breweriesRoutes)
 // app.use("/api/foods", foodsRoutes);
 
 app.get('/', (_req, res) => {

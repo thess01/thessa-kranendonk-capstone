@@ -11,7 +11,7 @@ class Upload extends React.Component {
         let token = sessionStorage.getItem('authToken')
 
         if(!!token) {
-            axios.get('http://localhost:8080/breweries/current', {
+            axios.get('/api/current', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

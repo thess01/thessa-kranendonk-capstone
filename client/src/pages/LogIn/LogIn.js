@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import {Link} from 'react-router-dom';
+import Input from '../../components/Input/Input'
 
 function LogIn(props) {
 
@@ -11,7 +12,7 @@ function LogIn(props) {
             password: e.target.password.value
         })
 
-        axios.post('http://localhost:8080/users/login', {
+        axios.post('/api/login', {
             breweryName: e.target.breweryName.value,
             password: e.target.password.value
         })
@@ -19,15 +20,15 @@ function LogIn(props) {
             console.log(res)
             let token = res.data.token
             sessionStorage.setItem('authToken', token)
-            props.history.push('/')
+            props.history.push('/current')
         })
     }
 
     return (
         <div className="login">
-            <h1>Log In</h1>
+            <h1>Brewery Log In</h1>
             <form onSubmit={handleLogIn}>
-                <Input label="breweryName" name="breweryName" type="text" />
+                <Input label="Brewery Name" name="breweryName" type="text" />
                 <Input label="Password" name="password" type="password" />
                 <button type="submit">Log In</button>
             </form>

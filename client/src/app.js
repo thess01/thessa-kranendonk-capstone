@@ -19,7 +19,7 @@ const App = () => {
 
           <Route path="/beers/:id" component={SingleBeerPage} />
 
-          <Route path="/upload" component={Upload} />
+          <Route path="/current" component={Upload} />
 
           <Route path="/signup" component={SignUp} />
 
