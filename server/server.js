@@ -5,13 +5,15 @@ const knex = require('knex')(require('./knexfile').development);
 require("dotenv").config();
 const port = process.env.PORT || 8080;
 const beersRoutes = require("./routes/beers");
+const breweriesRoutes = require("./routes/breweries")
 // const foodsRoutes = require("./routes/foods");
 
 app.use(cors());
 app.use(express.json());
-app.use(require("./routes/beers"));
+// app.use(require("./routes/beers"));
 
 app.use("/api/beers", beersRoutes);
+app.use("/api/breweries", breweriesRoutes)
 // app.use("/api/foods", foodsRoutes);
 
 app.get('/', (_req, res) => {

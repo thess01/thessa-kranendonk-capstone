@@ -4,6 +4,9 @@ import Home from "./pages/Home/Home"
 import PageFooter from "./components/PageFooter/PageFooter";
 import PageHeader from "./components/PageHeader/PageHeader";
 import SingleBeerPage from "./pages/SingleBeerPage/SingleBeerPage";
+import Upload from "./pages/Upload/Upload";
+import SignUp from './pages/SignUp/SignUp';
+import LogIn from './pages/LogIn/LogIn';
 document.title = "Brews & Bites";
 
 const App = () => {
@@ -16,7 +19,11 @@ const App = () => {
 
           <Route path="/beers/:id" component={SingleBeerPage} />
 
-          {/* <Route path="/upload" component={} /> */}
+          <Route path="/upload" component={Upload} />
+
+          <Route path="/signup" component={SignUp} />
+
+          <Route path="/login" component={LogIn} />
 
         </Switch>
       </main>

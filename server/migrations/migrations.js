@@ -7,6 +7,9 @@ exports.up = function(knex) {
             table.string("address").notNullable();
             table.string('cityState').notNullable();
             table.string('country').notNullable();
+            table.string("email").notNullable().unique();
+            table.string("password").notNullable();
+            table.string("phone");
             table.timestamp('updated_at').defaultTo(knex.fn.now());
         })
         .createTable("foods", (table) => {
@@ -34,13 +37,6 @@ exports.up = function(knex) {
             table.string('flavor').notNullable();
             table.string('image').notNullable().defaultTo("../public/beer_1");;
             table.integer('rating').notNullable().defaultTo(0);
-            // table
-            //     .integer('food_id')
-            //     .unsigned()
-            //     .references('id')
-            //     .inTable('foods')
-            //     .onUpdate('CASCADE')
-            //     .onDelete('SET NULL');
             table.timestamp('updated_at').defaultTo(knex.fn.now());
     })
     .createTable("comments", (table) => {
