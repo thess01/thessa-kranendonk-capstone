@@ -5,8 +5,8 @@ const FoodSection = (props) => {
       <>
      
     <li className="food-section" key={props.id}>
-      <p className="food-section__dish">{props.dish}</p>
-        <p className="food-section__description">{props.cuisine}</p>
+      <p className="food-section__dish">Dish {props.dish}</p>
+        <p className="food-section__description">Cuisine {props.cuisine}</p>
     </li>
 
     

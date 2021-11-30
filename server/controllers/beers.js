@@ -15,46 +15,26 @@ exports.getAllBeers = (_req, res) => {
 
 // display one beer by Id and show foods by beerType
 exports.getOneBeer = (req, res) => {
-    // const beerId = req.params.id;
-
     knex("beers")
    
     .where({"beers.id": req.params.id})
-    .join('breweries', 'beers.brewery_id', 'breweries.id')
-    .then(data => {
-        if(!data.length) {
+    .join('breweries', 'breweries.id', 'beers.brewery_id')
+    .then(beer => {
+        if(!beer.length) {
             return res.status(404).json({
                 message: "Beer does not exist"
             })
         }
+        if (beer){
         knex("foods")
-        .where({"beerType": data[0].beerType})
-        .then(newData => {
-            console.log(newData)
-            data[0].foods = newData
-            console.log(data[0]);
-            res.json(data[0]);
+        .where({"beerType": beer[0].beerType})
+        .then(food => {
+            beer[0].dishes = food
+            console.log(beer[0]);
+            res.json(beer[0]);
         })
-        // return data;
-        
+    }
     })
-
-
-
-    // .then(data => {
-    //     console.log(data)
-    //     knex("foods")
-    //     .where({beerType: data.beerType})
-    //     .then(food => {
-    //         if(!food.length) {
-    //             return res.status(404).json({
-    //                 message: "Food does not exist"
-    //             })
-    //         }
-    //         const dish = food;
-    //         data.push(food);
-    //     })
-    // })
 }
 
 

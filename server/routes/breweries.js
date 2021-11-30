@@ -4,13 +4,6 @@ const jwt = require("jsonwebtoken");
 const authorize = require("../middleware/authorize");
 const knex = require('knex')(require("../knexfile").development);
 
-let breweries = [];
-
-knex('breweries')
-.then((data) => {
-    breweries = data
-})
-
 
 router.get('/current', authorize, (req,res) => {
     const breweryNameFromToken = req.decoded.breweryName;
@@ -50,15 +43,19 @@ router.post('/login', (req, res) => {
     knex('breweries')
     .where({"breweryName": breweryName})
     .then((data) => {
-    console.log(data)
-    if (data.length === 0) {
+    if (!data.length) {
         return res.status(400).json({
             message: "Brewery does not exist"
-        })
-    }
+         })
+        }
+        if ("password" !== password) {
+                return res.status(400).json({
+                    message: "Password does not match"
+                })
+            }
     })
 
-    // const foundBrewery = breweries.find(brewery => brewery.breweryName === breweryName);
+     // const foundBrewery = breweries.find(brewery => brewery.breweryName === breweryName);
 
     // if (!foundBrewery) {
     //     return res.status(400).json({
@@ -70,6 +67,7 @@ router.post('/login', (req, res) => {
     //         message: "Password does not match"
     //     })
     // }
+
     const token = jwt.sign(
         {breweryName: breweryName},
         process.env.JWT_SECRET_KEY,
@@ -123,11 +121,11 @@ router.post('/signup', (req,res) => {
         res.status(201).json(data);
        })
    })
-//    .catch(() => {
-//     res.status(400).json({
-//         message: `Error creating ${req.body.breweryName}`
-//     })
-// })
+   .catch(() => {
+    res.status(400).json({
+        message: `Error creating ${req.body.breweryName}`
+    })
+})
 })
 
 module.exports = router;

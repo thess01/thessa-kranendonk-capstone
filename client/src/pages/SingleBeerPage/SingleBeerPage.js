@@ -9,23 +9,19 @@ import "./SingleBeerPage.scss";
 class SingleBeerPage extends Component {
   state = {
     selectedBeer: null,
-    selectedBeerComments: [],
-    foods: []
+    selectedBeerComments: null,
   };
 
   componentDidMount() {
       const id = this.props.match.params.id;
     Promise.all([
       axios.get(`/api/beers/${id}`),
-      axios.get(`/api/beers/${id}/comments`),
-      axios.get(`/api/beers/foods`)
+      axios.get(`/api/beers/${id}/comments`)
     ])
-      .then(([res1, res2, res3]) => {
-      //  console.log(res3.data)
+      .then(([res1, res2]) => {
         this.setState({
           selectedBeer: res1.data,
-          selectedBeerComments: res2.data,
-          foods: res3.data
+          selectedBeerComments: res2.data
         });
       })
       .catch((error) => {
@@ -78,22 +74,21 @@ class SingleBeerPage extends Component {
     })
   }
 
-  // findFoods = (food) => {
-  //   return food.beerType === this.state.selectedBeer.beerType;
-
-  // }
+ 
 
   render() {
-    const { selectedBeer, selectedBeerComments , foods} = this.state;
+    const { selectedBeer, selectedBeerComments} = this.state;
 
-    // let foods = this.state.foods;
-    // if (selectedBeer) {
-    //   foods = this.state.foods.filter((food) => {
-    //     return food.beerType === selectedBeer.beerType;
-    //   });
-    // }
 
     if (this.state.selectedBeer === null) {
+      return (
+        <div>
+          <h1 className="loading">Loading beers...</h1>
+        </div>
+      );
+    }
+
+    if (this.state.selectedBeerComments === null) {
       return (
         <div>
           <h1 className="loading">Loading beers...</h1>
@@ -105,18 +100,18 @@ class SingleBeerPage extends Component {
       <>
         <BeerDetails 
         beer={selectedBeer} />
-{/* 
-        {foods.map((food) => (
-            <FoodSection key={food.id}
-            dish={food.dish}
-            cuisine={food.cuisine}
-            beerType={food.beerType} />
-        ))} */}
+
+        {selectedBeer.dishes.map((dish) => (
+            <FoodSection key={dish.id}
+            dish={dish.dish}
+            cuisine={dish.cuisine}
+            beerType={dish.beerType} />
+        ))}
         
 
         <CommentsForm addComment={this.addComment}/>
         
-        {selectedBeerComments.map((comment) => (
+        {selectedBeerComments && selectedBeerComments.map((comment) => (
             <CommentsList 
             key={comment.id}
             comment={comment.comment}
