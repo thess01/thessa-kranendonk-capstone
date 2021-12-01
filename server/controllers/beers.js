@@ -1,5 +1,5 @@
 const knex = require('knex')(require("../knexfile").development);
-const BeersModel = require('../models/beersModel');
+// const BeersModel = require('../models/beersModel');
 
 exports.getAllBeers = (_req, res) => {
     knex("beers")

@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Input from '../../components/Input/Input';
-import UploadForm from '../../components/UploadForm/UploadForm';
+
 
 
 function SignUp(props) {
@@ -46,7 +46,7 @@ function SignUp(props) {
 
             <button type="submit">Sign Up!</button>
         </form>
-        <UploadForm />
+
         <Link to="/login">Log In</Link>
     </div>
     )

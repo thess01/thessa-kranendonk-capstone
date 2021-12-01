@@ -1,0 +1,123 @@
+@use './typography' as *;
+@use './variables' as *;
+
+@mixin html {
+  font-size: 16px;
+  width: 100%;
+}
+
+@mixin list {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+@mixin display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin display-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin button {
+  background-color: $primary-cta-color;
+  border-radius: 4px;
+  color: $white;
+  border: none;
+  height: 2.5rem;
+  &:hover {
+    background-color: $hover-cta-color;
+  }
+}
+@mixin input {
+  border-radius: 4px;
+  border: $diverline-color solid 1px;
+  background-color: $form-field-color;
+  font-family: "Avenir";
+  color: $primary-text;
+  font-size: 0.75rem;
+  &::placeholder {
+    color: $primary-text;
+  }
+  &:active {
+    outline: hidden;
+    border: solid 2px $primary-cta-color;
+  }
+}
+
+@mixin divider-border {
+  border-bottom: solid 2px $diverline-color;
+}
+
+@mixin button-text-mobile {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@mixin header-text-mobile {
+  font-size: 1.45rem;
+  line-height: 2rem;
+  font-weight: 550;
+}
+
+@mixin subheader-mobile {
+  font-size: 0.8rem;
+  line-height: 1.125rem;
+  font-weight: bold;
+}
+
+@mixin section-header-mobile {
+  font-size: 0.8rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: $secondary-text;
+}
+
+@mixin form-header {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  color: $secondary-text;
+}
+
+@mixin body-text-mobile {
+  font-size: 0.8rem;
+  line-height: 1.125rem;
+}
+
+@mixin header-text-desk {
+  font-size: 2rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+@mixin subheader-desk {
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+  font-weight: bold;
+}
+
+@mixin body-text-desk {
+  font-size: 0.9rem;
+  line-height: 1.375rem;
+}

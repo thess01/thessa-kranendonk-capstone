@@ -88,13 +88,13 @@ class SingleBeerPage extends Component {
       );
     }
 
-    if (this.state.selectedBeerComments === null) {
-      return (
-        <div>
-          <h1 className="loading">Loading beers...</h1>
-        </div>
-      );
-    }
+    // if (this.state.selectedBeerComments === null) {
+    //   return (
+    //     <div>
+    //       <h1 className="loading">Loading beers...</h1>
+    //     </div>
+    //   );
+    // }
 
     return (
       <>
@@ -111,7 +111,9 @@ class SingleBeerPage extends Component {
 
         <CommentsForm addComment={this.addComment}/>
         
-        {selectedBeerComments && selectedBeerComments.map((comment) => (
+        
+        {selectedBeerComments && 
+        selectedBeerComments.map((comment) => (
             <CommentsList 
             key={comment.id}
             comment={comment.comment}
