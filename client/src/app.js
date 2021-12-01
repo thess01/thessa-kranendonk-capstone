@@ -12,7 +12,7 @@ document.title = "Brews & Bites";
 const App = () => {
   return (
     <>
-      {/* <PageHeader /> */}
+      <PageHeader />
       <main className="main-content">
         <Switch>
           <Route path="/" exact component={Home} />

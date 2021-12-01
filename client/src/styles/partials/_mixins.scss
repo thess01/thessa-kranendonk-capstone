@@ -69,55 +69,81 @@
   border-bottom: solid 2px $diverline-color;
 }
 
-@mixin button-text-mobile {
-  font-size: 0.75rem;
-  font-weight: 700;
+@mixin MH1 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
 }
 
-@mixin header-text-mobile {
-  font-size: 1.45rem;
-  line-height: 2rem;
-  font-weight: 550;
+@mixin MH2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
 }
 
-@mixin subheader-mobile {
-  font-size: 0.8rem;
-  line-height: 1.125rem;
-  font-weight: bold;
+@mixin MH3 {
+  font-size: 0.813rem;
+  line-height: 1.25rem;
+  font-weight: 600;
 }
 
-@mixin section-header-mobile {
-  font-size: 0.8rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  color: $secondary-text;
+@mixin MH4 {
+  font-size: 0.688rem;
+  line-height: 1rem;
+  font-weight: 600;
 }
 
-@mixin form-header {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  color: $secondary-text;
+@mixin MP1 {
+  font-size: 0.938rem;
+  line-height: 1.625rem;
 }
 
-@mixin body-text-mobile {
-  font-size: 0.8rem;
-  line-height: 1.125rem;
+@mixin MP2 {
+  font-size: 0.813rem;
+  line-height: 1.25rem;
 }
 
-@mixin header-text-desk {
+@mixin MP3 {
+  font-size: 0.688rem;
+  line-height: 1rem;
+}
+
+// TABLET / DESKTOP
+@mixin H1 {
   font-size: 2rem;
-  line-height: 2.75rem;
-  font-weight: 700;
+  line-height: 2.5rem;
+  font-weight: 600;
 }
 
-@mixin subheader-desk {
-  font-size: 0.9rem;
-  line-height: 1.125rem;
-  font-weight: bold;
+@mixin H2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
 }
 
-@mixin body-text-desk {
-  font-size: 0.9rem;
+@mixin H3 {
+  font-size: 0.875rem;
   line-height: 1.375rem;
+  font-weight: 600;
+}
+
+@mixin H4 {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+}
+
+@mixin P1 {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+@mixin P2 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+@mixin P3 {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
 }
