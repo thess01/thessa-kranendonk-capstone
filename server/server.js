@@ -1,4 +1,5 @@
 const express = require("express");
+const bodyParser = require('body-parser')
 const app = express();
 const cors = require("cors");
 const knex = require('knex')(require('./knexfile').development);
@@ -10,6 +11,7 @@ const breweriesRoutes = require("./routes/breweries")
 
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.json())
 // app.use(require("./routes/beers"));
 
 app.use("/api/beers", beersRoutes);
