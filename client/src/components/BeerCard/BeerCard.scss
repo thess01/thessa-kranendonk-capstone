@@ -1,0 +1,77 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+.beercard {
+    @include list;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    &__item {
+        @include list;
+    }
+    &__link {
+        text-decoration: none;
+        color: $color-text;
+    }
+    &__wrapper {
+        @include desktop {
+            margin: 0 2rem;
+   
+        }
+
+    }
+    &__img {
+        width: 85vw;
+        border-radius: 5px;
+
+        @include desktop {
+            width: 25vw;
+        }
+
+    }
+    &__text-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem 0;
+
+        @include desktop {
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+    &__title {
+        margin: 0;
+        @include MH2;
+
+    }
+    &__brewery-name {
+        @extend .beercard__title;
+        @include MP2;
+
+    }
+    &__brewery-location {
+        @extend .beercard__title;
+        @include MP2;
+
+    }
+    &__brewery-type {
+        @extend .beercard__title;
+        @include MP2;
+
+    }
+}

@@ -44,7 +44,7 @@
     &__link {
         @include MH2;
         text-decoration: none;
-        color: black;
+        color: $color-text;
         padding: 0.25rem;
         text-align: center;
         &:hover {
