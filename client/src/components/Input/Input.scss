@@ -1,0 +1,30 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    &__label {
+        color: $color-white;
+        @include MP1;
+
+        @include desktop {
+        margin-bottom: 0.5rem;
+        @include P1;
+        margin-left: 0.5rem;
+        }
+    }
+     &__input {
+         border-radius: 20px;
+         border: 1px solid $color-accent-yellow;
+         height: 1.5rem;
+         width: 100%;
+
+     }
+}
