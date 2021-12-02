@@ -22,11 +22,18 @@
         background-color: $color-accent-yellow;
         opacity: 0.4;
         border-radius: 5px;
-        height: 45rem;
-        width: 75vw;
+        height: 34rem;
+        width: 95vw;
         position: absolute;
         z-index: -1;
-        top: 900px;
+        top: 500px;
+
+        @include desktop {
+            top: 900px;
+            height: 43rem;
+            width: 75vw;
+           
+        }
     }
     &__wrapper {
         @include desktop {
@@ -89,6 +96,15 @@
         }
 
     }
+    &__desktop-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include desktop {
+        display: flex;
+        flex-direction: row;
+        }
+    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -101,10 +117,6 @@
             align-items: center;
             width: 35vw;
         }
-
-    }
-    &__desktop-wrapper {
-        display: flex;
 
     }
     &__description {
