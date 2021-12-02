@@ -3,7 +3,7 @@ import { Component } from "react";
 import axios from "axios";
 import "./Home.scss";
 import BeerCardList from "../../components/BeerCardList/BeerCardList";
-import SearchBar from "../../components/SearchBar/SearchBar";
+
 
 class Home extends Component {
   state = {
@@ -41,7 +41,7 @@ class Home extends Component {
 
     return (
       <>
-        {/* <SearchBar /> */}
+  
         <BeerCardList beers={beers} />
     </>
     );
