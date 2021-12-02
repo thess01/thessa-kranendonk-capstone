@@ -5,6 +5,7 @@ import PageFooter from "./components/PageFooter/PageFooter";
 import PageHeader from "./components/PageHeader/PageHeader";
 import HeaderImageBar from "./components/HeaderImageBar/HeaderImage";
 import SingleBeerPage from "./pages/SingleBeerPage/SingleBeerPage";
+import SearchBar from './components/SearchBar/SearchBar'
 import Upload from "./pages/Upload/Upload";
 import SignUp from './pages/SignUp/SignUp';
 import LogIn from './pages/LogIn/LogIn';
@@ -19,9 +20,11 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Home} />
 
-          <Route path="/beers/:id" component={SingleBeerPage} />
+          <Route path="/beers/:id" exact component={SingleBeerPage} />
 
-          <Route path='/beers/:searchQuery' component={Home}/>
+          <Route path='/search' exact component={SearchBar}/>
+
+          <Route path='/search/:searchQuery' exact component={SearchBar}/>
 
           <Route path="/upload" component={Upload} />
 

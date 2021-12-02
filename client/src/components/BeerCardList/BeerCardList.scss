@@ -1,0 +1,23 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+
+// main {
+//     display: flex;
+// }
+
+.beercard-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 10rem;
+
+    @include desktop {
+    margin-top: 18rem;
+    }
+}

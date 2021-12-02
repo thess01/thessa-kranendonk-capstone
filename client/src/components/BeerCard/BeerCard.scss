@@ -4,20 +4,24 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/global' as *;
 
+
 .beercard {
-    margin-top: 7rem;
     @include list;
     padding: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    margin: 0;
+
 
     @include desktop {
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 12rem;
+        width: fit-content;
+        margin: 0;
+        margin-right: 0;
+       
     }
     &__item {
         @include list;
