@@ -29,31 +29,6 @@ class SingleBeerPage extends Component {
       });
   }
 
-  // componentDidUpdate(prevProps) {
-  //   const beerId = this.props.match.params.id;
-  //   const prevBeerId = prevProps.match.params.id;
-
-  //   if (this.props.selectedBeerComments.length !== prevProps.selectedBeerComments.length) {
-  //     this.getBeerCommentsById(beerId);
-  //     window.scrollTo({
-  //       top: 0,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // }
-  // getBeerCommentsById = (id) => {
-  //   axios
-  //     .get(`/api/beers/` + id)
-  //     .then((response) => {
-  //       this.setState({
-  //         selectedBeerComments: response.data,
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-
 
   addComment = (e) => {
     e.preventDefault();
@@ -87,14 +62,6 @@ class SingleBeerPage extends Component {
         </div>
       );
     }
-
-    // if (this.state.selectedBeerComments === null) {
-    //   return (
-    //     <div>
-    //       <h1 className="loading">Loading beers...</h1>
-    //     </div>
-    //   );
-    // }
 
     return (
       <>

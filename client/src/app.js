@@ -34,7 +34,7 @@ const App = () => {
 
         </Switch>
       </main>
-      {/* <PageFooter /> */}
+      <PageFooter />
     </>
   );
 };

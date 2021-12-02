@@ -6,7 +6,7 @@ const knex = require('knex')(require("../knexfile").development);
 
 exports.getAllBeers = (_req, res) => {
     knex("beers")
-    .join('breweries', 'breweries.id', "=",'beers.brewery_id')
+    // .leftOuterJoin('breweries','beers.brewery_id', 'breweries.id')
     .then((data) => {
         res.json(data);
     })
@@ -23,7 +23,7 @@ exports.getOneBeer = (req, res) => {
     knex("beers")
    
     .where({"beers.id": req.params.id})
-    .join('breweries', 'breweries.id', 'beers.brewery_id')
+    .leftJoin('breweries','beers.brewery_id','breweries.id')
     .then(beer => {
         if(!beer.length) {
             return res.status(404).json({
