@@ -36,6 +36,9 @@
     &__img {
         width: 85vw;
         border-radius: 5px;
+        &:hover {
+            opacity: 0.5;
+        }
 
         @include desktop {
             width: 25vw;

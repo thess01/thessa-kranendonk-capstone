@@ -1,0 +1,164 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+.beer-details {
+    margin-top: 10rem;
+    @include list;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include desktop {
+        margin-top: 18rem;
+    }
+
+    &__background {
+        background-color: $color-accent-yellow;
+        opacity: 0.4;
+        border-radius: 5px;
+        height: 45rem;
+        width: 75vw;
+        position: absolute;
+        z-index: -1;
+        top: 900px;
+    }
+    &__wrapper {
+        @include desktop {
+            margin: 0 2rem;
+   
+        }
+
+    }
+    &__brewery-wrap {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__beer-name {
+        text-align: center;
+        @include MH2;
+        margin: 0.75rem 0 0.5rem;
+        color: $color-primary;
+
+        @include desktop {
+            @include H1;
+            margin-top: 2rem;;
+            padding-right: 1rem;
+        }
+    }
+    &__brewery-info {
+        text-align: center;
+        @include MP2;
+        margin: 0;
+        color: $color-primary;
+
+        @include desktop {
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            line-height: 3.25rem;
+        }
+    
+    }
+    &__beer-type {
+        text-align: center;
+        @include MH3;
+        margin: 0.75rem 0 0;
+        color: $color-primary;
+
+        @include desktop {
+            @include H2;
+        }
+    }
+    &__image {
+        width: 85vw;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        &:hover {
+            opacity: 0.5;
+        }
+
+        @include desktop {
+            width: 65vw;
+        }
+
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+        width: 40vw;
+
+        @include desktop {
+            justify-content: center;
+            align-items: center;
+            width: 35vw;
+        }
+
+    }
+    &__desktop-wrapper {
+        display: flex;
+
+    }
+    &__description {
+        margin: 0;
+        @include MP2;
+        margin: 1rem 1rem;
+        text-align: center;
+        color: $color-primary;
+
+        @include desktop {
+            @include P1;
+            padding-top: 4rem;
+            margin: 2rem;
+            width: 30vw;
+        }
+    }
+
+    &__name-wrapper {
+        padding-right: 1.25rem;
+        border-right: 1px solid $color-text;
+
+        @include desktop {
+            padding-right: 3rem;
+        }
+    }
+    &__name {
+        @include MH3;
+        font-size: 13px;
+        line-height: 1.25rem;
+        text-align: end;
+        color: $color-primary;
+
+        @include desktop {
+            @include P1;
+            margin-top: 2rem;;
+        }
+    }
+
+    &__info-wrapper {
+        @include desktop {
+            padding-left: 3rem;
+        }
+    }
+    &__info {
+     
+        @include MP3;
+        line-height: 1.25rem;
+        font-size: 13px;
+        color: $color-primary;
+
+        @include desktop {
+            @include P1;
+            margin-top: 2rem;;
+        }
+    }
+   
+}
