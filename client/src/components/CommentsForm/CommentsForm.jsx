@@ -1,3 +1,5 @@
+import './CommentsForm.scss';
+
 const CommentsForm = (props) => {
     return (
       <section className="comments-form" id="comments-form">
