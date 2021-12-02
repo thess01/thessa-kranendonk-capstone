@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Input from '../../components/Input/Input';
+import "./SignUp.scss";
 
 
 
@@ -34,7 +35,7 @@ function SignUp(props) {
 
     return (
         <div className="signup">
-        <h1>Brewery Sign Up</h1>
+        <h1 className="signup__header">Brewery Sign Up</h1>
         <form onSubmit={handleSignUp}>
             <Input label="Brewery Name" name="breweryName" type="text" />
             <Input label="Password" name="password" type="password" />
@@ -43,11 +44,13 @@ function SignUp(props) {
             <Input label="City, State" name="cityState" type="text" />
             <Input label="Country" name="country" type="text" />
             <Input label="Phone Number" name="phone" type="text" />
-
-            <button type="submit">Sign Up!</button>
+            <div className="signup__button-wrapper">
+            <button className="signup__submit"type="submit">Sign Up!</button>
+            <Link className="signup__login"to="/login">Log In</Link>
+            </div>
         </form>
 
-        <Link to="/login">Log In</Link>
+        
     </div>
     )
 }

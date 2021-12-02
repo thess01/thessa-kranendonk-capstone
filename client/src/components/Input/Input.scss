@@ -13,7 +13,7 @@
     &__label {
         color: $color-white;
         @include MP1;
-
+        
         @include desktop {
         margin-bottom: 0.5rem;
         @include P1;

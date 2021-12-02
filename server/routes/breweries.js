@@ -14,7 +14,7 @@ let breweries =
 
 router.get('/breweries', breweriesController.getOneBrewery);
 
-router.get('/current', authorize, (req, res) => {
+router.get('/upload', authorize, (req, res) => {
     
 
     const breweryNameFromToken = req.decoded.breweryName;

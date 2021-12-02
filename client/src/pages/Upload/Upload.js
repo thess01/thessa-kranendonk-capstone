@@ -18,7 +18,7 @@ class Upload extends Component {
     componentDidMount() {
         let token = sessionStorage.getItem('authToken')
         if (!!token) {
-            axios.get('/api/current', {
+            axios.get('/api/upload', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

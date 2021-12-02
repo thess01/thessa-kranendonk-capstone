@@ -1,0 +1,60 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+.signup {
+    width: 60vw;
+    background-color: $color-primary;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    margin-bottom: 3rem;
+    &__header {
+        @include MH2;
+        color: $color-accent-yellow;
+        text-align: center;
+
+        @include desktop {
+        margin: 0.75rem;
+    }
+}
+&__button-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1rem 0;
+    justify-content: flex-start;
+}
+    &__submit {
+        background-color: $color-accent-yellow;
+        border: hidden;
+        border-radius: 20px;
+        color: $color-white;
+        padding: 0.25rem 1rem;
+        &:hover {
+            background-color: rgb(255, 145, 0);
+        }
+        @include desktop {
+        padding: 0.25rem 2rem;
+        @include H3;
+        }
+    }
+    &__login {
+        color: $color-white;
+            text-decoration: none;
+            padding: 0.25rem 1rem;
+        &:hover {
+            color: $color-accent-yellow;
+        }
+
+        @include desktop {
+            padding: 0.5rem 2rem;
+
+        }
+
+    }
+
+
+}

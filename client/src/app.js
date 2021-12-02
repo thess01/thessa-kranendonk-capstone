@@ -21,7 +21,7 @@ const App = () => {
 
           <Route path='/beers/:searchQuery' component={Home}/>
 
-          <Route path="/current" component={Upload} />
+          <Route path="/upload" component={Upload} />
 
           <Route path="/signup" component={SignUp} />
 
