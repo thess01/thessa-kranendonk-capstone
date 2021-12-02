@@ -19,7 +19,7 @@ knex("beers")
 
 
 router.get('/search/:seachQuery', (req, res) => {
-    let filteredBeers = beers.filter(beer => beer.beerName.toLowerCase().includes(req.params.seachQuery))
+    let filteredBeers = beers.filter(beer => beer.beerType.toLowerCase().includes(req.params.seachQuery))
     res.json(filteredBeers)
 })
 

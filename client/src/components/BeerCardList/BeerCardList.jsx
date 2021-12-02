@@ -8,7 +8,6 @@ export default function BeerCardList( { beers } ) {
             {
                 beers.map(beer=> 
                 <BeerCard
-                    key={beer.id} 
                     id={beer.id}
                     beerName={beer.beerName}
                     beerType={beer.beerType}
