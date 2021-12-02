@@ -83,7 +83,10 @@ class Upload extends Component {
         const { isLoading, breweryInfo } = this.state;
 
         return isLoading ?
-            <h1>Loading...</h1>
+            <div className="upload__message-wrapper">
+            <h1 className="upload__upload-message">Breweries need to be registered or logged in to upload new beers</h1>
+            <Link className="upload__link-register" to="/signup">Please register here!</Link>
+            </div>
             :
             (
                 <section className="upload">

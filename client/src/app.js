@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home/Home"
 import PageFooter from "./components/PageFooter/PageFooter";
 import PageHeader from "./components/PageHeader/PageHeader";
+import HeaderImageBar from "./components/HeaderImageBar/HeaderImage";
 import SingleBeerPage from "./pages/SingleBeerPage/SingleBeerPage";
 import Upload from "./pages/Upload/Upload";
 import SignUp from './pages/SignUp/SignUp';
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <>
       <PageHeader />
+      <HeaderImageBar />
       <main className="main-content">
         <Switch>
           <Route path="/" exact component={Home} />

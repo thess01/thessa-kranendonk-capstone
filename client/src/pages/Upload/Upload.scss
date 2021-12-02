@@ -11,9 +11,42 @@
     background-color: $color-primary;
     padding: 1rem 2rem;
     margin: 0 auto;
+    margin-top: 10rem;
     margin-bottom: 3rem;;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
+
+    @include desktop {
+        margin-top: 18.5rem;
+        margin-bottom: 3rem;
+    }
+
+    &__message-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;;
+    }
+    &__upload-message {
+        margin-top: 10rem;
+        color: $color-text;
+        @include MH2;
+        text-align: center;
+        margin: 10rem 1rem 0 1rem;
+
+        @include desktop {
+            margin-top: 24rem;
+        }
+    }
+
+    &__link-register {
+        color: $color-accent-yellow;
+        &:hover {
+            font-weight: bold;
+        }
+
+    }
+
     &__header {
         @include MH2;
         color: $color-accent-yellow;

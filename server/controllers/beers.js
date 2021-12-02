@@ -3,7 +3,7 @@ const knex = require('knex')(require("../knexfile").development);
 
 exports.getAllBeers = (_req, res) => {
     knex("beers")
-    .join('breweries', 'beers.brewery_id','breweries.id')
+    .join('breweries', 'breweries.id', "=",'beers.brewery_id')
     .then((data) => {
         res.json(data);
     })

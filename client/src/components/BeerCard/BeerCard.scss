@@ -5,6 +5,7 @@
 @use '../../styles/partials/global' as *;
 
 .beercard {
+    margin-top: 7rem;
     @include list;
     padding: 0;
     width: 100%;
@@ -16,7 +17,7 @@
     @include desktop {
         flex-direction: row;
         flex-wrap: wrap;
-
+        margin-top: 12rem;
     }
     &__item {
         @include list;

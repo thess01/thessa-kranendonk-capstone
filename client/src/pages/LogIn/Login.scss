@@ -9,8 +9,14 @@
     background-color: $color-primary;
     padding: 1rem 2rem;
     margin: 0 auto;
+    margin-top: 10rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
+
+    @include desktop {
+        margin-top: 18.5rem;
+        margin-bottom: 3rem;
+    }
     &__header {
         @include MH2;
         color: $color-accent-yellow;

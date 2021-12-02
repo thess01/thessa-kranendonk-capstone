@@ -1,0 +1,23 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+.image-bar {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    height: 10rem;
+    border-top: 4px solid $color-accent-yellow;
+    border-bottom: 4px solid $color-accent-yellow;
+    object-fit: cover;
+    // object-position: 0px -30px;
+    z-index: -1;
+
+    @include desktop {
+        height: 18rem;
+          top: 200px;
+          object-position: 0px -310px;
+    }
+}
