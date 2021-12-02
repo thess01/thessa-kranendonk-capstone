@@ -1,0 +1,44 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+.comments-display {
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+
+    @include desktop {
+        width: 55vw;
+    }
+
+    &__wrapper {
+        width: 100%;
+        border-bottom: 1px solid $color-text;
+      
+
+    }
+    &__user-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name {
+        @include MH3;
+
+    }
+    &__date {
+        @include MP3;
+        line-height: 1.4rem;
+
+    }
+    &__comment {
+        @include MP2;
+
+    }
+    // &__delete-button {
+
+    // }
+
+}
