@@ -77,11 +77,22 @@
     width: 100%;
 
     &--error {
-        border: 1px solid red;    
+        border: 1.5px solid rgb(192, 32, 3);    
         border-radius: 20px;
         height: 1.5rem;
     }
 
+}
+&__warning {
+    &--none {
+        color: $color-primary;
+        margin: 0;
+        display: hidden;
+    }
+    &--error {
+        color: rgb(192, 32, 3);
+        margin: 0;
+    }
 }
 &__button-wrapper {
     display: flex;

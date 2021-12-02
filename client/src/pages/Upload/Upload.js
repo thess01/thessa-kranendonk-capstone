@@ -17,6 +17,55 @@ class Upload extends Component {
         description: ''
     }
 
+
+    handleChange = (event) => {
+        this.setState({
+          [event.target.name]: event.target.value,
+        });
+      };
+
+    validateInput = (input) => {
+        if (!input) {
+            return false;
+        }
+        return true;
+    };
+
+    handleUpload = (e) => {
+        e.preventDefault();
+        if(this.validateForm()) {
+        axios.post('/api/beers/upload', {
+            description: e.target.description.value,
+            beerName: e.target.beerName.value,
+            beerType: e.target.beerType.value,
+            season: e.target.season.value,
+            ABV: e.target.ABV.value,
+            flavor: e.target.flavor.value,
+            brewery_id: this.state.breweryInfo.brewery_id,
+            image: "/beer_1.jpg"
+
+        })
+            .then(res => {
+                console.log(res)
+                this.props.history.push('/')
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        }
+    }
+
+    validateForm = () => {
+        if (!this.state.beerName) return false;
+        if (!this.state.description) return false;
+        if (!this.state.beerType) return false;
+        if (!this.state.season) return false;
+        if (!this.state.flavor) return false;
+        if (!this.state.ABV) return false;
+        return true;
+    };
+
+
     componentDidMount() {
         let token = sessionStorage.getItem('authToken')
         if (!!token) {
@@ -37,46 +86,6 @@ class Upload extends Component {
         }
     }
 
-
-
-    validateInput = (input) => {
-        if (!input) {
-            return false;
-        }
-        return true;
-    };
-
-    handleUpload = (e) => {
-        e.preventDefault();
-        axios.post('/api/beers/upload', {
-            description: e.target.description.value,
-            beerName: e.target.beerName.value,
-            beerType: e.target.beerType.value,
-            season: e.target.season.value,
-            ABV: e.target.abv.value,
-            flavor: e.target.flavor.value,
-            brewery_id: this.state.breweryInfo.brewery_id,
-            image: "/beer_1.jpg"
-
-        })
-            .then(res => {
-                console.log(res)
-                this.props.history.push('/')
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }
-
-    validateForm = () => {
-        if (!this.state.beerName) return false;
-        if (!this.state.description) return false;
-        if (!this.state.beerType) return false;
-        if (!this.state.season) return false;
-        if (!this.state.flavor) return false;
-        if (!this.state.ABV) return false;
-        return true;
-    };
 
 
     render() {
@@ -101,7 +110,12 @@ class Upload extends Component {
                                 type="text"
                                 name="beerName"
                                 placeholder="Beer Name"
+                                onChange={this.handleChange}
                             ></input>
+                            <p className={this.validateInput(this.state.beerName)
+                                    ? 'upload__warning--none'
+                                    : 'upload__warning--error'}>This field is required</p>
+
                             <label className="upload__label" htmlFor="beerType">Beer Type</label>
                             <input className={this.validateInput(this.state.beerType)
                                 ? "upload__input"
@@ -109,7 +123,12 @@ class Upload extends Component {
                                 type="text"
                                 name="beerType"
                                 placeholder="Beer Type"
+                                onChange={this.handleChange}
                             ></input>
+                               <p className={this.validateInput(this.state.beerType)
+                        ? 'upload__warning--none'
+                        : 'upload__warning--error'}>This field is required</p>
+
                             <label className="upload__label" htmlFor="description">Description</label>
                             <input className={this.validateInput(this.state.description)
                                 ? "upload__input"
@@ -117,7 +136,11 @@ class Upload extends Component {
                                 type="text"
                                 name="description"
                                 placeholder="Beer description"
+                                onChange={this.handleChange}
                             ></input>
+                               <p className={this.validateInput(this.state.description)
+                        ? 'upload__warning--none'
+                        : 'upload__warning--error'}>This field is required</p>
 
                             <label className="upload__label" htmlFor="flavor">Flavor</label>
                             <input className={this.validateInput(this.state.flavor)
@@ -126,7 +149,11 @@ class Upload extends Component {
                                 type="text"
                                 name="flavor"
                                 placeholder="Beer flavor"
+                                onChange={this.handleChange}
                             ></input>
+                               <p className={this.validateInput(this.state.flavor)
+                        ? 'upload__warning--none'
+                        : 'upload__warning--error'}>This field is required</p>
 
                             <label className="upload__label" htmlFor="season">Season</label>
                             <input className={this.validateInput(this.state.season)
@@ -135,16 +162,24 @@ class Upload extends Component {
                                 type="text"
                                 name="season"
                                 placeholder="Season"
+                                onChange={this.handleChange}
                             ></input>
+                               <p className={this.validateInput(this.state.season)
+                        ? 'upload__warning--none'
+                        : 'upload__warning--error'}>This field is required</p>
 
-                            <label className="upload__label" htmlFor="abv">ABV</label>
-                            <input className={this.validateInput(this.state.description)
+                            <label className="upload__label" htmlFor="ABV">ABV</label>
+                            <input className={this.validateInput(this.state.ABV)
                                 ? "upload__input"
                                 : "upload__input--error"}
                                 type="text"
-                                name="abv"
+                                name="ABV"
                                 placeholder="Beer ABV"
+                                onChange={this.handleChange}
                             ></input>
+                               <p className={this.validateInput(this.state.ABV)
+                        ? 'upload__warning--none'
+                        : 'upload__warning--error'}>This field is required</p>
                             <div className="upload__button-wrapper">
                             <button className="upload__submit" type="submit">Upload</button>
                             <Link className="upload__cancel" to="/">Cancel</Link>
