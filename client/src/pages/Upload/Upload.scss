@@ -1,0 +1,91 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    background-color: $color-primary;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    &__header {
+        @include MH2;
+        color: $color-accent-yellow;
+        text-align: center;
+
+        @include desktop {
+        margin: 0.75rem;
+        }
+    }
+&__form {
+    display: flex;
+    flex-direction: column;
+}
+&__label {
+    color: $color-white;
+    @include MP1;
+    
+    @include desktop {
+    margin-bottom: 0.5rem;
+    @include P1;
+    margin-left: 0.5rem;
+    }
+}
+&__input {
+    border-radius: 20px;
+    border: 1px solid $color-accent-yellow;
+    height: 1.5rem;
+    width: 100%;
+
+    &--error {
+        border: 1px solid red;    
+        border-radius: 20px;
+        height: 1.5rem;
+    }
+
+}
+&__button-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1rem 0;
+    justify-content: flex-start;
+   padding-top: 1rem;
+}
+    &__submit {
+        background-color: $color-accent-yellow;
+        border: hidden;
+        border-radius: 20px;
+        color: $color-white;
+        padding: 0.25rem 1rem;
+        &:hover {
+            background-color: rgb(255, 145, 0);
+        }
+        @include desktop {
+        padding: 0.25rem 2rem;
+        width: 8rem;
+        @include H3;
+        }
+    }
+    &__cancel {
+        color: $color-white;
+            text-decoration: none;
+            padding: 0.25rem 1rem;
+        &:hover {
+            color: $color-accent-yellow;
+        }
+
+        @include desktop {
+            padding: 0.5rem 2rem;
+
+        }
+
+    }
+
+
+}

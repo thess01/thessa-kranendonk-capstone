@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React from 'react';
+import {Link} from "react-router-dom"
 import { Component } from 'react';
+import './Upload.scss';
 
 
 class Upload extends Component {
@@ -89,7 +91,7 @@ class Upload extends Component {
 
                     <div className="upload__wrapper">
                         <form className="upload__form" onSubmit={this.handleUpload}>
-                            <label htmlFor="beerName">Beer Name</label>
+                            <label className="upload__label" htmlFor="beerName">Beer Name</label>
                             <input className={this.validateInput(this.state.beerName)
                                 ? "upload__input"
                                 : "upload__input--error"}
@@ -97,7 +99,7 @@ class Upload extends Component {
                                 name="beerName"
                                 placeholder="Beer Name"
                             ></input>
-                            <label htmlFor="beerType">Beer Type</label>
+                            <label className="upload__label" htmlFor="beerType">Beer Type</label>
                             <input className={this.validateInput(this.state.beerType)
                                 ? "upload__input"
                                 : "upload__input--error"}
@@ -105,7 +107,7 @@ class Upload extends Component {
                                 name="beerType"
                                 placeholder="Beer Type"
                             ></input>
-                            <label htmlFor="description">Description</label>
+                            <label className="upload__label" htmlFor="description">Description</label>
                             <input className={this.validateInput(this.state.description)
                                 ? "upload__input"
                                 : "upload__input--error"}
@@ -114,7 +116,7 @@ class Upload extends Component {
                                 placeholder="Beer description"
                             ></input>
 
-                            <label htmlFor="flavor">Flavor</label>
+                            <label className="upload__label" htmlFor="flavor">Flavor</label>
                             <input className={this.validateInput(this.state.flavor)
                                 ? "upload__input"
                                 : "upload__input--error"}
@@ -123,7 +125,7 @@ class Upload extends Component {
                                 placeholder="Beer flavor"
                             ></input>
 
-                            <label htmlFor="season">Season</label>
+                            <label className="upload__label" htmlFor="season">Season</label>
                             <input className={this.validateInput(this.state.season)
                                 ? "upload__input"
                                 : "upload__input--error"}
@@ -132,7 +134,7 @@ class Upload extends Component {
                                 placeholder="Season"
                             ></input>
 
-                            <label htmlFor="abv">ABV</label>
+                            <label className="upload__label" htmlFor="abv">ABV</label>
                             <input className={this.validateInput(this.state.description)
                                 ? "upload__input"
                                 : "upload__input--error"}
@@ -140,18 +142,11 @@ class Upload extends Component {
                                 name="abv"
                                 placeholder="Beer ABV"
                             ></input>
-                            <input
-                                className="button button--cancel"
-                                type="submit"
-                                name="updates"
-                                value="Cancel"
-                            />
-                            <input
-                                className="button button--submit"
-                                type="submit"
-                                name="submit"
-                                value="Submit"
-                            />
+                            <div className="upload__button-wrapper">
+                            <button className="upload__submit" type="submit">Upload</button>
+                            <Link className="upload__cancel" to="/">Cancel</Link>
+                            </div>
+                    
                         </form>
                     </div>
                 </section>
