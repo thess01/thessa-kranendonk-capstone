@@ -1,0 +1,74 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: inherit;
+    height: fit-content;
+    z-index: -1;
+    margin: 10rem 1.5rem 3rem 1.5rem;
+
+    @include desktop {
+        height: 18rem;
+          top: 200px;
+          object-position: 0px -310px;
+          border-top: 6px solid $color-accent-yellow;
+          border-bottom: 6px solid $color-accent-yellow;
+    }
+    &__input {
+        border-radius: 20px;
+        border: 1px solid $color-accent-yellow;
+        height: 2rem;
+        width: -webkit-fill-available;
+        box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        margin: 1rem 0.5rem;
+
+        @include desktop {
+            width: 55vw;
+        }
+
+    }
+    &__beers-container {
+        top: -100px;
+        position: absolute;
+        top: 28rem;
+    }
+    &__button {
+        background-color: $color-accent-yellow;
+        border: hidden;
+        border-radius: 20px;
+        color: $color-white;
+        padding: 0.25rem 1rem;
+        margin-bottom: 1.5rem;
+        width: 4rem;
+        text-decoration: none;
+        text-align: center;
+        &:hover {
+            background-color: rgb(255, 145, 0);
+        }
+        @include desktop {
+        padding: 0.25rem 2rem;
+        @include H3;
+        }
+
+    }
+    &__message {
+        position: absolute;
+        top: 8rem;
+        width: 80vw;
+        left: -100px;
+    }
+    &__error {
+        position: absolute;
+        text-align: center;
+        top: 12rem;
+        width: 80vw;
+        left: -130px;
+    }
+}

@@ -72,10 +72,10 @@ class Search extends Component {
           (
             <BeerCardList beers={this.state.beers} />
           ) : (
-            <p>Please enter a search term above</p>
+            <p className="search__message">Enter your search term above</p>
           )}
           {this.state.errorLoading && (
-            <p>There was an error loading your search results</p>
+            <p className="search__error">There was an error loading your search results</p>
           )}
         </div>
       </section>

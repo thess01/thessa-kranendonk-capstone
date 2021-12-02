@@ -13,6 +13,11 @@ const PageHeader = () => {
                             Beers
                         </NavLink>
                     </li>
+                    <li className="pageheader__list-item">
+                        <NavLink to="/search" exact className={(isActive) => "pageheader__link" + (isActive ? "--active" : "")}>
+                            Search
+                        </NavLink>
+                    </li>
 
 
                     <li className="pageheader__list-item">
