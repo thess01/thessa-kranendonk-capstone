@@ -64,7 +64,7 @@ class Search extends Component {
           value={this.state.query}
           onChange={this.handleQueryChange}
         />
-        <Link className="search__button" to={`/beers/search/${this.state.query}`}>
+        <Link className="search__button" to={`/search/${this.state.query}`}>
           Search
         </Link>
         <div className="search__beers-container">
