@@ -10,7 +10,6 @@
 
     @include desktop {
         padding-bottom: 50rem;
-        height: 100%;
     }
 
     &__wrapper {
@@ -46,7 +45,7 @@
         margin: 10rem 1rem 0 1rem;
 
         @include desktop {
-            margin-top: 24rem;
+            margin-top: 19rem;
         }
     }
 
@@ -54,6 +53,10 @@
         color: $color-accent-yellow;
         &:hover {
             font-weight: bold;
+        }
+
+        @include desktop {
+            padding-bottom: 22rem;
         }
 
     }

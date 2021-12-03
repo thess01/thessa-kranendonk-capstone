@@ -55,6 +55,7 @@
     text-decoration: none;
     color: $color-white;;
     @include MP3;
+
     &:hover {
         color: orange;
     }
@@ -73,6 +74,7 @@
 
         @include desktop {
             @include P1;
+            line-height: 3rem;
 
         }
     }
