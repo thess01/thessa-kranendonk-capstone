@@ -2,7 +2,7 @@ exports.up = function(knex) {
     return knex
         .schema
         .createTable("breweries", (table) => {
-            table.increments("id");
+            table.increments("brewery_id");
             table.string("breweryName").notNullable();
             table.string("address").notNullable();
             table.string('cityState').notNullable();
@@ -27,7 +27,7 @@ exports.up = function(knex) {
             table
                 .integer('brewery_id')
                 .unsigned()
-                .references("id")
+                .references("brewery_id")
                 .inTable("breweries")
                 .onUpdate('CASCADE')
                 .onDelete('SET NULL');

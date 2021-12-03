@@ -1,16 +1,11 @@
 const knex = require('knex')(require("../knexfile").development);
 
-
-
-
-
 exports.getAllBeers = (_req, res) => {
     knex("beers")
-    .select('beers.*', 'breweries.*')
-    .innerJoin('breweries','beers.brewery_id', 'breweries.id')
-    .then((data) => {
-        console.log(data)
-        res.json(data);
+    .join('breweries','beers.brewery_id','breweries.brewery_id')
+    .then((beers) => {
+        console.log(beers)
+        res.json(beers);
     })
     .catch((err) => {
         res.status(500).json({
@@ -25,7 +20,7 @@ exports.getOneBeer = (req, res) => {
     knex("beers")
    
     .where({"beers.id": req.params.id})
-    .join('breweries','beers.brewery_id','breweries.id')
+    .join('breweries','beers.brewery_id','breweries.brewery_id')
     .then(beer => {
         if(!beer.length) {
             return res.status(404).json({
@@ -41,6 +36,12 @@ exports.getOneBeer = (req, res) => {
             res.json(beer[0]);
         })
     }
+    })
+    .catch((err) => {
+        res.status(500).json({
+            errorMessage: "Unable to retrieve beer from database",
+            error: err
+        })
     })
 }
 

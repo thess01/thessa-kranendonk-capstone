@@ -6,19 +6,10 @@ const knex = require('knex')(require("../knexfile").development);
 const breweriesController = require('../controllers/breweries')
 
 
-let breweries =
-        knex('breweries')
-            .then((data) => {
-                breweries = data
-            })
-
 router.get('/breweries', breweriesController.getOneBrewery);
 
 router.get('/upload', authorize, (req, res) => {
-    
-
     const breweryNameFromToken = req.decoded.breweryName;
-
     const foundBrewery = breweries.find(brewery => brewery.breweryName === breweryNameFromToken);
 
     if (!foundBrewery) {
@@ -32,6 +23,15 @@ router.get('/upload', authorize, (req, res) => {
     })
 })
 
+let breweries = [];
+
+knex('breweries')
+    // .where({ "breweryName": breweryName})
+    .then((data) => {
+        console.log(data)
+      breweries = data;
+    })
+
 
 router.post('/login', (req, res) => {
     const { breweryName, password } = req.body;
@@ -41,29 +41,20 @@ router.post('/login', (req, res) => {
             message: "Login requires brewery name and password"
         })
     }
+        
+    const foundBrewery = breweries.find(brewery => brewery.breweryName === breweryName)
 
-    knex('breweries')
-        .where({ "breweryName": breweryName })
-        .then((data) => {
-            if (!data.length) {
-                return res.status(400).json({
-                    message: "Brewery does not exist"
-                })
-            }
-        })
+        if (!foundBrewery) {
+            return res.status(404).json({
+                message: "Brewery does not exist"
+            })
+        }
 
-    // const foundBrewery = breweries.find(brewery => brewery.breweryName === breweryName);
-
-    // if (!foundBrewery) {
-    //     return res.status(400).json({
-    //         message: "Brewery does not exist"
-    //     })
-    // }
-    // if (foundBrewery.password !== password) {
-    //     return res.status(400).json({
-    //         message: "Password does not match"
-    //     })
-    // }
+        if (foundBrewery.password !== password) {
+            return res.status(400).json({
+                message: "Password does not match"
+            })
+        }
 
     const token = jwt.sign(
         { breweryName: breweryName },

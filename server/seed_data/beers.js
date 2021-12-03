@@ -9,7 +9,7 @@ module.exports =[
         season: "fall",
         ABV: "5.5%",
         flavor: "Citrus",
-        image: "http://localhost:8080/public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498891/Used/pexels-vin%C3%ADcius-caricatte-4243302_noireq.jpg",
         brewery_id: 2
     },
     {
@@ -21,7 +21,7 @@ module.exports =[
         season: "not specified",
         ABV: "6.1%",
         flavor: "Citrus",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498882/Used/pexels-dorte-237774_lrh2ge.jpg",
         brewery_id: 1
     },
     {
@@ -33,7 +33,7 @@ module.exports =[
         season: "fall",
         ABV: "5.8%",
         flavor: "Mango, Pineapple, Peach",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498880/Used/pexels-elevate-1267682_fwgngx.jpg",
         brewery_id: 4
     },
     {
@@ -45,7 +45,7 @@ module.exports =[
         season: "spring",
         ABV: "4.8%",
         flavor: "Citrus, Caramel",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638497224/Used/beer_4_csboul.jpg",
         brewery_id: 12
     },
     {
@@ -57,7 +57,7 @@ module.exports =[
         season: "fall",
         ABV: "6.1%",
         flavor: "Mango, Citrus",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638497225/Used/beer_1_fffnlh.jpg",
         brewery_id: 13
     },
     {
@@ -69,7 +69,7 @@ module.exports =[
         season: "fall",
         ABV: "5.1%",
         flavor: "Berry, Melon, Banana",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498890/Used/pexels-evgeniy-alekseyev-7418939_mon8hi.jpg",
         brewery_id: 11
     },
     {
@@ -81,7 +81,7 @@ module.exports =[
         season: "fall",
         ABV: "5.6%",
         flavor: "Pineapple, Apricot, Lychee",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498896/Used/kanan-khasmammadov-8pUytjGU-E0-unsplash_oh0ul2.jpg",
         brewery_id: 9
     },
     {
@@ -93,7 +93,7 @@ module.exports =[
         season: "fall",
         ABV: "6.6%",
         flavor: "Citrus, Caramel",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498890/Used/pexels-rodnae-productions-5737367_bjju4o.jpg",
         brewery_id: 7
     },
     {
@@ -105,7 +105,7 @@ module.exports =[
         season: "summer",
         ABV: "5.0%",
         flavor: "Lemon, Melon, Honey",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498880/Used/pexels-cottonbro-5530264_qbz8br.jpg",
         brewery_id: 2
     },
     {
@@ -117,7 +117,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.2%",
         flavor: "Citrus, Mandarin",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498880/Used/pexels-jess-low-2574851_ijnq75.jpg",
         brewery_id: 1
     },
     {
@@ -129,7 +129,7 @@ module.exports =[
         season: "summer",
         ABV: "4.2%",
         flavor: "Baked Bread",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498889/Used/pexels-pavel-danilyuk-5858194_mlz6wz.jpg",
         brewery_id: 3
     },
     {
@@ -141,7 +141,7 @@ module.exports =[
         season: "summer",
         ABV: "4.0%",
         flavor: "Citrus, Biscuit",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498893/Used/jon-parry-C8eSYwQkwHw-unsplash_pxlx1r.jpg",
         brewery_id: 5
     },
     {
@@ -153,7 +153,7 @@ module.exports =[
         season: "winter",
         ABV: "5.9%",
         flavor: "Coffee, Burned Sugar, Chocolate",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498894/Used/josh-olalde-YjTtHDe-5Z0-unsplash_sjquib.jpg",
         brewery_id: 6
     },
     {
@@ -165,7 +165,7 @@ module.exports =[
         season: "winter",
         ABV: "6.3%",
         flavor: "Coffee, Nuts, Chocolate",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498894/Used/devon-hawkins-8dhhg9QIpw0-unsplash_naq5hq.jpg",
         brewery_id: 3
     },
     {
@@ -177,7 +177,7 @@ module.exports =[
         season: "winter",
         ABV: "4.5%",
         flavor: "Coffee, Nuts, Chocolate",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498891/Used/pexels-erik-mclean-4850282_yw4ytz.jpg",
         brewery_id: 4 
     },
     {
@@ -189,7 +189,7 @@ module.exports =[
         season: "winter",
         ABV: "5.8%",
         flavor: "Chocolate",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498881/Used/pexels-caio-59150_yighnu.jpg",
         brewery_id: 8
     },
     {
@@ -201,7 +201,7 @@ module.exports =[
         season: "winter",
         ABV: "6.4%",
         flavor: "Malty, Smoky",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498880/Used/pexels-tim-durben-1025113_1_drh1lr.jpg",
         brewery_id: 11
     },
     {
@@ -213,7 +213,7 @@ module.exports =[
         season: "winter",
         ABV: "6.2%",
         flavor: "Chocolate, Coffee",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498878/Used/pexels-helena-lopes-1796698_nlpfde.jpg",
         brewery_id: 12
     },
     {
@@ -225,7 +225,7 @@ module.exports =[
         season: "winter",
         ABV: "5.2%",
         flavor: "Chocolate",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498878/Used/pexels-elevate-1267363_nznryd.jpg",
         brewery_id: 16
     },
     {
@@ -237,7 +237,7 @@ module.exports =[
         season: "not specified",
         ABV: "4.2%",
         flavor: "Grapefruit, Honey, Caramel",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498879/Used/pexels-anete-lusina-5238428_f2dgad.jpg",
         brewery_id: 16
     },
     {
@@ -249,7 +249,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.9%",
         flavor: "Citrus, Hops",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498883/Used/pexels-streetwindy-2606028_kipnpy.jpg",
         brewery_id: 5
     },
     {
@@ -261,7 +261,7 @@ module.exports =[
         season: "not specified",
         ABV: "6.9%",
         flavor: "Grapefruit, Caramel",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498883/Used/pexels-rodnae-productions-8342012_nehpso.jpg",
         brewery_id: 7
     },
     {
@@ -273,7 +273,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.4%",
         flavor: "Oatmeal",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498886/Used/pexels-los-muertos-crew-8477416_g2cnz7.jpg",
         brewery_id: 6
     },
     {
@@ -285,7 +285,7 @@ module.exports =[
         season: "summer",
         ABV: "6.4%",
         flavor: "Tangerine, Peach, Cedar",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498888/Used/pexels-cup-of-couple-7660472_suqzps.jpg",
         brewery_id: 6
     },
     {
@@ -297,7 +297,7 @@ module.exports =[
         season: "summer",
         ABV: "4.4%",
         flavor: "Lemon, Guava, Mango",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498896/Used/louis-hansel-dfMWjLCXoSc-unsplash_lnrtmw.jpg",
         brewery_id: 10
     },
     {
@@ -309,7 +309,7 @@ module.exports =[
         season: "summer",
         ABV: "5.6%",
         flavor: "Coconut, Passionfruit",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498894/Used/jon-parry-Qk5c2bEnzEM-unsplash_bsqpeh.jpg",
         brewery_id: 11
     },
     {
@@ -321,7 +321,7 @@ module.exports =[
         season: "summer",
         ABV: "5.8%",
         flavor: "Orange, Grapefruit",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498889/Used/pexels-karolina-grabowska-4968337_gbgpxe.jpg",
         brewery_id: 12
     },
     {
@@ -333,7 +333,7 @@ module.exports =[
         season: "summer",
         ABV: "4.8%",
         flavor: "Plum, Boysenberry",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498892/Used/pexels-gustavo-santana-5860684_g5xsqf.jpg",
         brewery_id: 9
     },
     {
@@ -345,7 +345,7 @@ module.exports =[
         season: "summer",
         ABV: "4.3%",
         flavor: "Clementine",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498886/Used/pexels-rachel-claire-5531045_laxtrc.jpg",
         brewery_id: 15
     },
     {
@@ -357,7 +357,7 @@ module.exports =[
         season: "not specified",
         ABV: "6.5%",
         flavor: "Pineapple, Citrus",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498880/Used/pexels-cottonbro-5530264_qbz8br.jpg",
         brewery_id: 5
 
     },
@@ -370,7 +370,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.7%",
         flavor: "Pineapple, Grapefruit, Orange",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498879/Used/pexels-anete-lusina-5238428_f2dgad.jpg",
         brewery_id: 7
 
     },
@@ -383,7 +383,7 @@ module.exports =[
         season: "fall",
         ABV: "6.4%",
         flavor: "Mango, Citrus",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498884/Used/pexels-engin-akyurt-3356408_nmhbln.jpg",
         brewery_id: 8
 
     },
@@ -396,7 +396,7 @@ module.exports =[
         season: "fall",
         ABV: "4.4%",
         flavor: "Caramel, Toffee",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498891/Used/pexels-jesus-arias-4623722_sf7pvg.jpg",
         brewery_id: 14
 
     },
@@ -409,7 +409,7 @@ module.exports =[
         season: "not specified",
         ABV: "5.0%",
         flavor: "Melon",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498892/Used/pexels-daniel-reche-6570569_xbgird.jpg",
         brewery_id: 16
 
     },
@@ -422,7 +422,7 @@ module.exports =[
         season: "not specified",
         ABV: "7.2%",
         flavor: "Melon, Honey, Nuts",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498893/Used/josh-olalde-b0EBo7iwLTQ-unsplash_xkiipt.jpg",
         brewery_id: 14
 
     },
@@ -435,7 +435,7 @@ module.exports =[
         season: "winter",
         ABV: "6.1%",
         flavor: "Caramel, Sea Salt",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498891/Used/pexels-erik-mclean-4850282_yw4ytz.jpg",
         brewery_id: 13
 
     },
@@ -448,7 +448,7 @@ module.exports =[
         season: "winter",
         ABV: "6.1%",
         flavor: "Coffee, Chocolate",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498888/Used/pexels-roman-odintsov-5320333_ijh9rm.jpg",
         brewery_id: 10
 
     },
@@ -461,7 +461,7 @@ module.exports =[
         season: "winter",
         ABV: "4.8%",
         flavor: "Chocolate, Cinnamon, Vanilla, Peppers",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498883/Used/pexels-elevate-1267356_vaeokf.jpg",
         brewery_id: 3
     },
     {
@@ -473,7 +473,7 @@ module.exports =[
         season: "winter",
         ABV: "6.0%",
         flavor: "Grapes, Cocoa, Molasses, Figs",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638502878/pexels-cottonbro-5530252_of8khb.jpg",
         brewery_id: 7
     },
     {
@@ -485,7 +485,7 @@ module.exports =[
         season: "spring",
         ABV: "5.5%",
         flavor: "Grapefruit, Lemon, Pineapple",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498892/Used/bence-boros-8T5UAV6KkZA-unsplash_s4jcoy.jpg",
         brewery_id: 11
     },
     {
@@ -497,7 +497,7 @@ module.exports =[
         season: "spring",
         ABV: "5.8%",
         flavor: "Grapefruit, Tangering, Peach",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498893/Used/wil-stewart-UErWoQEoMrc-unsplash_d34le0.jpg",
         brewery_id: 15
     },
     {
@@ -509,7 +509,7 @@ module.exports =[
         season: "spring",
         ABV: "4.3%",
         flavor: "Citrus, Passionfruit, Pineapple",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498892/Used/pexels-daniel-reche-6570266_ep4rtf.jpg",
         brewery_id: 6
     },
     {
@@ -521,7 +521,7 @@ module.exports =[
         season: "summer",
         ABV: "5.1%",
         flavor: "Lime, Pineapple, Orange, Raspberry",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498896/Used/louis-hansel-dfMWjLCXoSc-unsplash_lnrtmw.jpg",
         brewery_id: 16
     },
     {
@@ -533,7 +533,7 @@ module.exports =[
         season: "summer",
         ABV: "4.1%",
         flavor: "Citrus, Guava",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638502878/pexels-alexandr-podvalny-1009068_ixkamr.jpg",
         brewery_id: 8
     },
     {
@@ -545,7 +545,7 @@ module.exports =[
         season: "spring",
         ABV: "5.2%",
         flavor: "Citrus, Mango, Apricot",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498884/Used/pexels-cottonbro-5537953_n0v7lu.jpg",
         brewery_id: 14
     }
 ];

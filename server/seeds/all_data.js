@@ -9,9 +9,6 @@ exports.seed = function(knex) {
     .then(() => {
       return knex("breweries").insert(breweriesData);
     })
-    // .then(() => {
-    //   return knex("inventories").del();
-    // })
     .then(() => {
         return knex("foods").insert(foodsData);
       })

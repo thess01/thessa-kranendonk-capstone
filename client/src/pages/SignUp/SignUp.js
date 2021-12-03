@@ -51,7 +51,7 @@ class SignUp extends Component {
         })
         .then(res => {
             console.log(res)
-            // history.push('/current')
+            this.props.history.push('/current')
         })
         .catch((error) => {
             console.log(error);
