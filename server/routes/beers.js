@@ -18,6 +18,7 @@ knex("beers")
 })
 .catch((err) => res.status(400).send("Error retrieving beers"))
 
+// wild card search with like keyword -- 
 
 router.get('/search/:seachQuery', (req, res) => {
     let filteredBeers = beers.filter(beer => beer.beerType.toLowerCase().includes(req.params.seachQuery))
