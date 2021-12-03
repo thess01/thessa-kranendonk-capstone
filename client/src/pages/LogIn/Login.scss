@@ -66,18 +66,7 @@
     justify-content: flex-start;
 }
     &__submit {
-        background-color: $color-accent-yellow;
-        border: hidden;
-        border-radius: 20px;
-        color: $color-white;
-        padding: 0.25rem 1rem;
-        &:hover {
-            background-color: rgb(255, 145, 0);
-        }
-        @include desktop {
-        padding: 0.25rem 2rem;
-        @include H3;
-        }
+      @include button;
     }
     &__signup {
         color: $color-white;
@@ -88,7 +77,7 @@
         }
 
         @include desktop {
-            padding: 0.5rem 2rem;
+            padding: 0.75rem 2rem;
 
         }
 
