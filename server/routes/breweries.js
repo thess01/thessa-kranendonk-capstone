@@ -19,7 +19,7 @@ router.get('/upload', authorize, (req, res) => {
     }
     return res.json({
         breweryName: foundBrewery.breweryName,
-        brewery_id: foundBrewery.id
+        brewery_id: foundBrewery.brewery_id
     })
 })
 

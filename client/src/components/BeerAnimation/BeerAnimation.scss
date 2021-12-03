@@ -38,6 +38,7 @@
     width: 3rem;
 
     @include desktop {
+        padding-top: 1.5rem;
         width: 6rem;
     }
 }

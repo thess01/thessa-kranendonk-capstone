@@ -48,6 +48,7 @@ exports.getOneBeer = (req, res) => {
 
 exports.postBeer = (req, res) => {
     knex("beers")
+    .join('breweries','beers.brewery_id','breweries.brewery_id')
     .insert(req.body)
     .then((data) => {
         res.status(201).json(data);

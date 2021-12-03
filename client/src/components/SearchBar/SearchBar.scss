@@ -12,13 +12,12 @@
     width: inherit;
     min-height: fit-content;
     z-index: -1;
-    margin: 10rem 1.5rem 0rem 1.5rem;
-    padding-bottom: 15rem;
+    margin: 25rem 1.5rem 0rem 1.5rem;
+
 
     @include desktop {
-    height: 18rem;
-    margin-top: 13rem;
-    padding-bottom: 22rem;
+    margin-top: 17rem;
+
        
     }
     &__title {
@@ -42,10 +41,12 @@
 
     }
     &__beers-container {
-        top: -100px;
-        position: absolute;
-        top: 28rem;
         min-height: fit-content;
+        margin-top: -11rem;
+
+        @include desktop {
+            min-height: 100vh;
+        }
     }
     &__button {
         background-color: $color-accent-yellow;

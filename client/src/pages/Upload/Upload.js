@@ -42,7 +42,7 @@ class Upload extends Component {
             ABV: e.target.ABV.value,
             flavor: e.target.flavor.value,
             brewery_id: this.state.breweryInfo.brewery_id,
-            image: "/beer_1.jpg"
+            image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498894/Used/josh-olalde-YjTtHDe-5Z0-unsplash_sjquib.jpg"
 
         })
             .then(res => {

@@ -9,7 +9,7 @@ import "./SingleBeerPage.scss";
 class SingleBeerPage extends Component {
   state = {
     selectedBeer: null,
-    selectedBeerComments: null,
+    selectedBeerComments: [],
   };
 
   componentDidMount() {
@@ -78,6 +78,9 @@ class SingleBeerPage extends Component {
       );
     }
 
+
+    
+
     return (
       <>
         <BeerDetails 
@@ -88,14 +91,14 @@ class SingleBeerPage extends Component {
             dish={dish.dish}
             cuisine={dish.cuisine}
             beerType={dish.beerType} />
-        ))}
+        ))} 
         
 
         <CommentsForm addComment={this.addComment}/>
         
         
-        {selectedBeerComments && 
-        selectedBeerComments.map((comment) => (
+        {/* {selectedBeerComments &&  */}
+      {selectedBeerComments.map((comment) => (
             <CommentsList 
             key={comment.id}
             comment={comment.comment}
@@ -107,5 +110,6 @@ class SingleBeerPage extends Component {
     );
   }
 }
+
 
 export default SingleBeerPage;
