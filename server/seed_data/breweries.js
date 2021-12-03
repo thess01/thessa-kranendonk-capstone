@@ -1,6 +1,6 @@
 module.exports = [
 	{
-		id: 1,
+		brewery_id: 1,
 		breweryName: "Collective Arts Brewing",
 		address: "503 Burlington Ave",
 		cityState: "Hamilton, ON",
@@ -10,7 +10,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 2,
+		brewery_id: 2,
 		breweryName: "Blood Brothers Brewing",
 		address: "1414 Main St.",
 		cityState: "Toronto, ON",
@@ -20,7 +20,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 3,
+		brewery_id: 3,
 		breweryName: "Lake of Bays",
 		address: "913 Wellington Ave",
 		cityState: "Huntsville, ON",
@@ -30,17 +30,17 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 4,
+		brewery_id: 4,
 		breweryName: "Hippie Brews",
 		address: "128 Alger St SE",
-		cityState: "Grand Rapids, MI",
+		cityState: "Grand Ra	brewery_ids, MI",
 		country: "USA",
 		phone: "601-351-3456",
 		email: "admin@hippie.com",
 		password: "bestBrewery123"
 	},
 	{
-		id: 5,
+		brewery_id: 5,
 		breweryName: "Indie Brewing Company",
 		address: "2301 7th St.",
 		cityState: "Los Angeles, CA",
@@ -50,7 +50,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 6,
+		brewery_id: 6,
 		breweryName: "Bell's Brewery",
 		address: "828 Trafalger Road",
 		cityState: "San Francisco, CA",
@@ -60,7 +60,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 7,
+		brewery_id: 7,
 		breweryName: "Furnace Room",
 		address: "1A Elgin St.",
 		cityState: "Georgetown, ON",
@@ -70,7 +70,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 8,
+		brewery_id: 8,
 		breweryName: "Brightwood Brewing",
 		address: "35 Portland St.",
 		cityState: "Halifax, NS",
@@ -80,7 +80,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 9,
+		brewery_id: 9,
 		breweryName: "Horns of Odin Craft Brewery",
 		address: "1372 Peters Rd",
 		cityState: "Mount Steward, PE",
@@ -90,7 +90,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 10,
+		brewery_id: 10,
 		breweryName: "Ellipsis Brewing",
 		address: "7500 Tropic Blvd",
 		cityState: "Orlando, FL",
@@ -100,7 +100,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 11,
+		brewery_id: 11,
 		breweryName: "Megaton Brewing",
 		address: "Russell Palmer Rd",
 		cityState: "Houston, TX",
@@ -110,7 +110,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 12,
+		brewery_id: 12,
 		breweryName: "Snake River Brewing",
 		address: "7286 S Yosemite St",
 		cityState: "Yellowstone, CO",
@@ -120,7 +120,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 13,
+		brewery_id: 13,
 		breweryName: "Long Brewing LLC",
 		address: "29380 NE Owls Ln",
 		cityState: "Portland, OR",
@@ -130,7 +130,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 14,
+		brewery_id: 14,
 		breweryName: "Townsite Brewing",
 		address: "5824 Ash Ave",
 		cityState: "Powell River, BC",
@@ -140,7 +140,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 15,
+		brewery_id: 15,
 		breweryName: "Granville Island Brewing",
 		address: "1441 Cartwright St.",
 		cityState: "Vancouver, BC",
@@ -150,7 +150,7 @@ module.exports = [
 		password: "bestBrewery123"
 	},
 	{
-		id: 16,
+		brewery_id: 16,
 		breweryName: "Farmhouse Brewing",
 		address: "6385 Lickman Rd",
 		cityState: "Chilliwack, BC",

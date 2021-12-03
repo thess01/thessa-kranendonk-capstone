@@ -1,12 +1,12 @@
 import "./BeerDetails.scss";
-import image from "../../assets/images/beer_1.jpg";
+// import image from "../../assets/images/beer_1.jpg";
 
 const BeerDetails = ({beer}) => {
   console.log({beer});
   return (
     <div className="beer-details">
       <div className="beer-details__background"></div>
-     <img className="beer-details__image" src={image} alt={beer.beerName}/>
+     <img className="beer-details__image" src={beer.image} alt={beer.beerName}/>
       <div className="beer-details__brewery-wrap">
         <h4 className="beer-details__beer-name">{beer.beerName}</h4>
         <p className="beer-details__brewery-info">by {beer.breweryName}, {beer.cityState}, {beer.country}</p>

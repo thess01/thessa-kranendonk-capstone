@@ -1,8 +1,8 @@
 import "./BeerCard.scss";
 import { Link } from "react-router-dom";
-import image from "../../assets/images/beer_1.jpg";
+// import image from "../../assets/images/beer_1.jpg";
 
-export default function BeerCard({ id, beerName, beerType, breweryName, cityState, country }) {
+export default function BeerCard({ id, beerName, image, beerType, breweryName, cityState, country }) {
   return (
     <>
       <ul className="beercard">

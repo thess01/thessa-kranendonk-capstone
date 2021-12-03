@@ -129,7 +129,7 @@ module.exports =[
         season: "summer",
         ABV: "4.2%",
         flavor: "Baked Bread",
-        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498892/Used/bence-boros-8T5UAV6KkZA-unsplash_s4jcoy.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498889/Used/pexels-pavel-danilyuk-5858194_mlz6wz.jpg",
         brewery_id: 3
     },
     {
@@ -485,7 +485,7 @@ module.exports =[
         season: "spring",
         ABV: "5.5%",
         flavor: "Grapefruit, Lemon, Pineapple",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498892/Used/bence-boros-8T5UAV6KkZA-unsplash_s4jcoy.jpg",
         brewery_id: 11
     },
     {
@@ -497,7 +497,7 @@ module.exports =[
         season: "spring",
         ABV: "5.8%",
         flavor: "Grapefruit, Tangering, Peach",
-        image: "../public/beer_1.jpg",
+        image: "https://res.cloudinary.com/dybcfr6cd/image/upload/v1638498893/Used/wil-stewart-UErWoQEoMrc-unsplash_d34le0.jpg",
         brewery_id: 15
     },
     {
