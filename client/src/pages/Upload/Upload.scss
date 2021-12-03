@@ -6,26 +6,37 @@
 
 .upload {
     display: flex;
-    flex-direction: column;
-    width: 60vw;
-    background-color: $color-primary;
-    padding: 1rem 2rem;
-    margin: 0 auto;
-    margin-top: 10rem;
-    margin-bottom: 3rem;;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    padding-bottom: 10rem;
 
     @include desktop {
-        margin-top: 18.5rem;
-        margin-bottom: 3rem;
+        padding-bottom: 50rem;
+        height: 100%;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        background-color: $color-primary;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        margin-top: 10rem;
+        margin-bottom: 3rem;;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    
+        @include desktop {
+            margin-top: 18.5rem;
+            margin-bottom: 3rem;
+        }
+
     }
 
     &__message-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 3rem;;
+        // margin-bottom: 3rem;
     }
     &__upload-message {
         margin-top: 10rem;

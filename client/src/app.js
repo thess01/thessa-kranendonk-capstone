@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./pages/Home/Home"
 import PageFooter from "./components/PageFooter/PageFooter";
 import PageHeader from "./components/PageHeader/PageHeader";
-import HeaderImageBar from "./components/HeaderImageBar/HeaderImage";
+import HeaderImageBar from "./components/HeaderImageBar/HeaderImageBar";
 import SingleBeerPage from "./pages/SingleBeerPage/SingleBeerPage";
 import SearchBar from './components/SearchBar/SearchBar'
 import Upload from "./pages/Upload/Upload";
@@ -33,8 +33,9 @@ const App = () => {
           <Route path="/login" component={LogIn} />
 
         </Switch>
+        <PageFooter />
       </main>
-      <PageFooter />
+      
     </>
   );
 };

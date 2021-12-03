@@ -51,26 +51,27 @@ class LogIn extends Component {
     render() {
     return (
         <div className="login">
-            <h1 className="login__header">Brewery Log In</h1>
-            <form onSubmit={this.handleLogIn}>
-                <Input label="Brewery Name" name="breweryName" type="text" onChange={this.handleChange} className={this.validateInput(this.state.breweryName)
-                ? "login__input"
-                : "login__input--error"}/>
-                <p className={this.validateInput(this.state.breweryName)
-                ? "login__warning--none"
-                : "login__warning--error"}>This field is required</p>
-
-                <Input label="Password" name="password" type="password"  onChange={this.handleChange} className={this.validateInput(this.state.password)
-                ? "login__input"
-                : "login__input--error"}/>
-                <p className={this.validateInput(this.state.password)
-                ? "login__warning--none"
-                : "login__warning--error"}>This field is required</p>
-                <div className="login__button-wrapper">
-                <button className="login__submit" type="submit">Log In</button>
-                <Link className="login__signup" to="/signup">Sign Up</Link>
-                </div>
-            </form>
+            <div class="login__wrapper">
+                <h1 className="login__header">Brewery Log In</h1>
+                <form onSubmit={this.handleLogIn}>
+                    <Input label="Brewery Name" name="breweryName" type="text" onChange={this.handleChange} className={this.validateInput(this.state.breweryName)
+                    ? "login__input"
+                    : "login__input--error"}/>
+                    <p className={this.validateInput(this.state.breweryName)
+                    ? "login__warning--none"
+                    : "login__warning--error"}>This field is required</p>
+                    <Input label="Password" name="password" type="password"  onChange={this.handleChange} className={this.validateInput(this.state.password)
+                    ? "login__input"
+                    : "login__input--error"}/>
+                    <p className={this.validateInput(this.state.password)
+                    ? "login__warning--none"
+                    : "login__warning--error"}>This field is required</p>
+                    <div className="login__button-wrapper">
+                    <button className="login__submit" type="submit">Log In</button>
+                    <Link className="login__signup" to="/signup">Sign Up</Link>
+                    </div>
+                </form>
+            </div>
            
         </div>
     )

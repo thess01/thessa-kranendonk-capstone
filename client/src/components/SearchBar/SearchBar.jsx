@@ -21,7 +21,7 @@ class Search extends Component {
     axios
       .get(`/api/beers/search/${query}`)
       .then((response) => {
-          console.log(response.data)
+        console.log(response.data)
         this.setState({
           errorLoading: false,
           query: query,
@@ -29,6 +29,7 @@ class Search extends Component {
         });
       })
       .catch((error) => {
+    
         this.setState({
           errorLoading: true,
         });

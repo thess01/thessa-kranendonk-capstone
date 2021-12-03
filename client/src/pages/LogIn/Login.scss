@@ -5,17 +5,26 @@
 @use '../../styles/partials/global' as *;
 
 .login {
-    width: 60vw;
-    background-color: $color-primary;
-    padding: 1rem 2rem;
-    margin: 0 auto;
-    margin-top: 10rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    display: flex;
+    padding-bottom: 12rem;
+
+    @include desktop {
+        padding-bottom: 20rem;
+    }
+
+    &__wrapper {
+        width: 60vw;
+        background-color: $color-primary;
+        padding: 1rem 2rem;
+        margin: 10rem auto 0 auto;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    
 
     @include desktop {
         margin-top: 18.5rem;
         margin-bottom: 3rem;
+    }
     }
     &__header {
         @include MH2;

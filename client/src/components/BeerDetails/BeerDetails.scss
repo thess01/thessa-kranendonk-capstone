@@ -87,9 +87,7 @@
         width: 85vw;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0,0,0,0.6);
-        &:hover {
-            opacity: 0.5;
-        }
+        object-fit: fill;
 
         @include desktop {
             width: 65vw;

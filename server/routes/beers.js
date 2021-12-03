@@ -12,6 +12,7 @@ port = process.env.port;
 let beers = [];
 
 knex("beers")
+.join('breweries','beers.brewery_id','breweries.brewery_id')
 .then((data) => {
     beers = data;
 })
