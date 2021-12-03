@@ -8,7 +8,8 @@ function CommentsList(props) {
         <div className="comments-display__user-info">
           <h3 className="comments-display__name">{props.name}</h3>
           <p className="comments-display__date">
-            {new Date(props.timestamp).toLocaleDateString()}
+            {/* {new Date(props.timestamp).toLocaleDateString()} */}
+            {props.updated_at}
           </p>
         </div>
         <p className="comments-display__comment">{props.comment}</p>
