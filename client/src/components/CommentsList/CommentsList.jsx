@@ -1,4 +1,5 @@
 import "./CommentsList.scss";
+var moment = require('moment');
 
 function CommentsList(props) {
   return (
@@ -8,8 +9,7 @@ function CommentsList(props) {
         <div className="comments-display__user-info">
           <h3 className="comments-display__name">{props.name}</h3>
           <p className="comments-display__date">
-            {/* {new Date(props.timestamp).toLocaleDateString()} */}
-            {props.updated_at}
+          {moment(props.timestamp).fromNow()} 
           </p>
         </div>
         <p className="comments-display__comment">{props.comment}</p>

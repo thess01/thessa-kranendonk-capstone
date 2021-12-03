@@ -29,7 +29,18 @@ class SingleBeerPage extends Component {
       });
   }
 
-
+  getBeerById = (id) => {
+    axios.get(`/api/beers/${id}/comments`)
+    .then((response) => {
+      this.setState({
+        selectedBeerComments: response.data
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
+  
   addComment = (e) => {
     e.preventDefault();
 
@@ -43,13 +54,17 @@ class SingleBeerPage extends Component {
     let beerId = this.props.match.params.id;
     axios.post(`/api/beers/${beerId}`, newComment)
     .then((response) => {
-        this.setState({
-          selectedBeerComments: response.data,
-        })
+
+      let beerId = this.props.match.params.id;
+      this.getBeerById(beerId);
+
     })
+    .catch((error) => {
+      console.log("Can't post comment")
+    })
+    e.target.comment.value = "";
   }
 
- 
 
   render() {
     const { selectedBeer, selectedBeerComments} = this.state;
