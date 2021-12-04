@@ -14,7 +14,8 @@ class Upload extends Component {
         flavor: '',
         ABV: '',
         beerType: '',
-        description: ''
+        description: '',
+        isValid: true
     }
 
 
@@ -23,13 +24,6 @@ class Upload extends Component {
           [event.target.name]: event.target.value,
         });
       };
-
-    validateInput = (input) => {
-        if (!input) {
-            return false;
-        }
-        return true;
-    };
 
     handleUpload = (e) => {
         e.preventDefault();
@@ -56,12 +50,24 @@ class Upload extends Component {
     }
 
     validateForm = () => {
-        if (!this.state.beerName) return false;
-        if (!this.state.description) return false;
-        if (!this.state.beerType) return false;
-        if (!this.state.season) return false;
-        if (!this.state.flavor) return false;
-        if (!this.state.ABV) return false;
+        if (!this.state.beerName) {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.description) {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.beerType) {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.season) {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.flavor) {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.ABV) {
+            this.setState({isValid: false})
+            return false};
         return true;
     };
 
@@ -104,7 +110,7 @@ class Upload extends Component {
                         <div className="upload__wrapper-form">
                             <form className="upload__form" onSubmit={this.handleUpload}>
                                 <label className="upload__label" htmlFor="beerName">Beer Name</label>
-                                <input className={this.validateInput(this.state.beerName)
+                                <input className={this.state.isValid
                                     ? "upload__input"
                                     : "upload__input--error"}
                                     type="text"
@@ -112,11 +118,11 @@ class Upload extends Component {
                                     placeholder="Beer Name"
                                     onChange={this.handleChange}
                                 ></input>
-                                <p className={this.validateInput(this.state.beerName)
+                                <p className={this.state.isValid
                                         ? 'upload__warning--none'
                                         : 'upload__warning--error'}>This field is required</p>
                                 <label className="upload__label" htmlFor="beerType">Beer Type</label>
-                                <input className={this.validateInput(this.state.beerType)
+                                <input className={this.state.isValid
                                     ? "upload__input"
                                     : "upload__input--error"}
                                     type="text"
@@ -124,11 +130,11 @@ class Upload extends Component {
                                     placeholder="Beer Type"
                                     onChange={this.handleChange}
                                 ></input>
-                                   <p className={this.validateInput(this.state.beerType)
+                                   <p className={this.state.isValid
                             ? 'upload__warning--none'
                             : 'upload__warning--error'}>This field is required</p>
                                 <label className="upload__label" htmlFor="description">Description</label>
-                                <input className={this.validateInput(this.state.description)
+                                <input className={this.state.isValid
                                     ? "upload__input"
                                     : "upload__input--error"}
                                     type="text"
@@ -136,11 +142,11 @@ class Upload extends Component {
                                     placeholder="Beer description"
                                     onChange={this.handleChange}
                                 ></input>
-                                   <p className={this.validateInput(this.state.description)
+                                   <p className={this.state.isValid
                             ? 'upload__warning--none'
                             : 'upload__warning--error'}>This field is required</p>
                                 <label className="upload__label" htmlFor="flavor">Flavor</label>
-                                <input className={this.validateInput(this.state.flavor)
+                                <input className={this.state.isValid
                                     ? "upload__input"
                                     : "upload__input--error"}
                                     type="text"
@@ -148,11 +154,11 @@ class Upload extends Component {
                                     placeholder="Beer flavor"
                                     onChange={this.handleChange}
                                 ></input>
-                                   <p className={this.validateInput(this.state.flavor)
+                                   <p className={this.state.isValid
                             ? 'upload__warning--none'
                             : 'upload__warning--error'}>This field is required</p>
                                 <label className="upload__label" htmlFor="season">Season</label>
-                                <input className={this.validateInput(this.state.season)
+                                <input className={this.state.isValid
                                     ? "upload__input"
                                     : "upload__input--error"}
                                     type="text"
@@ -160,11 +166,11 @@ class Upload extends Component {
                                     placeholder="Season"
                                     onChange={this.handleChange}
                                 ></input>
-                                   <p className={this.validateInput(this.state.season)
+                                   <p className={this.state.isValid
                             ? 'upload__warning--none'
                             : 'upload__warning--error'}>This field is required</p>
                                 <label className="upload__label" htmlFor="ABV">ABV</label>
-                                <input className={this.validateInput(this.state.ABV)
+                                <input className={this.state.isValid
                                     ? "upload__input"
                                     : "upload__input--error"}
                                     type="text"
@@ -172,7 +178,7 @@ class Upload extends Component {
                                     placeholder="Beer ABV"
                                     onChange={this.handleChange}
                                 ></input>
-                                   <p className={this.validateInput(this.state.ABV)
+                                   <p className={this.state.isValid
                             ? 'upload__warning--none'
                             : 'upload__warning--error'}>This field is required</p>
                                 <div className="upload__button-wrapper">

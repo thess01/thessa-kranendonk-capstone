@@ -9,20 +9,26 @@ port = process.env.port;
 
 
 
-let beers = [];
+// let beers = [];
 
-knex("beers")
-.join('breweries','beers.brewery_id','breweries.brewery_id')
-.then((data) => {
-    beers = data;
-})
-.catch((err) => res.status(400).send("Error retrieving beers"))
+// knex("beers").where("beerName", "like", `%${query}%`).orWhere("beerType", "like", `%${query}%`).orWhere("flavor", "like", `%${query}%`)
+// .join('breweries','beers.brewery_id','breweries.brewery_id')
+// .then((data) => {
+//     beers = data;
+// })
+// .catch((err) => res.status(400).send("Error retrieving beers"))
 
-// wild card search with like keyword -- 
 
 router.get('/search/:seachQuery', (req, res) => {
-    let filteredBeers = beers.filter(beer => beer.beerType.toLowerCase().includes(req.params.seachQuery))
-    res.json(filteredBeers)
+
+let query = 
+    knex("beers").where("beerName", "like", `%${query}%`).orWhere("beerType", "like", `%${query}%`).orWhere("flavor", "like", `%${query}%`)
+    .join('breweries','beers.brewery_id','breweries.brewery_id')
+    .then((data) => {
+    // beers = data;
+})
+.catch((err) => res.status(400).send("Error retrieving beers"))
+    res.json(data)
 })
 
 router.get('/', beersController.getAllBeers);

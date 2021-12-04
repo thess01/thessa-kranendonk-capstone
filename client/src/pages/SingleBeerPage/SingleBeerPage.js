@@ -9,7 +9,7 @@ import "./SingleBeerPage.scss";
 class SingleBeerPage extends Component {
   state = {
     selectedBeer: null,
-    selectedBeerComments: [],
+    selectedBeerComments: null,
   };
 
   componentDidMount() {

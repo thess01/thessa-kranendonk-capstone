@@ -8,7 +8,8 @@ import './Login.scss';
 class LogIn extends Component {
     state = {
         breweryName: '',
-        password: ''
+        password: '',
+        isValid: true
 
     }
 
@@ -26,8 +27,12 @@ class LogIn extends Component {
     }
 
     validateForm = () => {
-        if (!this.state.breweryName) return false;
-        if (!this.state.password) return false;
+        if (!this.state.breweryName)  {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.password)  {
+            this.setState({isValid: false})
+            return false};
         return true;
     }
 
@@ -54,16 +59,16 @@ class LogIn extends Component {
             <div class="login__wrapper">
                 <h1 className="login__header">Brewery Log In</h1>
                 <form onSubmit={this.handleLogIn}>
-                    <Input label="Brewery Name" name="breweryName" type="text" onChange={this.handleChange} className={this.validateInput(this.state.breweryName)
+                    <Input label="Brewery Name" name="breweryName" type="text" onChange={this.handleChange} className={this.state.isValid
                     ? "login__input"
                     : "login__input--error"}/>
-                    <p className={this.validateInput(this.state.breweryName)
+                    <p className={this.state.isValid
                     ? "login__warning--none"
                     : "login__warning--error"}>This field is required</p>
-                    <Input label="Password" name="password" type="password"  onChange={this.handleChange} className={this.validateInput(this.state.password)
+                    <Input label="Password" name="password" type="password"  onChange={this.handleChange} className={this.state.isValid
                     ? "login__input"
                     : "login__input--error"}/>
-                    <p className={this.validateInput(this.state.password)
+                    <p className={this.state.isValid
                     ? "login__warning--none"
                     : "login__warning--error"}>This field is required</p>
                     <div className="login__button-wrapper">

@@ -15,26 +15,34 @@ class SignUp extends Component {
         address: '',
         cityState: '',
         country: '',
-        phone: ''
+        phone: '',
+        isValid: true
     }
 
     validateForm = () => {
-        if (!this.state.breweryName) return false;
-        if (!this.state.password) return false;
-        if (!this.state.email) return false;
-        if (!this.state.address) return false;
-        if (!this.state.cityState) return false;
-        if (!this.state.country) return false;
-        if (!this.state.phone) return false;
+        if (!this.state.breweryName)  {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.password)  {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.email)  {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.address)  {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.cityState)  {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.country)  {
+            this.setState({isValid: false})
+            return false};
+        if (!this.state.phone)  {
+            this.setState({isValid: false})
+            return false};
         return true;
     };
-
-    validateInput = (input) => {
-        if(!input) {
-            return false
-        }
-        return true
-    }
 
 
         handleSignUp = (e) => {
@@ -71,46 +79,46 @@ class SignUp extends Component {
             <div className="signup__wrapper">
             <h1 className="signup__header">Brewery Sign Up</h1>
             <form onSubmit={this.handleSignUp}>
-                <Input label="Brewery Name" name="breweryName" type="text" onChange={this.handleChange} className={this.validateInput(this.state.breweryName)
+                <Input label="Brewery Name" name="breweryName" type="text" onChange={this.handleChange} className={this.state.isValid
                                     ? "signup__input"
                                     : "signup__input--error"}/>
-                    <p className={this.validateInput(this.state.breweryName)
+                    <p className={this.state.isValid
                                     ? "signup__warning--none"
                                     : "signup__warning--error"}>This field is required</p>
-                <Input label="Password" name="password" type="password" onChange={this.handleChange} className={this.validateInput(this.state.password)
+                <Input label="Password" name="password" type="password" onChange={this.handleChange} className={this.state.isValid
                                     ? "signup__input"
                                     : "signup__input--error"}/>
-                <p className={this.validateInput(this.state.password)
+                <p className={this.state.isValid
                     ? "signup__warning--none"
                     : "signup__warning--error"}>This field is required</p>
-                <Input label="Email" name="email" type="email" onChange={this.handleChange} className={this.validateInput(this.state.email)
+                <Input label="Email" name="email" type="email" onChange={this.handleChange} className={this.state.isValid
                                     ? "signup__input"
                                     : "signup__input--error"}/>
-                <p className={this.validateInput(this.state.email)
+                <p className={this.state.isValid
                     ? "signup__warning--none"
                     : "signup__warning--error"}>This field is required</p>
-                <Input label="Address" name="address" type="text" onChange={this.handleChange} className={this.validateInput(this.state.address)
+                <Input label="Address" name="address" type="text" onChange={this.handleChange} className={this.state.isValid
                                     ? "signup__input"
                                     : "signup__input--error"}/>
-                <p className={this.validateInput(this.state.address)
+                <p className={this.state.isValid
                     ? "signup__warning--none"
                     : "signup__warning--error"}>This field is required</p>
-                <Input label="City, State" name="cityState" type="text" onChange={this.handleChange} className={this.validateInput(this.state.cityState)
+                <Input label="City, State" name="cityState" type="text" onChange={this.handleChange} className={this.state.isValid
                                     ? "signup__input"
                                     : "signup__input--error"}/>
-                <p className={this.validateInput(this.state.cityState)
+                <p className={this.state.isValid
                     ? "signup__warning--none"
                     : "signup__warning--error"}>This field is required</p>
-                <Input label="Country" name="country" type="text" onChange={this.handleChange} className={this.validateInput(this.state.country)
+                <Input label="Country" name="country" type="text" onChange={this.handleChange} className={this.state.isValid
                                     ? "signup__input"
                                     : "signup__input--error"}/>
-                <p className={this.validateInput(this.state.country)
+                <p className={this.state.isValid
                     ? "signup__warning--none"
                     : "signup__warning--error"}>This field is required</p>
-                <Input label="Phone Number" name="phone" type="text" onChange={this.handleChange} className={this.validateInput(this.state.phone)
+                <Input label="Phone Number" name="phone" type="text" onChange={this.handleChange} className={this.state.isValid
                                     ? "signup__input"
                                     : "signup__input--error"}/>
-                <p className={this.validateInput(this.state.phone)
+                <p className={this.state.isValid
                     ? "signup__warning--none"
                     : "signup__warning--error"}>This field is required</p>
                 <div className="signup__button-wrapper">
