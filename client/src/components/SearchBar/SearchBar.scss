@@ -69,13 +69,13 @@
     }
     &__message {
         color: $color-text;
-        position: absolute;
-        top: 8rem;
         width: 80vw;
-        left: -100px;
+        text-align: center;
+      
 
         @include desktop {
-            top: 17rem;
+            margin-top: 12rem;
+            
         }
     }
     &__error {

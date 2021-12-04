@@ -6,11 +6,6 @@
 
 .signup {
     display: flex;
-    padding-bottom: 10rem;
-
-    @include desktop {
-        padding-bottom: 20rem;
-    }
 
     &__wrapper {
     width: 60vw;

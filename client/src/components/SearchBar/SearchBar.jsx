@@ -10,13 +10,19 @@ class Search extends Component {
     beers: [],
     errorLoading: false,
   };
-
+ 
 
   handleQueryChange = (event) => {
     this.setState({
       query: event.target.value,
     });
   };
+
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.searchBeers(this.state.query) 
+  }
 
   searchBeers = (query) => {
     axios
@@ -35,11 +41,6 @@ class Search extends Component {
       });
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.searchBeers(this.state.query) 
-  }
-
   componentDidMount() {
     const query = this.props.match.params.searchQuery;
 
@@ -48,11 +49,14 @@ class Search extends Component {
     }
   }
 
-  componentDidUpdate(prevProps) {
-    const query = this.props.match.params.searchQuery;
-    const prevQuery = prevProps.match.params.searchQuery;
-    console.log(prevQuery)
-    console.log(prevProps)
+  
+      componentDidUpdate(prevProps, prevState) {
+        const query = this.state.query;
+        const prevQuery = prevState.query;
+
+      console.log(query)
+      console.log(prevState)
+    
     
     if (query !== prevQuery) {
       this.searchBeers(query);
@@ -60,15 +64,12 @@ class Search extends Component {
   }
 
   render() {
-
-
     return (
       <section className="search">
         <h2 className="search__title">Search for beers</h2>
         <input
           placeholder="Search for..."
           className="search__input"
-          name="query"
           type="text"
           value={this.state.query}
           onChange={this.handleQueryChange}
@@ -76,12 +77,14 @@ class Search extends Component {
         <button onClick={this.handleSubmit} className="search__button">
           Search
         </button>
+        
         <div className="search__beers-container">
           {this.state.query ? 
           (
             <BeerCardList beers={this.state.beers} />
+
           ) : (
-            <p className="search__message">Enter your search term above</p>
+            <p></p>
           )}
           {this.state.errorLoading && (
             <p className="search__error">There was an error loading your search results</p>
