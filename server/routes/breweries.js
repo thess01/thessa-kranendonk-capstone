@@ -26,9 +26,7 @@ router.get('/upload', authorize, (req, res) => {
 let breweries = [];
 
 knex('breweries')
-    // .where({ "breweryName": breweryName})
     .then((data) => {
-        console.log(data)
       breweries = data;
     })
 
