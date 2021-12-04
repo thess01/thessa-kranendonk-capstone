@@ -1,26 +1,30 @@
 import "./CommentsList.scss";
 var moment = require('moment');
 
-function CommentsList(props) {
+function CommentsList({comments, handleDeleteComment}) {
   return (
-    <li key={props.id} className="comments-display">
+<>
+    {comments.map(comment =>
+    <li key={comment.id} className="comments-display">
 
       <div className="comments-display__wrapper">
         <div className="comments-display__user-info">
-          <h3 className="comments-display__name">{props.name}</h3>
+          <h3 className="comments-display__name">{comment.userName}</h3>
           <p className="comments-display__date">
-          {moment(props.timestamp).fromNow()} 
+          {moment(comment.timestamp).fromNow()} 
           </p>
         </div>
-        <p className="comments-display__comment">{props.comment}</p>
-        {/* <button
-          className="comments-display__delete-button" */}
-        {/* onClick={() => props.handleDeleteComment(props.commentId)} */}
-        {/* >
+        <p className="comments-display__comment">{comment.comment}</p>
+        <button
+          className="comments-display__delete-button"
+        onClick={() => handleDeleteComment(comment.id)}
+        >
           Delete
-        </button> */}
+        </button>
       </div>
     </li>
+    )}
+    </>
   );
 }
 

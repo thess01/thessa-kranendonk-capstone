@@ -35,7 +35,7 @@ exports.up = function(knex) {
             table.string('season').notNullable();
             table.string('ABV').notNullable();
             table.string('flavor').notNullable();
-            table.string('image').notNullable().defaultTo("../public/beer_1");;
+            table.string('image').notNullable().defaultTo();;
             table.integer('rating').notNullable().defaultTo(0);
             table.timestamp('updated_at').defaultTo(knex.fn.now());
     })
@@ -56,5 +56,7 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-    return knex.schema.dropTable("beers").dropTable("foods").dropTable("breweries").dropTable("comments");
+    return knex.schema
+    .dropTable("beers").dropTable("foods").dropTable("breweries")
+    .dropTable("comments");
 };

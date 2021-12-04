@@ -33,7 +33,8 @@ router.get('/:id', beersController.getOneBeer);
 
 router.post('/:id', commentsController.postComment);
 
-router.get('/:id/comments', commentsController.getAllComments);
+router.delete('/:id/comments/:id', commentsController.deleteComment)
+
 
 
 

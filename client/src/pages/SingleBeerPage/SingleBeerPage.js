@@ -9,35 +9,41 @@ import "./SingleBeerPage.scss";
 class SingleBeerPage extends Component {
   state = {
     selectedBeer: null,
-    selectedBeerComments: null,
+    errorLoading: false
   };
 
   componentDidMount() {
       const id = this.props.match.params.id;
     Promise.all([
       axios.get(`/api/beers/${id}`),
-      axios.get(`/api/beers/${id}/comments`)
+
     ])
       .then(([res1, res2]) => {
         this.setState({
           selectedBeer: res1.data,
-          selectedBeerComments: res2.data
+          errorLoading: false
         });
       })
       .catch((error) => {
         console.log(error);
+        this.setState({
+          errorLoading: true
+        })
       });
   }
 
   getBeerById = (id) => {
-    axios.get(`/api/beers/${id}/comments`)
+    axios.get(`/api/beers/${id}`)
     .then((response) => {
       this.setState({
-        selectedBeerComments: response.data
+        selectedBeer: response.data,
       })
     })
     .catch((error) => {
       console.log(error)
+      this.setState({
+        errorLoading: true
+      })
     })
   }
   
@@ -65,9 +71,17 @@ class SingleBeerPage extends Component {
     e.target.comment.value = "";
   }
 
+  handleDeleteComment = (commentId) => {
+    let beer_id = this.props.match.params.id;
+    axios.delete(`/api/beers/${beer_id}/comments/${commentId}`)
+    .then(() => {
+      this.getBeerById(beer_id);
+    })
+  }
+
 
   render() {
-    const { selectedBeer, selectedBeerComments} = this.state;
+    const { selectedBeer } = this.state;
 
 
     if (this.state.selectedBeer === null) {
@@ -78,6 +92,8 @@ class SingleBeerPage extends Component {
       );
     }
 
+
+    console.log(this.state.selectedBeer.comments)
 
     
 
@@ -96,15 +112,19 @@ class SingleBeerPage extends Component {
 
         <CommentsForm addComment={this.addComment}/>
         
-        
-        {/* {selectedBeerComments &&  */}
-      {selectedBeerComments.map((comment) => (
-            <CommentsList 
-            key={comment.id}
-            comment={comment.comment}
-            name={comment.userName}
-            timestamp={comment.updated_at}/>
-        ))}
+        <div className="single-beer-page__container">
+          {this.state.selectedBeer.comments ?
+          (
+
+          <CommentsList comments={this.state.selectedBeer.comments} handleDeleteComment={this.handleDeleteComment}/>
+         
+        ) : (
+            <p>Leave a comment</p>
+        )}
+        {this.state.errorLoading && (
+          <p>No comments yet</p>
+        )}
+        </div>
         
     </>
     );

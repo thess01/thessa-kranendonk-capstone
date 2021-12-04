@@ -17,6 +17,8 @@
     &__wrapper {
         width: 100%;
         border-bottom: 1px solid $color-text;
+        display: flex;
+        flex-direction: column;
       
 
     }
@@ -27,6 +29,10 @@
     &__name {
         @include MH3;
 
+        @include desktop {
+            @include H3;
+        }
+
     }
     &__date {
         @include MP3;
@@ -35,10 +41,26 @@
     }
     &__comment {
         @include MP2;
+        margin-bottom: 0.25rem;
+
+        @include desktop {
+            @include MP1;
+        }
 
     }
-    // &__delete-button {
+    &__delete-button {
+        @include button;
+        background-color:#dbdbdb;
+        width: fit-content;
+        align-self: flex-end;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+        @include desktop {
+            font-size: 1rem;
+            width: fit-content;
+        }
+        
 
-    // }
+    }
 
 }

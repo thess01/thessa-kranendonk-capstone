@@ -21,6 +21,7 @@ const App = () => {
           <Route path="/" exact component={Home} />
 
           <Route path="/beers/:id" exact component={SingleBeerPage} />
+          {/* <Route path="/beers/:id" exact component={SingleBeerPage} /> */}
 
           <Route path='/search' exact component={SearchBar}/>
 
