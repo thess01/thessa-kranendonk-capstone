@@ -6,10 +6,11 @@ import "./SearchBar.scss";
 
 class Search extends Component {
   state = {
-    query: "",
+    query: '',
     beers: [],
     errorLoading: false,
   };
+
 
   handleQueryChange = (event) => {
     this.setState({
@@ -21,7 +22,6 @@ class Search extends Component {
     axios
       .get(`/api/beers/search/${query}`)
       .then((response) => {
-        console.log(response.data)
         this.setState({
           errorLoading: false,
           query: query,
@@ -29,12 +29,16 @@ class Search extends Component {
         });
       })
       .catch((error) => {
-    
         this.setState({
           errorLoading: true,
         });
       });
   };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.searchBeers(this.state.query) 
+  }
 
   componentDidMount() {
     const query = this.props.match.params.searchQuery;
@@ -44,10 +48,11 @@ class Search extends Component {
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    const query = this.state.query;
-    const prevQuery = prevState.query;
-
+  componentDidUpdate(prevProps) {
+    const query = this.props.match.params.searchQuery;
+    const prevQuery = prevProps.match.params.searchQuery;
+    console.log(prevQuery)
+    console.log(prevProps)
     
     if (query !== prevQuery) {
       this.searchBeers(query);
@@ -55,19 +60,22 @@ class Search extends Component {
   }
 
   render() {
+
+
     return (
       <section className="search">
         <h2 className="search__title">Search for beers</h2>
         <input
           placeholder="Search for..."
           className="search__input"
+          name="query"
           type="text"
           value={this.state.query}
           onChange={this.handleQueryChange}
         />
-        <Link className="search__button" to={`/search/${this.state.query}`}>
+        <button onClick={this.handleSubmit} className="search__button">
           Search
-        </Link>
+        </button>
         <div className="search__beers-container">
           {this.state.query ? 
           (
