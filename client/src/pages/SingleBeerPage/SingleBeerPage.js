@@ -102,12 +102,13 @@ class SingleBeerPage extends Component {
         <BeerDetails 
         beer={selectedBeer} />
 
-        {selectedBeer.dishes.map((dish) => (
-            <FoodSection key={dish.id}
-            dish={dish.dish}
-            cuisine={dish.cuisine}
-            beerType={dish.beerType} />
-        ))} 
+        {/* {selectedBeer.dishes.map((dish) => ( */}
+            <FoodSection foods={this.state.selectedBeer.dishes} />
+        {/* //     dish={dish.dish}
+        //     cuisine={dish.cuisine}
+        //     beerType={dish.beerType}
+        //     food_image={dish.food_image} />
+        // ))}  */}
         
 
         <CommentsForm addComment={this.addComment}/>
