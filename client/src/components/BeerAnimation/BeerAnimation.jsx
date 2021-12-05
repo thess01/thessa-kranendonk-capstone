@@ -1,10 +1,11 @@
 import "./BeerAnimation.scss"
 import logo from "../../assets/images/logo.png"
+
+
 export default function Animation() {
     return (
    
   <div className="image">
-    {/* <img className="animation-image" src={logo} alt="logo" /> */}
     <div className="container">
               <svg
                 version="1.1"

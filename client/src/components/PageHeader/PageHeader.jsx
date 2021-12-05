@@ -1,16 +1,20 @@
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import Animation from "../BeerAnimation/BeerAnimation";
+import LogOut from "../LogOut/LogOut";
 import "./PageHeader.scss";
 
 const PageHeader = () => {
+
+    
+
     return (
         <header className="pageheader">
             <div className="pageheader__wrapper">
                 <Link className="pageheader__logo" to="/"><Animation /></Link>
                 <ul className="pageheader__list">
                     <li className="pageheader__list-item">
-                        {/* <Animation /> */}
+                     
                         <NavLink to="/" exact className={(isActive) => "pageheader__link" + (isActive ? "--active" : "")}>
                             Beers
                         </NavLink>
@@ -34,6 +38,7 @@ const PageHeader = () => {
                         </NavLink>
                     </li>
                 </ul>
+                <LogOut />
             </div>
         </header>
     )

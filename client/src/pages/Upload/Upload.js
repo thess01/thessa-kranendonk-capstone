@@ -94,16 +94,22 @@ class Upload extends Component {
 
 
 
+
     render() {
         const { isLoading, breweryInfo } = this.state;
 
-        return isLoading ?
-            <div className="upload__message-wrapper">
-            <h1 className="upload__upload-message">Breweries need to be registered or logged in to upload new beers</h1>
-            <Link className="upload__link-register" to="/signup">Please register here!</Link>
-            </div>
-            :
-            (
+        let token = sessionStorage.getItem('authToken')
+
+        if (!token) {
+            return (
+                <div className="upload__message-wrapper">
+                <h1 className="upload__upload-message">Breweries need to be registered or logged in to upload new beers</h1>
+                <Link className="upload__link-register" to="/signup">Please register here!</Link>
+                </div>
+            );
+          }
+
+            return (
                 <section className="upload">
                     <div class="upload__wrapper">
                         <h1 className="upload__header">Upload Brews {breweryInfo.breweryName}</h1>
@@ -190,11 +196,11 @@ class Upload extends Component {
                         </div>
                     </div>
                 </section>
-
-
-            )
+                )
+      
+    }
     }
 
 
-}
+
 export default Upload;
