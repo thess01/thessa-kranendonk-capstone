@@ -14,11 +14,15 @@
     align-items: center;
     margin: 0;
 
-
-    @include desktop {
+    @include tablet {
         flex-direction: row;
         flex-wrap: wrap;
         width: fit-content;
+        margin: 1rem 1rem 0 1rem;
+    }
+
+
+    @include desktop {
         margin: 0;
         margin-right: 0;
        
@@ -40,8 +44,14 @@
     &__img {
         width: 85vw;
         border-radius: 5px;
+        object-fit: cover;
         &:hover {
             opacity: 0.5;
+        }
+
+        @include tablet {
+            width: 38vw;
+            height: 12rem;
         }
 
         @include desktop {

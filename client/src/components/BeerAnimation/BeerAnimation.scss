@@ -15,6 +15,12 @@
     width:20rem;
     height:9.5rem;
 
+    @include tablet {
+        background-size: 16rem;
+        height: 12rem;
+        width: 20rem;
+    }
+
     @include desktop {
     background-size: 20rem;
     width: 20rem;
@@ -25,7 +31,6 @@
 
 .container {
     background-image:url("../../assets/images/logo.png");
-    // width: rem;
 
 
     @include desktop {
@@ -36,6 +41,11 @@
 #Layer_1 {
     margin-top: 1.5rem;
     width: 3rem;
+
+    @include tablet {
+        padding-top: 1rem;
+        width: 4rem;
+    }
 
     @include desktop {
         padding-top: 1.5rem;
