@@ -27,6 +27,7 @@
         @include MH2;
         color: $color-accent-yellow;
         text-align: center;
+        margin-bottom: 0.25rem;
 
         @include desktop {
         margin: 0.75rem;
@@ -35,13 +36,14 @@
 &__input {
     border-radius: 20px;
     border: 1px solid $color-accent-yellow;
-    height: 1.5rem;
+    height: 2rem;
     width: 100%;
+   
 
     &--error {
         border: 1.5px solid rgb(192, 32, 3);    
         border-radius: 20px;
-        height: 1.5rem;
+        height: 2rem;
     }
 
 }

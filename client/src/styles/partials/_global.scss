@@ -16,5 +16,9 @@ html {
 }
 
 main {
+    padding-bottom: 15rem;
+
+    @include desktop {
     padding-bottom: 23rem;
+    }
 }

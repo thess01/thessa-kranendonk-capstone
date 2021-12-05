@@ -12,7 +12,7 @@
     width: inherit;
     min-height: fit-content;
     z-index: -1;
-    margin: 25rem 1.5rem 0rem 1.5rem;
+    margin: 10rem 1.5rem 0rem 1.5rem;
 
 
     @include desktop {
@@ -45,19 +45,14 @@
         margin-top: -11rem;
 
         @include desktop {
-            min-height: 100vh;
+        
+            min-height: 40vh;
         }
     }
     &__button {
+        @include button;
         background-color: $color-accent-yellow;
-        border: hidden;
-        border-radius: 20px;
-        color: $color-white;
-        padding: 0.25rem 1rem;
-        margin-bottom: 1.5rem;
-        width: 4rem;
-        text-decoration: none;
-        text-align: center;
+        margin-top: 1rem;
         &:hover {
             background-color: rgb(255, 145, 0);
         }

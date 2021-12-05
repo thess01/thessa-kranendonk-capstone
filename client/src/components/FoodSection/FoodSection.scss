@@ -9,10 +9,11 @@
     flex-wrap: wrap;
     width: 50vw;
     justify-content: center;
-    margin: 6rem auto 3rem;
+    margin: 2rem auto 3rem;
 
     @include desktop {
-        width: 50vw;
+        width: 70vw;
+        margin: 6rem auto 3rem;
         justify-content: space-between;
     }
     
@@ -44,8 +45,8 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.6);
 
         @include desktop {
-            width: 20vw;
-            height: 24rem;
+            width: 28vw;
+            height: 30rem;
             justify-content: space-between;
 
         }
@@ -57,8 +58,8 @@
         border-radius: 5px;
 
         @include desktop {
-            height: 15rem !important;
-            width: 20vw;
+            height: 20rem !important;
+            width: 28vw;
         }
     }
     &__main {
@@ -85,13 +86,13 @@
         color: $color-accent_yellow;
 
         @include desktop {
-            font-size: 1.25rem;
+            font-size: 1.75rem;
         }
     }
     &__description-entry {
         color: $color-white;
         text-align: center;
-        margin: 0.5rem;
+        margin: 1.5rem;
     }
 
    
