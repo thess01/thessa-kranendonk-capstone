@@ -16,6 +16,11 @@
     display: flex;
     justify-content: space-between;
 
+    @include tablet {
+        height: 13rem;
+        background-position: top;
+    }
+
     @include desktop {
         margin-top: 3rem;
         height: 18rem;
@@ -33,11 +38,16 @@
     width: 8rem;
     padding-left: 1rem;
 
+    @include tablet {
+        margin: 1rem 0 0 7rem;
+        height: 8rem;
+        padding-top: 2rem;
+        justify-content: flex-start;
+    }
+
     @include desktop {
         margin-left: 17rem;
         height: 12rem;
-        padding-top: 2rem;
-        justify-content: flex-start;
        
     }
 }
@@ -45,6 +55,11 @@
     margin: 2.25rem 2.5rem 0 0;
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+        margin: 3rem 7rem 0 0;
+
+    }
 
     @include desktop {
         margin-right: 17rem;
@@ -60,21 +75,20 @@
         color: orange;
     }
 
-    @include desktop {
+    @include tablet{
         @include P1;
-        line-height: 3rem;
+        line-height: 2rem;
         width: 6rem;
         text-align: center;
     }
     &--active {
         @include MP3;
         color: orange;
-        padding: 0.25rem;
         text-decoration: none;
 
-        @include desktop {
+        @include tablet {
             @include P1;
-            line-height: 3rem;
+            line-height: 2rem;
 
         }
     }
@@ -85,7 +99,7 @@
      @include MH3;
      text-align: center;
 
-     @include desktop {
+     @include tablet {
          @include H2;
      }
  }
@@ -94,7 +108,7 @@
      width: 1.25rem;
      margin: 0.25rem;
 
-     @include desktop {
+     @include tablet {
          height: 2rem;
          width: 2rem;
      }

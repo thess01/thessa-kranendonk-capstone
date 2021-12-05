@@ -14,6 +14,10 @@
     align-items: center;
     flex-direction: column;
 
+    @include tablet {
+        margin-top: 18rem;
+    }
+
     @include desktop {
         margin-top: 18rem;
     }
@@ -28,6 +32,12 @@
         z-index: -1;
         top: 500px;
 
+        @include tablet {
+            height: 35.5rem;
+            width: 85vw;
+            top: 700px;
+        }
+
         @include desktop {
             top: 900px;
             height: 43rem;
@@ -36,6 +46,17 @@
         }
     }
     &__wrapper {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+        justify-content: space-between;
+
+        @include tablet {
+            padding-top: 1.5rem;
+            width: 40%;
+        }
+
         @include desktop {
             margin: 0 2rem;
    
@@ -79,6 +100,7 @@
         margin: 0.75rem 0 0;
         color: $color-primary;
 
+      
         @include desktop {
             @include H2;
         }
@@ -89,86 +111,37 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.6);
         object-fit: fill;
 
+        @include tablet {
+            width: 75vw;
+        }
+
         @include desktop {
             width: 65vw;
         }
-
-    }
-    &__desktop-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include desktop {
-        display: flex;
-        flex-direction: row;
-        }
-    }
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 1rem 0;
-        width: 40vw;
-
-        @include desktop {
-            justify-content: center;
-            align-items: center;
-            width: 35vw;
-        }
-
     }
     &__description {
-        margin: 0;
-        @include MP2;
-        margin: 1rem 1rem;
+        width: 80%;
         text-align: center;
-        color: $color-primary;
 
-        @include desktop {
-            @include P1;
-            padding-top: 1rem;
-            margin: 2rem;
-            width: 30vw;
+        @include tablet {
+            width: 60%;
         }
     }
 
-    &__name-wrapper {
-        padding-right: 1.25rem;
-        border-right: 1px solid $color-text;
-
-        @include desktop {
-            padding-right: 3rem;
-        }
-    }
     &__name {
-        @include MH3;
-        font-size: 13px;
-        line-height: 1.25rem;
-        text-align: end;
-        color: $color-primary;
+        font-weight: bold;
+        width: 45%;
+        margin: 0;
 
-        @include desktop {
-            @include P1;
-            margin-top: 2rem;;
-        }
+        
     }
 
-    &__info-wrapper {
-        @include desktop {
-            padding-left: 3rem;
-        }
-    }
     &__info {
-     
-        @include MP3;
-        line-height: 1.25rem;
-        font-size: 13px;
-        color: $color-primary;
-
-        @include desktop {
-            @include P1;
-            margin-top: 2rem;;
-        }
+        width: 55%;
+        margin: 0;
     }
+  
+
+    
    
 }

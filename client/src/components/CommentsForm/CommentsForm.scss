@@ -45,6 +45,10 @@
              box-shadow: 0 0 10px rgba(0,0,0,0.6);
              margin: 1rem 0.5rem;
 
+             @include tablet {
+                 width: 75vw;
+             }
+
              @include desktop {
                  width: 55vw;
              }

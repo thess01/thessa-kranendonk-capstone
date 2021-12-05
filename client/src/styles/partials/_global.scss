@@ -18,6 +18,10 @@ html {
 main {
     padding-bottom: 15rem;
 
+    @include tablet {
+        padding-bottom: 18rem;
+    }
+
     @include desktop {
     padding-bottom: 23rem;
     }

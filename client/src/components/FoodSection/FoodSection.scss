@@ -9,7 +9,12 @@
     flex-wrap: wrap;
     width: 50vw;
     justify-content: center;
-    margin: 2rem auto 3rem;
+    margin: 5rem auto 3rem;
+
+    @include tablet {
+        width: 70vw;
+        margin: 4.5rem auto 3rem;
+    }
 
     @include desktop {
         width: 70vw;
@@ -23,6 +28,10 @@
     align-items: center;
     width: fit-content;
     margin: 0.75rem 0;
+
+    @include tablet {
+        margin: 1rem;
+    }
   
 
     @include desktop {
@@ -44,6 +53,10 @@
         align-items: center;
         box-shadow: 0 0 10px rgba(0,0,0,0.6);
 
+        @include tablet {
+            width: 30vw;
+        }
+
         @include desktop {
             width: 28vw;
             height: 30rem;
@@ -51,11 +64,16 @@
 
         }
     }
+
     &__image {
         height: 11rem !important;
         width: 65vw;
         object-fit: cover;
         border-radius: 5px;
+
+        @include tablet {
+            width: 30vw;
+        }
 
         @include desktop {
             height: 20rem !important;
@@ -69,6 +87,11 @@
         padding: 0.75rem 1rem;
         width:fit-content;
         height: 8vw;
+
+        @include tablet {
+            width: 20vw;
+            margin-top: 0.5rem;
+        }
 
         @include desktop {
         justify-content: space-between;
@@ -85,6 +108,7 @@
         font-size: 1rem;
         color: $color-accent_yellow;
 
+    
         @include desktop {
             font-size: 1.75rem;
         }
@@ -93,6 +117,11 @@
         color: $color-white;
         text-align: center;
         margin: 1.5rem;
+
+        @include tablet {
+            margin: 0
+        }
+
     }
 
    

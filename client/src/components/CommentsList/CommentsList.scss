@@ -10,6 +10,10 @@
     margin: 0 auto;
     padding-bottom: 1rem;
 
+    @include tablet {
+        width: 75vw;
+    }
+
     @include desktop {
         width: 55vw;
     }
