@@ -12,3 +12,17 @@ const knex = require('knex')(require("../knexfile").development);
             })
         })
     }
+
+
+exports.postEvent = (req, res) => {
+    knex("events")
+    .insert(req.body)
+    .then((data) => {
+        res.status(201).json(data);
+    })
+    // .catch(() => {
+    //     res.status(400).json({
+    //         message: `Error creating ${req.body.eventName}`
+    //     })
+    // })
+}
