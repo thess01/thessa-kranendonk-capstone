@@ -11,6 +11,7 @@ class EventPage extends Component {
   }
 
 
+
   componentDidMount() {
     axios
       .get("/api/events")

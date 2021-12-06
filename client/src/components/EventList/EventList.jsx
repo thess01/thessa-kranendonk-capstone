@@ -9,19 +9,28 @@ import "./EventList.scss";
 
 export default function EventList({ events }) {
   const [open, setOpen] = React.useState(false);
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
   console.log(errors);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  // let history = useHistory();
+  let history = useHistory();
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    // alert("Thank you, pending validation");
-    // history.push("/");
+  const onSubmit = (data) => {
+      axios
+        .post(`/api/events/add`, data)
+        .then(() => {
+          alert("Upload Succesful!");
+          handleClose()
+  
+      }, [reset])
+        .catch(err => {console.log(err)});
+
+    
 }
+
+
   return (
     <>
       <section className="event-card-list">
@@ -52,23 +61,26 @@ export default function EventList({ events }) {
               <h2 className="add-event__modal-header">Enter Event Details</h2>
               <form className="add-event__form" onSubmit={handleSubmit(onSubmit)}>
                     <label className="add-event__label" htmlFor="eventName">Event Name</label>
-                    <input className="add-event__input" type="text" placeholder="Event Name" {...register("eventName", {required: true, max: 50, min: -3, maxLength: 80})} />
+                    <input className="add-event__input" type="text" name="eventName" placeholder="Event Name" {...register("eventName", {required: true, max: 50, min: -3, maxLength: 80})} />
                     {errors.eventName && <p className="add-event__error">This field is required</p>}
 
-                    <label className="add-event__label" htmlFor="eventLocation">Event Location</label>
-                    <input className="add-event__input" type="text" placeholder="Event Location" {...register("eventLocation", {required: true, max: 50, min: -3, maxLength: 80})} />
+                    <label className="add-event__label" htmlFor="location">Event Location</label>
+                    <input className="add-event__input" type="text" name="location"  placeholder="Location" {...register("location", {required: true, max: 50, min: -3, maxLength: 80})} />
                     {errors.eventLocation && <p className="add-event__error">This field is required</p>}
 
                     <label className="add-event__label" htmlFor="date">Date</label>
-                    <input className="add-event__input" type="text" placeholder="Date" {...register("date", {required: true, maxLength: 100})} />
+                    <input className="add-event__input" type="text" name="date" placeholder="Date" {...register("date", {required: true, maxLength: 100})} />
                     {errors.date && <p className="add-event__error">This field is required</p>}
 
                     <label className="add-event__label" htmlFor="email">Email</label>
-                    <input className="add-event__input" type="email" placeholder="Email" {...register("email", {required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/})} />
+                    <input className="add-event__input" type="email" name="email" placeholder="Email" {...register("email", {required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/})} />
                     {errors.email && <p className="add-event__error">Email did not pass the requirements</p>}
+
+                    <label className="add-event__label" htmlFor="website">Website</label>
+                    <input className="add-event__input" type="text" name="website" placeholder="Website" {...register("website", {required: true, maxLength: 100})} />
                     
                     <label className="add-event__label" htmlFor="description">Description</label>
-                    <input className="add-event__input" type="text" placeholder="Description" {...register("description", {validate: (value) => value.length > 50})} />
+                    <input className="add-event__input" type="text" name="description" placeholder="Description" {...register("description", {validate: (value) => value.length > 50})} />
                     {errors.description && <p className="add-event__error">Your description is less than 50 characters</p>}
                    
 
