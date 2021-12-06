@@ -10,7 +10,8 @@
 width: 80%;
 margin: 0 auto;
 margin-top: 14rem;
-
+display: flex;
+flex-direction: column;
 @include tablet {
 
 }
@@ -28,5 +29,13 @@ margin-top: 14rem;
     @include desktop {
         padding-top: 4rem;
     }
+}
+
+&__add-button {
+    @include button;
+    width: 8rem;
+    background-color: $color-accent-yellow;
+    padding: 0.25rem;
+    align-self: flex-end ;
 }
 }
