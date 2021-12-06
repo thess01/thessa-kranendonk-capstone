@@ -15,7 +15,6 @@ class EventPage extends Component {
     axios
       .get("/api/events")
       .then((response) => {
-        console.log(response.data)
         this.setState({
           events: response.data,
         });

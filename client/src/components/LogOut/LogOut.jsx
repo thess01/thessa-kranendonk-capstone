@@ -17,12 +17,14 @@ class LogOut extends Component {
                 }
             })
                 .then(response => {
-                    console.log(response)
                     this.setState({
                         isLoading: false,
                         breweryInfo: response.data
                     })
                 })
+                .catch((error) => {
+                    console.log(error);
+                  });
         } 
     }
 

@@ -40,7 +40,6 @@ class Upload extends Component {
 
         })
             .then(res => {
-                console.log(res)
                 this.props.history.push('/')
             })
             .catch((error) => {
@@ -81,7 +80,6 @@ class Upload extends Component {
                 }
             })
                 .then(response => {
-                    console.log(response)
                     this.setState({
                         isLoading: false,
                         breweryInfo: response.data

@@ -2,7 +2,6 @@ import "./BeerDetails.scss";
 // import image from "../../assets/images/beer_1.jpg";
 
 const BeerDetails = ({beer}) => {
-  console.log({beer});
   return (
     <div className="beer-details">
       <div className="beer-details__background"></div>

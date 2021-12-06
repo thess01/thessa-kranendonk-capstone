@@ -85,8 +85,6 @@ class SingleBeerPage extends Component {
       );
     }
 
-    console.log(this.state.selectedBeer.comments);
-
     return (
       <>
         <BeerDetails beer={selectedBeer} />

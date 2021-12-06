@@ -58,7 +58,6 @@ class SignUp extends Component {
             phone: e.target.phone.value
         })
         .then(res => {
-            console.log(res)
             this.props.history.push('/current')
         })
         .catch((error) => {

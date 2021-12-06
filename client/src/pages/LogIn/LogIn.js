@@ -45,11 +45,13 @@ class LogIn extends Component {
             password: e.target.password.value
         })
         .then(res => {
-            console.log(res)
             let token = res.data.token
             sessionStorage.setItem('authToken', token)
             this.props.history.push('/upload')
         })
+        .catch((error) => {
+            console.log(error);
+          });
     }
     }
 
