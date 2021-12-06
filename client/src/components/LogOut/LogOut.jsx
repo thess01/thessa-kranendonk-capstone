@@ -29,10 +29,6 @@ class LogOut extends Component {
     }
 
 
-    // componentDidUpdate() {
-
-    // }
-
     handleLogOut = (e) => {
         e.preventDefault();
 
@@ -40,7 +36,7 @@ class LogOut extends Component {
         this.setState({
             breweryInfo: null
         })
-        
+
         this.props.history.push('/')
     }
 
