@@ -4,7 +4,6 @@ exports.getAllBeers = (_req, res) => {
     knex("beers")
     .join('breweries','beers.brewery_id','breweries.brewery_id')
     .then((beers) => {
-        console.log(beers)
         res.json(beers);
     })
     .catch((err) => {
@@ -32,15 +31,13 @@ exports.getOneBeer = (req, res) => {
         .where({"beerType": beer[0].beerType})
         .then(food => {
             beer[0].dishes = food
-            console.log(beer[0]);
-            // res.json(beer[0]);
+     
         })
         if(beer){
             knex("comments")
             .where({"beer_id": beer[0].id})
             .then(comments => {
                 beer[0].comments = comments
-                console.log(beer[0]);
                 res.json(beer[0]);
             })
         }

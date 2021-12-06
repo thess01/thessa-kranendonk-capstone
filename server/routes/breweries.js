@@ -8,6 +8,8 @@ const breweriesController = require('../controllers/breweries')
 
 router.get('/breweries', breweriesController.getOneBrewery);
 
+// UPLOAD
+
 router.get('/upload', authorize, (req, res) => {
     const breweryNameFromToken = req.decoded.breweryName;
     const foundBrewery = breweries.find(brewery => brewery.breweryName === breweryNameFromToken);
@@ -30,6 +32,7 @@ knex('breweries')
       breweries = data;
     })
 
+// LOG IN
 
 router.post('/login', (req, res) => {
     const { breweryName, password } = req.body;
@@ -65,6 +68,9 @@ router.post('/login', (req, res) => {
         token: token
     });
 });
+
+
+// SIGN UP
 
 router.post('/signup', (req, res) => {
     const breweryName = req.body.breweryName;
