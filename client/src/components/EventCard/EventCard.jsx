@@ -5,27 +5,26 @@ import Modal from "@mui/material/Modal";
 import "./EventCard.scss";
 
 
-function EventCard({events}) {
+function EventCard({eventName, location, description, image, email, date, id}) {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
-  <section className="events-card">
-    <h1 className="events-card__header">Events</h1>
-    {events.map(event =>
-    <ul className="events-card__ul">
-     <li key={event.id} className="events-card__list">
+ 
+   
+    <ul className="events-card">
+     <li key={id} className="events-card__list">
        <a onClick={handleOpen}>
       <div className="events-card__wrapper">
         <div className="events-card__events-info">
-          <h3 className="events-card__location">{event.location}</h3>
-          <p className="events-card__date">{event.date}</p>
+          <h3 className="events-card__location">{location}</h3>
+          <p className="events-card__date">{date}</p>
         </div>
         <div className="event-card__description-wrapper">
-          <h3 className="events-card__event-name">{event.eventName}</h3>
-          <p className="events-card__description">{event.description}</p>
+          <h3 className="events-card__event-name">{eventName}</h3>
+          <p className="events-card__description">{description}</p>
         </div>
       </div>
       
@@ -41,11 +40,11 @@ function EventCard({events}) {
               >
                 <Box className="events-card__modal-box">
                   <h2 className="events-card__modal-header">Event Details</h2>
-                  <h3 className="events-card__modal-location">{event.location}</h3>
-                  <p className="events-card__modal-date">{event.date}</p>
-                  <p className="events-card__modal-description">{event.description}</p>
-                  <p className="events-card__emails">{event.email}</p>
-                  <img className="events-card__map" src={event.map_image} alt='Event map'/>
+                  <h3 className="events-card__modal-location">{location}</h3>
+                  <p className="events-card__modal-date">{date}</p>
+                  <p className="events-card__modal-description">{description}</p>
+                  <p className="events-card__emails">{email}</p>
+                  <img className="events-card__map" src={image} alt='Event map'/>
 
                 </Box>
               </Modal>
@@ -53,8 +52,7 @@ function EventCard({events}) {
       </div>
       </li>
       </ul>
-    )}
-    </section>
+  
   );
 }
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Component } from "react";
-import EventCard from '../../components/EventCard/EventCard';
+import EventList from '../../components/EventList/EventList';
 import axios from "axios";
 import "./EventPage.scss";
 
@@ -20,9 +20,9 @@ class EventPage extends Component {
           events: response.data,
         });
       })
-      // .catch((error) => {
-      //   console.log(error);
-      // });
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
 
@@ -41,7 +41,7 @@ class EventPage extends Component {
     return (
       <>
   
-        <EventCard events={events} />
+        <EventList events={events} />
     </>
     );
   }

@@ -1,0 +1,32 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+
+.event-card-list {
+@include list;
+width: 80%;
+margin: 0 auto;
+margin-top: 14rem;
+
+@include tablet {
+
+}
+
+&__header {
+    text-align: center;
+    margin-top: 0;
+
+    @include tablet {
+        @include H1;
+        padding-top: 2rem;
+        margin-bottom: 0rem;
+    }
+
+    @include desktop {
+        padding-top: 4rem;
+    }
+}
+}
