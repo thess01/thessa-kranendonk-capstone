@@ -9,12 +9,156 @@
   @include list;
   width: 80%;
   margin: 0 auto;
+  margin-top: 14rem;
+
+  @include tablet {
+
+  }
 
   &__wrapper {
+        height: 18rem;
+
+        @include tablet {
+            display: flex;
+            height: 8rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid $color-text;
+            
+        }
+  }
+  &__header {
+        text-align: center;
+        margin-top: 0;
+
+        @include tablet {
+            @include H1;
+            padding-top: 2rem;
+            margin-bottom: 0rem;
+        }
+  }
+
+  &__location {
+      background-color: $color-accent-yellow;
+      padding: 0.25rem;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 0;
+
+      @include tablet {
+          background-color: white;
+          border-radius: 0;
+          width: 11rem;
+      }
+
+      @include desktop {
+      
+          width: 12rem;
+      }
 
   }
   &__events-info {
+      height: 4rem;
+      background-color: #ffad0aab;
+      border-radius: 50%;
 
+      @include tablet {
+          height: 7rem;
+      }
+
+  }
+  &__date {
+      text-align: center;
+      margin-top: 0;
+
+      @include tablet {
+            margin-top: 0.5rem;
+      }
+
+  }
+
+  &__description-wrapper {
+      display: flex;
+      flex-direction: column;
+  }
+
+  &__event-name {
+
+    @include desktop {
+      margin: 0.5rem  0 0.75rem 2rem;
+    }
+      }
+  &__description {
+      margin: 1.25rem 1rem 0 1rem;
+
+      @include tablet {
+          margin: 1.25rem 0 1rem 2rem;
+      }
+
+      @include desktop {
+          margin: 0 2rem 2rem;
+      }
+
+  }
+
+  &__modal-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+  }
+
+  &__modal-header {
+      text-align: center;
+  }
+
+  &__modal-location {
+      text-align: center;
+      background-color: $color-accent-yellow;
+      border-radius: 5px;
+  }
+
+  &__modal-date {
+      text-align: center;
+      margin-bottom: 0.5rem;
+  }
+
+  &__modal-description {
+      padding-bottom: 0.5rem;
+      text-align: center;
+  }
+  &__map {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      
+      @include desktop {
+          width: 75%;
+          margin: 0 auto;
+      }
+  }
+
+  &__modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14rem;
+    background-color:white;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 24;
+    padding: 1rem;
+
+    @include tablet {
+        width: 24rem;
+    }
+
+    @include desktop {
+       display: flex;
+       flex-direction: column;
+        width: 30rem;
+    }
   }
 
 

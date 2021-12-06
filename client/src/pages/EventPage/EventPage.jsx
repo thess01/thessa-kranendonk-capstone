@@ -13,16 +13,16 @@ class EventPage extends Component {
 
   componentDidMount() {
     axios
-      .get("/api/beers/events")
+      .get("/api/events")
       .then((response) => {
         console.log(response.data)
         this.setState({
           events: response.data,
         });
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      // .catch((error) => {
+      //   console.log(error);
+      // });
   }
 
 

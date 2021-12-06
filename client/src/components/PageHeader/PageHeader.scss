@@ -48,7 +48,7 @@
 
     }
     &__link {
-        @include MH2;
+        @include MH3;
         text-decoration: none;
         color: $color-text;
         padding: 0.25rem;
@@ -62,7 +62,7 @@
         }
 
         &--active {
-            @include MH2;
+            @include MH3;
             color: orange;
             padding: 0.25rem;
             text-decoration: underline;

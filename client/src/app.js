@@ -35,7 +35,7 @@ const App = () => {
 
           <Route path="/login" component={LogIn} />
 
-          <Route path="/events" exact component={EventPage} />
+          <Route path="/events" component={EventPage} />
 
         </Switch>
         <PageFooter />

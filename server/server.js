@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use("/api/beers", beersRoutes);
 app.use("/api", breweriesRoutes)
-app.use("/apiz", eventsRoutes);
+app.use("/api", eventsRoutes);
 
 app.get('/', (_req, res) => {
    console.log('Hello')
