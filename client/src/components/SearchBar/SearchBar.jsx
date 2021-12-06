@@ -6,11 +6,10 @@ import "./SearchBar.scss";
 
 class Search extends Component {
   state = {
-    query: '',
+    query: "",
     beers: [],
     errorLoading: false,
   };
- 
 
   handleQueryChange = (event) => {
     this.setState({
@@ -18,11 +17,10 @@ class Search extends Component {
     });
   };
 
-
   handleSubmit = (e) => {
     e.preventDefault();
-    this.searchBeers(this.state.query) 
-  }
+    this.searchBeers(this.state.query);
+  };
 
   searchBeers = (query) => {
     axios
@@ -48,14 +46,11 @@ class Search extends Component {
     }
   }
 
-  
   componentDidUpdate(prevProps, prevState) {
-        const query = this.state.query;
-        const copy = { ...this.state.query};
-        const prevQuery = prevState.query;
-    
-    
-    if (copy !== prevQuery) {
+    const query = this.state.query;
+    const prevQuery = prevState.query;
+
+    if (query !== prevQuery) {
       this.searchBeers(query);
     }
   }
@@ -74,17 +69,17 @@ class Search extends Component {
         <button onClick={this.handleSubmit} className="search__button">
           Search
         </button>
-        
-        <div className="search__beers-container">
-          {this.state.query ? 
-          (
-            <BeerCardList beers={this.state.beers} />
 
+        <div className="search__beers-container">
+          {this.state.query ? (
+            <BeerCardList beers={this.state.beers} />
           ) : (
             <p></p>
           )}
           {this.state.errorLoading && (
-            <p className="search__error">There was an error loading your search results</p>
+            <p className="search__error">
+              There was an error loading your search results
+            </p>
           )}
         </div>
       </section>

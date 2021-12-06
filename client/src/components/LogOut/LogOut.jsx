@@ -28,6 +28,26 @@ class LogOut extends Component {
         } 
     }
 
+    componentDidUpdate() {
+        let token = sessionStorage.getItem('authToken')
+        if (!!token) {
+            axios.get('/api/upload', {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+                .then(response => {
+                    this.setState({
+                        isLoading: false,
+                        breweryInfo: response.data
+                    })
+                })
+                .catch((error) => {
+                    console.log(error);
+                  });
+        } 
+    }
+
 
     handleLogOut = (e) => {
         e.preventDefault();
@@ -41,6 +61,7 @@ class LogOut extends Component {
     }
 
     render() {
+       
         return (
     <>
     {this.state.breweryInfo ? (

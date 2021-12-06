@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import Input from '../../components/Input/Input'
 import './Login.scss';
 
+
 class LogIn extends Component {
     state = {
         breweryName: '',
@@ -42,7 +43,8 @@ class LogIn extends Component {
 
         axios.post('/api/login', {
             breweryName: e.target.breweryName.value,
-            password: e.target.password.value
+            password: e.target.password.value,
+            breweryInfo: e.target.breweryName.value
         })
         .then(res => {
             let token = res.data.token
@@ -56,6 +58,7 @@ class LogIn extends Component {
     }
 
     render() {
+      const {breweryName} = this.state.breweryName;
     return (
         <div className="login">
             <div class="login__wrapper">
