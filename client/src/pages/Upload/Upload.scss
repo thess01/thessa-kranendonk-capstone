@@ -118,15 +118,20 @@
 }
 &__button-wrapper {
     display: flex;
-    flex-direction: row-reverse;
     margin: 1rem 0;
     justify-content: flex-start;
-   padding-top: 1rem;
+    padding-top: 1rem;
+
+    @include tablet {
+        justify-content: flex-end;
+    }
 }
-    &__submit {
+    
+&__submit {
         @include button;
     }
-    &__cancel {
+    
+&__cancel {
         color: $color-white;
             text-decoration: none;
             padding: 0.25rem 1rem;
