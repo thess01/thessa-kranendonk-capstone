@@ -1,0 +1,21 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/global' as *;
+
+
+.events-card {
+  @include list;
+  width: 80%;
+  margin: 0 auto;
+
+  &__wrapper {
+
+  }
+  &__events-info {
+
+  }
+
+
+}

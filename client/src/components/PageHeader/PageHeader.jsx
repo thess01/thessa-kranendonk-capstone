@@ -31,6 +31,11 @@ const PageHeader = () => {
                             Upload
                         </NavLink>
                     </li>
+                    <li className="pageheader__list-item">
+                        <NavLink to="/events" exact className={(isActive) => "pageheader__link" + (isActive ? "--active" : "")}>
+                            Events
+                        </NavLink>
+                    </li>
 
                     <li className="pageheader__list-item">
                         <NavLink to="/login" exact className={(isActive) => "pageheader__link" + (isActive ? "--active" : "")}>

@@ -10,6 +10,7 @@ import Upload from "./pages/Upload/Upload";
 import SignUp from './pages/SignUp/SignUp';
 import LogIn from './pages/LogIn/LogIn';
 import LogOut from "./components/LogOut/LogOut";
+import EventPage from "./pages/EventPage/EventPage";
 document.title = "Brews & Bites";
 
 const App = () => {
@@ -33,6 +34,8 @@ const App = () => {
           <Route path="/signup" component={SignUp} />
 
           <Route path="/login" component={LogIn} />
+
+          <Route path="/events" exact component={EventPage} />
 
         </Switch>
         <PageFooter />
