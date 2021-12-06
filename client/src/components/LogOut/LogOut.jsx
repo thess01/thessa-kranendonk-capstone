@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import axios from 'axios';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import './LogOut.scss';
 
 class LogOut extends Component {
@@ -42,15 +42,15 @@ class LogOut extends Component {
     <>
     {this.state.breweryInfo ? (
         
-        <div className="logout-field">
-            <p>Welcome, {this.state.breweryInfo.breweryName}</p>
-           <button onClick={this.handleLogOut}>Log Out</button>
+        <div className="logout">
+            <p className="logout__welcome">Welcome, {this.state.breweryInfo.breweryName}</p>
+           <button className="logout__button" onClick={this.handleLogOut}>Log Out</button>
         </div>
          
         ) : (
     
             <div>
-            <h1 className="loading">Log In</h1>
+            <p></p>
           </div>
     )
         

@@ -9,6 +9,7 @@ import SearchBar from './components/SearchBar/SearchBar'
 import Upload from "./pages/Upload/Upload";
 import SignUp from './pages/SignUp/SignUp';
 import LogIn from './pages/LogIn/LogIn';
+import LogOut from "./components/LogOut/LogOut";
 document.title = "Brews & Bites";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
     <>
       <PageHeader />
       <HeaderImageBar />
+      <LogOut />
       <main className="main-content">
         <Switch>
           <Route path="/" exact component={Home} />

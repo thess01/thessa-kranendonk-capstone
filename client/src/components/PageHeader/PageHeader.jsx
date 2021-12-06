@@ -38,7 +38,7 @@ const PageHeader = () => {
                         </NavLink>
                     </li>
                 </ul>
-                <LogOut />
+           
             </div>
         </header>
     )
