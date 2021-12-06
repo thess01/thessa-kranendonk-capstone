@@ -30,7 +30,6 @@ class Search extends Component {
       .then((response) => {
         this.setState({
           errorLoading: false,
-          query: query,
           beers: response.data,
         });
       })
@@ -50,15 +49,13 @@ class Search extends Component {
   }
 
   
-      componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
         const query = this.state.query;
+        const copy = { ...this.state.query};
         const prevQuery = prevState.query;
-
-      console.log(query)
-      console.log(prevState)
     
     
-    if (query !== prevQuery) {
+    if (copy !== prevQuery) {
       this.searchBeers(query);
     }
   }

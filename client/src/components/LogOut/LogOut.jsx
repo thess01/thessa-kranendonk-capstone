@@ -28,6 +28,7 @@ class LogOut extends Component {
         } 
     }
 
+
     // componentDidUpdate() {
 
     // }
@@ -36,6 +37,10 @@ class LogOut extends Component {
         e.preventDefault();
 
         sessionStorage.removeItem('authToken')
+        this.setState({
+            breweryInfo: null
+        })
+        
         this.props.history.push('/')
     }
 
