@@ -53,23 +53,23 @@ export default function EventList({ events }) {
               <form className="add-event__form" onSubmit={handleSubmit(onSubmit)}>
                     <label className="add-event__label" htmlFor="eventName">Event Name</label>
                     <input className="add-event__input" type="text" placeholder="Event Name" {...register("eventName", {required: true, max: 50, min: -3, maxLength: 80})} />
-                    {errors.eventName && <p>This field is required</p>}
+                    {errors.eventName && <p className="add-event__error">This field is required</p>}
 
                     <label className="add-event__label" htmlFor="eventLocation">Event Location</label>
                     <input className="add-event__input" type="text" placeholder="Event Location" {...register("eventLocation", {required: true, max: 50, min: -3, maxLength: 80})} />
-                    {errors.eventLocation && <p>This field is required</p>}
+                    {errors.eventLocation && <p className="add-event__error">This field is required</p>}
 
                     <label className="add-event__label" htmlFor="date">Date</label>
                     <input className="add-event__input" type="text" placeholder="Date" {...register("date", {required: true, maxLength: 100})} />
-                    {errors.date && <p>This field is required</p>}
+                    {errors.date && <p className="add-event__error">This field is required</p>}
 
                     <label className="add-event__label" htmlFor="email">Email</label>
                     <input className="add-event__input" type="email" placeholder="Email" {...register("email", {required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/})} />
-                    {errors.email && <p>Email did not pass the requirements</p>}
+                    {errors.email && <p className="add-event__error">Email did not pass the requirements</p>}
                     
                     <label className="add-event__label" htmlFor="description">Description</label>
                     <input className="add-event__input" type="text" placeholder="Description" {...register("description", {validate: (value) => value.length > 50})} />
-                    {errors.description && <p>Your description is less than 50 characters</p>}
+                    {errors.description && <p className="add-event__error">Your description is less than 50 characters</p>}
                    
 
 
