@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const knex = require('knex')(require('./knexfile').development);
 require("dotenv").config();
 const port = process.env.PORT || 8080;
 const beersRoutes = require("./routes/beers");

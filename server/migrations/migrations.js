@@ -27,6 +27,7 @@ exports.up = function(knex) {
             table.string("dish").notNullable();
             table.string("cuisine").notNullable();
             table.string("beerType").notNullable();
+            table.string("food_image").notNullable();
 
         })
      
