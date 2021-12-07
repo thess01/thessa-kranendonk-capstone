@@ -11,6 +11,7 @@ import SignUp from './pages/SignUp/SignUp';
 import LogIn from './pages/LogIn/LogIn';
 import LogOut from "./components/LogOut/LogOut";
 import EventPage from "./pages/EventPage/EventPage";
+import TipsPage from "./pages/TipsPage/TipsPage";
 document.title = "Brews & Bites";
 
 const App = () => {
@@ -30,6 +31,8 @@ const App = () => {
           <Route path='/search/:searchQuery' exact component={SearchBar}/>
 
           <Route path="/upload" component={Upload} />
+
+          <Route path="/pairing-tips" component={TipsPage} />
 
           <Route path="/signup" component={SignUp} />
 

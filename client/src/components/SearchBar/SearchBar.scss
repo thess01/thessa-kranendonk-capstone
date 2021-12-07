@@ -53,6 +53,7 @@
             min-height: 40vh;
         }
     }
+    
     &__button {
         @include button;
         background-color: $color-accent-yellow;

@@ -38,6 +38,12 @@ const PageHeader = () => {
                     </li>
 
                     <li className="pageheader__list-item">
+                        <NavLink to="/pairing-tips" exact className={(isActive) => "pageheader__link" + (isActive ? "--active" : "")}>
+                            Tips
+                        </NavLink>
+                    </li>
+
+                    <li className="pageheader__list-item">
                         <NavLink to="/login" exact className={(isActive) => "pageheader__link" + (isActive ? "--active" : "")}>
                             Login
                         </NavLink>

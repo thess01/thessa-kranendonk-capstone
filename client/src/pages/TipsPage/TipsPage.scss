@@ -1,0 +1,175 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/global" as *;
+
+.tips {
+  margin: 12rem 1rem 0;
+
+  @include tablet {
+    margin: 16rem auto;
+  }
+
+  @include desktop {
+    margin: 18rem auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    text-align: center;
+    color: $color-accent-yellow;
+
+    @include desktop {
+        @include H1;
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    @include tablet {
+      width: 80%;
+      margin: 0 auto 2rem;
+    }
+
+    @include desktop {
+        width: 50%;
+    }
+  }
+
+  &__container {
+    @include desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet {
+      flex-direction: row;
+      width: 80vw;
+      justify-content: space-between;
+      margin: 2rem 0;
+    }
+
+    @include desktop {
+        justify-content: space-between;
+        width: 70vw;
+        margin: 3rem 0;
+    }
+  }
+
+  &__wrapper-reverse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet {
+      flex-direction: row-reverse;
+      width: 80vw;
+      justify-content: space-around;
+      margin: 0 auto;
+    }
+
+    @include desktop {
+        justify-content: space-between;
+        width: 70vw;
+        margin: 3rem 0;
+    }
+
+  }
+
+  &__inner-wrapper {
+    width: fit-content;
+  }
+
+  &__inner-wrapper-reverse {
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__semi-header {
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+   
+  }
+
+  &__image {
+    height: 8rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 -40px;
+    border-radius: 5px;
+
+    @include tablet {
+      width: 18rem;
+      object-position: center;
+      height: 18rem;
+      margin: 0 0 0 6rem;
+      align-items: flex-start;
+    }
+    @include desktop {
+        width: 24rem;
+        margin: 0;
+    }
+
+   
+  }
+
+  &__image-reverse {
+    height: 8rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 -40px;
+    border-radius: 5px;
+
+    @include tablet {
+      width: 18rem;
+      object-position: center;
+      height: 18rem;
+      margin: 0;
+      align-items: flex-start;
+    }
+
+    @include desktop {
+        width: 24rem;
+    }
+
+ 
+  }
+  &__3CS {
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto 3rem;
+
+    @include tablet {
+      width: 40vw;
+      margin: 1.5rem;
+      margin-top: 0.25rem;
+    }
+
+    @include desktop {
+        width: 20rem;
+    }
+  
+  }
+
+
+  &__paragraph {
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
