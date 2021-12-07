@@ -74,7 +74,9 @@ class SignUp extends Component {
 
  render(){
     return (
+       
         <section class="signup">
+           
             <div className="signup__wrapper">
             <h1 className="signup__header">Brewery Sign Up</h1>
             <form onSubmit={this.handleSignUp}>
@@ -127,6 +129,7 @@ class SignUp extends Component {
             </form>
             
                 </div>
+                
         </section>
     )
  }

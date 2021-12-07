@@ -4,6 +4,7 @@ import image2 from '../../assets/images/tips2.jpg'
 import image3 from '../../assets/images/tips3.jpg'
 import image4 from '../../assets/images/tips1.jpg'
 import image5 from '../../assets/images/tips4.jpg'
+import Slide from 'react-reveal/Slide';
 
 const TipsPage = () => {
   return (
@@ -13,8 +14,9 @@ const TipsPage = () => {
         There are three main things to keep in mind when pairing beer with food.
         Those are the 3 C’s: Cut, Complement and Contrast.
       </h3>
-
+     
       <div className="tips__container">
+      <Slide left>
         <div className="tips__wrapper">
           <img className="tips__image" src={image1} alt="Beer and food pairings"/>
           <div className="tips__inner-wrapper">
@@ -29,6 +31,9 @@ const TipsPage = () => {
             </p>
           </div>
         </div>
+        </Slide>
+
+        <Slide right>
         <div className="tips__wrapper-reverse">
           <img className="tips__image-reverse" src={image2} alt="Beer and food pairings"/>
           <div className="tips__inner-wrapper-reverse">
@@ -43,6 +48,9 @@ const TipsPage = () => {
             </p>
           </div>
         </div>
+        </Slide>
+
+        <Slide left>
         <div className="tips__wrapper">
           <img className="tips__image" src={image5} alt="Beer and food pairings"/>
           <div className="tips__inner-wrapper">
@@ -57,6 +65,9 @@ const TipsPage = () => {
             </p>
           </div>
         </div>
+        </Slide>
+
+        <Slide right>
         <div className="tips__wrapper-reverse">
           <img className="tips__image-reverse" src={image4} alt="Beer and food pairings"/>
           <div className="tips__inner-wrapper-reverse">
@@ -72,6 +83,9 @@ const TipsPage = () => {
             </p>
           </div>
         </div>
+        </Slide>
+
+        <Slide left>
         <div className="tips__wrapper">
           <img className="tips__image" src={image3} alt="Beer and food pairings"/>
           <div className="tips__inner-wrapper">
@@ -87,6 +101,7 @@ const TipsPage = () => {
             </p>
           </div>
       </div>
+      </Slide>
       </div>
     </section>
   );

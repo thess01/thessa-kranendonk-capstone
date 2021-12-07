@@ -3,6 +3,7 @@ import { Component } from 'react';
 import React from 'react'
 import {Link} from 'react-router-dom';
 import Input from '../../components/Input/Input'
+import Slide from 'react-reveal/Slide';
 import './Login.scss';
 
 
@@ -60,6 +61,8 @@ class LogIn extends Component {
     render() {
       const {breweryName} = this.state.breweryName;
     return (
+
+        <Slide bottom>
         <div className="login">
             <div class="login__wrapper">
                 <h1 className="login__header">Brewery Log In</h1>
@@ -84,6 +87,7 @@ class LogIn extends Component {
             </div>
            
         </div>
+        </Slide>
     )
     }
 }

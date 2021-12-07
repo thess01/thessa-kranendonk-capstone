@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import React from "react";
 import Modal from "@mui/material/Modal";
+import Slide from 'react-reveal/Slide';
 import "./EventCard.scss";
 import map from '../../assets/images/map.png'
 
@@ -13,7 +14,7 @@ function EventCard({eventName, location, description, website, date, id}) {
 
   return (
  
-   
+   <Slide bottom>
     <ul className="events-card">
      <li key={id} className="events-card__list">
        <a onClick={handleOpen}>
@@ -52,7 +53,7 @@ function EventCard({eventName, location, description, website, date, id}) {
       </div>
       </li>
       </ul>
-  
+      </Slide>
   );
 }
 

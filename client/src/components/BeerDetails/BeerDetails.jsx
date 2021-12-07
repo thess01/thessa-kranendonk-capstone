@@ -1,5 +1,5 @@
 import "./BeerDetails.scss";
-// import image from "../../assets/images/beer_1.jpg";
+
 
 const BeerDetails = ({beer}) => {
   return (

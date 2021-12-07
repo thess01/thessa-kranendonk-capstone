@@ -68,11 +68,12 @@ exports.postBeer = (req, res) => {
 
 }
 
+
 exports.searchBeers = (req, res) => {
-    let query = req.params.seachQuery;
+    // let query = req.params.seachQuery;
     knex("beers")
     .join('breweries','beers.brewery_id','breweries.brewery_id')
-    .where("beerName", "like", `%${query}%`).orWhere("beerType", "like", `%${query}%`).orWhere("flavor", "like", `%${query}%`)
+    .where("beerName", "like", `%${req.params.searchQuery}%`).orWhere("beerType", "like", `%${req.params.searchQuery}%`).orWhere("flavor", "like", `%${req.params.searchQuery}%`)
     .then((data) => {
         res.json(data)
 })

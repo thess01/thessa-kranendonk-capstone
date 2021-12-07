@@ -1,10 +1,11 @@
 import "./BeerCard.scss";
 import { Link } from "react-router-dom";
-// import image from "../../assets/images/beer_1.jpg";
+import Slide from 'react-reveal/Slide';
 
 export default function BeerCard({ id, beerName, image, beerType, breweryName, cityState, country }) {
   return (
     <>
+    <Slide left>
       <ul className="beercard">
             <Link className="beercard__link" to={`/beers/` + id}>
               <li className="beerCard__item"  key={id}>
@@ -24,6 +25,7 @@ export default function BeerCard({ id, beerName, image, beerType, breweryName, c
               </li>
             </Link>
       </ul>
+      </Slide>
     </>
   );
 }
