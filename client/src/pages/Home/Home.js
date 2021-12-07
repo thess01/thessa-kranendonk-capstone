@@ -3,6 +3,7 @@ import { Component } from "react";
 import axios from "axios";
 import "./Home.scss";
 import BeerCardList from "../../components/BeerCardList/BeerCardList";
+import About from "../../components/About/About";
 
 
 class Home extends Component {
@@ -40,7 +41,7 @@ class Home extends Component {
 
     return (
       <>
-  
+        <About />
         <BeerCardList beers={beers} />
     </>
     );

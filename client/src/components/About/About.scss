@@ -5,18 +5,23 @@
 @use '../../styles/partials/global' as *;
 
 
+.about{
 
-.beercard-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
-    margin-top: 2rem;
+    &__text {
+    margin: 12rem 1.5rem 0;
+    @include MP2;
+    text-align: center;
 
+    @include tablet {
+        margin: 16rem 5rem 0;
+        @include P1;
+    }
 
     @include desktop {
-    margin-top: 4rem;
+        margin: 18rem 10rem 0;
+        @include P1;
     }
-   
+    
+}
+
 }

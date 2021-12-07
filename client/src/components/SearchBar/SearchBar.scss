@@ -14,6 +14,9 @@
     z-index: -1;
     margin: 10rem 1.5rem 0rem 1.5rem;
 
+    @include tablet {
+        margin-top: 14rem;
+    }
 
     @include desktop {
     margin-top: 17rem;
@@ -42,10 +45,11 @@
     }
     &__beers-container {
         min-height: fit-content;
-        margin-top: -11rem;
+        margin-top: 1.5rem;
+
 
         @include desktop {
-        
+            margin-top: 0rem;
             min-height: 40vh;
         }
     }

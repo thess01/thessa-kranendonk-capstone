@@ -1,7 +1,6 @@
 import "./HeaderImageBar.scss";
 import HeaderImage from '../../assets/images/beer_2.jpg'
-import { Component } from "react";
-import LogOut from "../LogOut/LogOut";
+
 
 const HeaderImageBar = () => {
   return (
