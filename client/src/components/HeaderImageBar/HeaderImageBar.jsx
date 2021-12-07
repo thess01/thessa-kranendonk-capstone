@@ -1,13 +1,18 @@
 import "./HeaderImageBar.scss";
-import HeaderImage from '../../assets/images/beer_2.jpg'
+import video from '../../assets/videos/beer37.mp4'
 
 
 const HeaderImageBar = () => {
   return (
 
      <>
-    <img className="image-bar" src={HeaderImage} alt="Brews And Bites" />
-    <h1 className="image-bar__header"></h1>
+    
+    <div className="image__video">
+    <video className="video" autoPlay loop muted>
+   <  source src={video} type="video/mp4" />
+    </video>
+
+    </div>
       </>
     
   );

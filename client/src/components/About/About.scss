@@ -8,13 +8,15 @@
 .about{
 
     &__text {
-    margin: 12rem 1.5rem 0;
+    margin: 10rem 1.5rem 0;
     @include MP2;
     text-align: center;
 
     @include tablet {
-        margin: 16rem 5rem 0;
-        font-size: 1.5rem;
+        margin: 17rem 7rem 0;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        font-style: italic;
     }
 
     @include desktop {
