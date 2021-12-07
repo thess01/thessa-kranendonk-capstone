@@ -7,6 +7,10 @@ module.exports = {
      password: "rootroot",
      database: "brews_and_bites",
      charset: "utf8"
-    }
+    },
+  },
+  production: {
+    client: 'mysql',
+    connection: process.env.JAWSDB_URL,
   }
   };
