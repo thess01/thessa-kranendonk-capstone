@@ -25,7 +25,7 @@
     }
     &__title {
         @include MH1;
-        color: $color-text;
+        color: $color-primary;
         @include desktop {
             @include H1;
         }

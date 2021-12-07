@@ -11,8 +11,7 @@
   margin-top: 14rem;
   display: flex;
   flex-direction: column;
-  @include tablet {
-  }
+ 
 
   &__header {
     text-align: center;
@@ -35,6 +34,12 @@
     background-color: $color-accent-yellow;
     padding: 0.25rem;
     align-self: flex-end;
+    width: 6rem;
+
+    @include desktop {
+      width: fit-content;
+      padding: 0.5rem;
+    }
   }
 }
 

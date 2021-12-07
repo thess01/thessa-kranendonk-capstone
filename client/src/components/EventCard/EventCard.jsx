@@ -1,11 +1,11 @@
 import Box from "@mui/material/Box";
 import React from "react";
-import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import "./EventCard.scss";
+import map from '../../assets/images/map.png'
 
 
-function EventCard({eventName, location, description, image, email, date, id}) {
+function EventCard({eventName, location, description, website, date, id}) {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => setOpen(true);
@@ -43,8 +43,8 @@ function EventCard({eventName, location, description, image, email, date, id}) {
                   <h3 className="events-card__modal-location">{location}</h3>
                   <p className="events-card__modal-date">{date}</p>
                   <p className="events-card__modal-description">{description}</p>
-                  <p className="events-card__emails">{email}</p>
-                  <img className="events-card__map" src={image} alt='Event map'/>
+                  <p className="events-card__website">{website}</p>
+                  <img className="events-card__map" src={map} alt='Event map'/>
 
                 </Box>
               </Modal>

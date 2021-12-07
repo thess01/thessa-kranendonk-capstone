@@ -45,8 +45,7 @@ export default function EventList({ events }) {
             date={event.date}
             location={event.location}
             description={event.description}
-            email={event.email}
-            image={event.map_image}
+            website={event.website}
           />
         ))}
 

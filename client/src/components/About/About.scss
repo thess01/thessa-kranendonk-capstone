@@ -14,14 +14,13 @@
 
     @include tablet {
         margin: 16rem 5rem 0;
-        @include P1;
+        font-size: 1.5rem;
     }
 
     @include desktop {
         margin: 18rem 10rem 0;
-        @include P1;
-    }
-    
+        font-size: 1.25rem;
+        line-height: 1.85rem;
+    } 
 }
-
 }

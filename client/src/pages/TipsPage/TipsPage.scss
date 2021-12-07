@@ -35,7 +35,8 @@
     }
 
     @include desktop {
-        width: 50%;
+        width: 45%;
+        margin-bottom: 4rem;
     }
   }
 
@@ -61,7 +62,7 @@
 
     @include desktop {
         justify-content: space-between;
-        width: 70vw;
+        width: 60vw;
         margin: 3rem 0;
     }
   }
@@ -80,7 +81,7 @@
 
     @include desktop {
         justify-content: space-between;
-        width: 70vw;
+        width: 60vw;
         margin: 3rem 0;
     }
 
@@ -112,6 +113,7 @@
     object-fit: cover;
     object-position: 0 -40px;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
 
     @include tablet {
       width: 18rem;
@@ -134,6 +136,7 @@
     object-fit: cover;
     object-position: 0 -40px;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
 
     @include tablet {
       width: 18rem;
