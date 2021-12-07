@@ -66,3 +66,18 @@ exports.postBeer = (req, res) => {
     })
 
 }
+
+exports.searchBeers = (req, res) => {
+    let query = req.params.seachQuery;
+    knex("beers")
+    .join('breweries','beers.brewery_id','breweries.brewery_id')
+    .where("beerName", "like", `%${query}%`).orWhere("beerType", "like", `%${query}%`).orWhere("flavor", "like", `%${query}%`)
+    .then((data) => {
+        res.json(data)
+})
+.catch((err) => {
+    res.status(400).json({
+    err: "Error retrieving beers"})
+
+})
+}
