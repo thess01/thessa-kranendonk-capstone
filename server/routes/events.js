@@ -10,5 +10,6 @@ port = process.env.port;
 
 router.get('/events', eventsController.getAllEvents);
 
-router.post('/events/add', eventsController.postEvent)
+router.post('/events/add', eventsController.postEvent);
+
 module.exports = router;
