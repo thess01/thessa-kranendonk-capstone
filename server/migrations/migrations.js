@@ -12,6 +12,16 @@ exports.up = function(knex) {
             table.string("phone").notNullable();
             table.timestamp('updated_at').defaultTo(knex.fn.now());
         })
+        .createTable("events", (table) => {
+            table.increments("id");
+            table.string("location").notNullable();
+            table.string("eventName").notNullable();
+            table.string("date").notNullable();
+            table.text("description").notNullable();
+            table.string("email").notNullable();
+            table.string("website").notNullable();
+
+        })
         .createTable("foods", (table) => {
             table.increments("id");
             table.string("dish").notNullable();
@@ -58,5 +68,5 @@ exports.up = function(knex) {
 exports.down = function(knex) {
     return knex.schema
     .dropTable("beers").dropTable("foods").dropTable("breweries")
-    .dropTable("comments");
+    .dropTable("comments").dropTable("events");
 };
