@@ -14,7 +14,6 @@ exports.getAllBeers = (_req, res) => {
     })
 }
 
-// display one beer by Id and show foods by beerType
 exports.getOneBeer = (req, res) => {
     knex("beers")
    

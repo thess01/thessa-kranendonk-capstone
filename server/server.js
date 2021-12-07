@@ -17,10 +17,10 @@ app.use("/api", breweriesRoutes)
 app.use("/api", eventsRoutes);
 
 app.get('/', (_req, res) => {
-   console.log('Hello')
+   console.log('Hello World')
  });
 
 
 app.listen(port, () => {
-   console.log(`Server is running on port: ${port}`);
+   console.log(`Grooving on: ${port}`);
 });
