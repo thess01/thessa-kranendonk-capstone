@@ -59,7 +59,6 @@ class LogIn extends Component {
     }
 
     render() {
-      const {breweryName} = this.state.breweryName;
     return (
 
         <Slide bottom>

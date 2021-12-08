@@ -11,7 +11,7 @@ function CommentsList({comments, handleDeleteComment}) {
         <div className="comments-display__user-info">
           <h3 className="comments-display__name">{comment.userName}</h3>
           <p className="comments-display__date">
-          {moment(comment.timestamp).fromNow()} 
+          {moment(comment.timestamp).fromNow()}  
           </p>
         </div>
         <p className="comments-display__comment">{comment.comment}</p>

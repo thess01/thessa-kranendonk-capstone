@@ -67,6 +67,8 @@ class SingleBeerPage extends Component {
     e.target.comment.value = "";
   };
 
+  
+
   handleDeleteComment = (commentId) => {
     let beer_id = this.props.match.params.id;
     axios.delete(`/api/beers/${beer_id}/comments/${commentId}`).then(() => {

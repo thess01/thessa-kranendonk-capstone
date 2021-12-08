@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import axios from 'axios';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 import './LogOut.scss';
 
 class LogOut extends Component {

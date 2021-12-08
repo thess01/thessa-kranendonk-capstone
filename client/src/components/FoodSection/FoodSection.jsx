@@ -1,8 +1,11 @@
 import "./FoodSection.scss";
+import Slide from 'react-reveal/Slide';
 
 const FoodSection = ({foods}) => {
   return (
+    
       <section className="food-section">
+       <Slide bottom>
      {foods.map(food =>
     <li className="food-section__list" key={food.id}>
     <div className="food-section__background">
@@ -20,6 +23,7 @@ const FoodSection = ({foods}) => {
     </li>
 
      )}
+     </Slide>
 </section>
   );
 };

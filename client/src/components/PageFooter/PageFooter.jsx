@@ -20,9 +20,9 @@ const PageFooter = () => {
         <div className="footer__wrapper-right">
             <h2 className="footer__header">Follow Us</h2>
         <div className="footer_<NavLink-wrapper">
-            <NavLink to="/"><img className="footer__social-media" src={instagram} /></NavLink>
-            <NavLink to="/"><img className="footer__social-media" src={facebook} /></NavLink>
-            <NavLink to="/"><img className="footer__social-media" src={twitter} /></NavLink>
+            <NavLink to="/"><img className="footer__social-media" src={instagram} alt="Instagram"/></NavLink>
+            <NavLink to="/"><img className="footer__social-media" src={facebook} alt="Facebook"/></NavLink>
+            <NavLink to="/"><img className="footer__social-media" src={twitter} alt="Twitter"/></NavLink>
         </div>
         </div>
     </footer>

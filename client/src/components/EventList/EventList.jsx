@@ -1,5 +1,4 @@
 import EventCard from "../EventCard/EventCard";
-import { Link, useHistory } from "react-router-dom";
 import { useForm} from 'react-hook-form'
 import axios from "axios";
 import Box from "@mui/material/Box";
@@ -14,8 +13,6 @@ export default function EventList({ events }) {
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
-  let history = useHistory();
 
   const onSubmit = (data) => {
       axios

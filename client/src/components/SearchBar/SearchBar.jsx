@@ -1,6 +1,5 @@
 import { Component } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import BeerCardList from "../BeerCardList/BeerCardList";
 import "./SearchBar.scss";
 

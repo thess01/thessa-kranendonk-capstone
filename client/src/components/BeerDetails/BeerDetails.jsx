@@ -79,7 +79,6 @@ useEffect(() => {
   } else {
     return (
     <div className="beer-details">
-      <div className="beer-details__background"></div>
       <img className="beer-details__image" src={beer.image} alt={beer.beerName}/>
       <div className="beer-details__brewery-wrap">
         <h4 className="beer-details__beer-name">{beer.beerName.toUpperCase()}</h4>
@@ -146,7 +145,7 @@ useEffect(() => {
                   name="description"
                   placeholder="Description"
                   {...register("description", {
-                    valiABV: (value) => value.length > 50,
+                    validate: (value) => value.length > 50,
                   })}
                 />
                 {errors.description && (

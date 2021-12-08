@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Component } from "react";
 import EventList from '../../components/EventList/EventList';
 import axios from "axios";

@@ -1,5 +1,4 @@
 import { NavLink, Link } from "react-router-dom";
-import beerIcon from "../../assets/images/beer-outline.svg";
 import Animation from "../BeerAnimation/BeerAnimation";
 import "./PageHeader.scss";
 

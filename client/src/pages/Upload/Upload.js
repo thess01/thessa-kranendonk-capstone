@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Component } from "react";
+import Slide from 'react-reveal/Slide';
 import "./Upload.scss";
 
 class Upload extends Component {
@@ -96,7 +97,7 @@ class Upload extends Component {
   }
 
   render() {
-    const { isLoading, breweryInfo } = this.state;
+    const { breweryInfo } = this.state;
 
     let token = sessionStorage.getItem("authToken");
 
@@ -114,6 +115,7 @@ class Upload extends Component {
     }
 
     return (
+      <Slide bottom>
       <section className="upload">
         <div class="upload__wrapper">
           <h1 className="upload__header">
@@ -275,6 +277,7 @@ class Upload extends Component {
           </div>
         </div>
       </section>
+      </Slide>
     );
   }
 }
