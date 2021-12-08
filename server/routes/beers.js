@@ -18,6 +18,8 @@ router.get('/foods', foodsController.getAllFoods);
 
 router.get('/:id', beersController.getOneBeer);
 
+router.delete('/:id', beersController.deleteBeer);
+
 router.post('/:id', commentsController.postComment);
 
 router.delete('/:id/comments/:id', commentsController.deleteComment)

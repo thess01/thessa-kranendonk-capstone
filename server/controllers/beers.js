@@ -18,10 +18,10 @@ exports.getAllBeers = (_req, res) => {
 
 exports.getOneBeer = (req, res) => {
     knex("beers")
-   
     .where({"beers.id": req.params.id})
     .join('breweries','beers.brewery_id','breweries.brewery_id')
     .then(beer => {
+        console.log(req.params.id)
         if(!beer.length) {
             return res.status(404).json({
                 message: "Beer does not exist"
@@ -37,8 +37,8 @@ exports.getOneBeer = (req, res) => {
         if(beer){
             knex("comments")
             .where({"beer_id": beer[0].id})
-            .then(comments => {
-                beer[0].comments = comments
+            .then(comment => {
+                beer[0].comments = comment
                 res.json(beer[0]);
             })
         }
@@ -82,4 +82,19 @@ exports.searchBeers = (req, res) => {
     err: "Error retrieving beers"})
 
 })
+}
+
+exports.deleteBeer = (req, res) => {
+    knex("beers")
+    .where({"beers.id": req.params.id})
+    .del()
+    .then((data) => {
+        res.status(200).json(data);
+    })
+    .catch(() => {
+        res.status(400).json({
+            message: `Error deleting beer`
+        })
+    })
+
 }
