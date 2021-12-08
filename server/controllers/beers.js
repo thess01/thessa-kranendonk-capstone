@@ -21,7 +21,6 @@ exports.getOneBeer = (req, res) => {
     .where({"beers.id": req.params.id})
     .join('breweries','beers.brewery_id','breweries.brewery_id')
     .then(beer => {
-        console.log(req.params.id)
         if(!beer.length) {
             return res.status(404).json({
                 message: "Beer does not exist"
