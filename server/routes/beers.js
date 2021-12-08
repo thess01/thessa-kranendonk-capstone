@@ -1,10 +1,8 @@
-const knex = require('knex')(require("../knexfile").development);
 const express = require("express");
 const router = express.Router();
 const beersController = require('../controllers/beers');
 const commentsController = require('../controllers/comments');
 const foodsController = require('../controllers/foods');
-
 port = process.env.port;
 
 

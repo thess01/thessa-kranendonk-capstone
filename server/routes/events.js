@@ -1,4 +1,3 @@
-const knex = require('knex')(require("../knexfile").development);
 const express = require("express");
 const router = express.Router();
 const eventsController = require('../controllers/events');
