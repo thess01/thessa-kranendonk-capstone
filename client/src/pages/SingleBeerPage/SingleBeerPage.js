@@ -103,7 +103,13 @@ class SingleBeerPage extends Component {
     return (
       <>
         <BeerDetails beer={selectedBeer} handleEditBeer={this.handleEditBeer} />
-        <FoodSection foods={this.state.selectedBeer.dishes} />
+        {this.state.selectedBeer.dishes ? (
+        <FoodSection 
+        foods={this.state.selectedBeer.dishes} 
+        />
+        ) : (
+          <div><p>Loading...</p></div>
+        )}
         <CommentsForm addComment={this.addComment} />
 
         <div className="single-beer-page__container">

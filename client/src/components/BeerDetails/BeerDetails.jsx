@@ -99,8 +99,11 @@ useEffect(() => {
               <p className="beer-details__name">Expert rating:</p>
               <p className="beer-details__info">{beer.rating} stars</p>
         </div>
-        <button className="delModal__delete-button" onClick={handleOpen}>Edit</button>
-        <button className="delModal__delete-button" onClick={handleDelete}>Delete</button>
+        
+        <div className="beer-details__buttons">
+        <button className="beer-details__edit-button" onClick={handleOpen}>Edit</button>
+        <button className="beer-details__delete-button" onClick={handleDelete}>Delete</button>
+        </div>
     
     <div className="edit-beer">
     <Modal
@@ -151,8 +154,8 @@ useEffect(() => {
                     Your description is less than 50 characters
                   </p>
                 )}
-
-                <select {...register("Title", { required: true })}>
+              <label className="edit-beer__label" htmlFor="beerType">Beer Type</label>
+                <select className="edit-beer__input" {...register("beerType", { required: true })}>
                   <option value="IPA">IPA</option>
                   <option value="Amber Ale">Amber Ale</option>
                   <option value="Porter">Porter</option>

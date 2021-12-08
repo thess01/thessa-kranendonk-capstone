@@ -7,44 +7,51 @@
 .beer-details {
     margin-top: 14rem;
     @include list;
-    padding: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 12rem 1rem 0 1rem;
+    background-color: #ffad0a86;
+    background-size: 100%;
+    border-radius: 5px;
+    padding-top: 1rem;
 
     @include tablet {
         margin-top: 18rem;
+        padding-top: 2rem;
     }
 
     @include desktop {
         margin-top: 18rem;
+        width: 75vw;
+        margin: 18rem auto 0 auto;
+        padding-bottom: 2rem;
     }
 
-    &__background {
-        background-color: $color-accent-yellow;
-        opacity: 0.4;
-        border-radius: 5px;
-        height: 34rem;
-        width: 95vw;
-        position: absolute;
-        z-index: -1;
-        top: 500px;
+    // &__background {
+    //     background-color: $color-accent-yellow;
+    //     opacity: 0.4;
+    //     border-radius: 5px;
+    //     height: 34rem;
+    //     width: 95vw;
+    //     position: absolute;
+    //     z-index: -1;
+    //     top: 500px;
 
-        @include tablet {
-            height: 35.5rem;
-            width: 85vw;
-            top: 700px;
-        }
+    //     @include tablet {
+    //         height: 35.5rem;
+    //         width: 85vw;
+    //         top: 700px;
+    //     }
 
-        @include desktop {
-            top: 900px;
-            height: 43rem;
-            width: 75vw;
+    //     @include desktop {
+    //         top: 900px;
+    //         height: 43rem;
+    //         width: 75vw;
            
-        }
-    }
+        // }
+    
     &__wrapper {
         width: 80%;
         display: flex;
@@ -106,13 +113,13 @@
         }
     }
     &__image {
-        width: 85vw;
+        width: 90%;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0,0,0,0.6);
         object-fit: fill;
 
         @include tablet {
-            width: 75vw;
+            width: 80vw;
         }
 
         @include desktop {
@@ -139,6 +146,49 @@
     &__info {
         width: 55%;
         margin: 0;
+    }
+
+    &__buttons {
+        padding-bottom: 1rem;
+        @include tablet {
+            margin: 2rem 0;
+            padding-bottom: 0;
+        }
+
+        @include desktop {
+            margin-top: 4rem;
+            padding-bottom: 0
+        }
+    }
+
+    &__edit-button {
+        @include button;
+        margin: 1rem;
+
+        @include tablet {
+            padding: 0.25rem 0;
+        }
+
+        @include desktop {
+            @include P1;
+        }
+
+
+    }
+
+    &__delete-button {
+        @include button;
+        margin: 1rem;
+
+        @include tablet {
+            padding: 0.25rem 0;
+        }
+
+        @include desktop {
+            @include P1;
+        }
+
+
     }
 }
 
@@ -275,6 +325,8 @@
         @include desktop {
             margin: 0;
         }
-      }
+    }
+
+
     
   }
