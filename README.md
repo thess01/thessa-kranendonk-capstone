@@ -8,7 +8,7 @@ Please install node and MySQL beforehand
 2. Next create a new database in MySQLWorkbench named `brews_and_bites`.
 
 3. Install server side dependencies:  
-    Enter `cd server` in the terminal, hit enter, then run `npm install`
+    In the terminal, hit enter, then run `npm install`
   
 4. Run migrations
    $ npx knex migrate:latest
@@ -25,7 +25,7 @@ Please install node and MySQL beforehand
   
 
 7. Start the server:
-   $ npm start
+   Enter $ `node server.js` in the terminal
 
 
 #### Set up the frontend
