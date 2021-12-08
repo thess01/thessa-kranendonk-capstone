@@ -11,10 +11,10 @@ Please install node and MySQL beforehand
     In the terminal run `npm install`
   
 4. Run migrations
-   $ npx knex migrate:latest
+   $ npm run migrate
 
 5. Run seeds
-   $ npx knex seed:run
+   $ npx run seed
    
 6. Set environment:  
 
