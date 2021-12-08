@@ -15,6 +15,7 @@ export default function BeerCardList( { beers } ) {
                     country={beer.country}
                     cityState={beer.cityState}
                     image={beer.image}
+                    brewery_id={beer.brewery_id}
                 />)
             }
             </section>

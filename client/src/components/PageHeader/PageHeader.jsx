@@ -1,7 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import beerIcon from "../../assets/images/beer-outline.svg";
 import Animation from "../BeerAnimation/BeerAnimation";
-import LogOut from "../LogOut/LogOut";
 import "./PageHeader.scss";
 
 const PageHeader = () => {

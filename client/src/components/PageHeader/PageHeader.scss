@@ -50,29 +50,135 @@
 
     }
     &__link {
-        @include MH3;
-        text-decoration: none;
-        color: $color-text;
-        padding: 0.25rem;
-        text-align: center;
-        &:hover {
-            color: orange;
-        }
+        
+            width: 3rem;
+            background:$color-accent-yellow;
+            color: $color-white;
+            font-size: 1rem;
+            padding: 0.5rem 0.5rem;
+            border: 0;
+            transition: all 0.5s;
+            border-radius: 20px;
+            position: relative;
+            text-align: center;
 
-        @include tablet {
-            @include H2;
-        }
-
-        &--active {
-            @include MH3;
-            color: orange;
-            padding: 0.25rem;
-            text-decoration: underline;
-
-            @include tablet {
-                @include H2;
-
+            @include desktop {
+                width: 5rem;
+                font-size: 1.5rem;
+                padding: 0.5rem 0.5rem;
             }
+           
+        
+            &::after {
+                position: absolute;
+                left: 80%;
+                top: 54%;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+        
+            }
+        
+            &:hover {
+                background: $color-primary;
+                transition: all 0.5s;
+                border-radius: 20px;
+                box-shadow: 0px 6px 15px #0000ff61;
+                padding: 0.5rem 2rem;
+                color: #ffffff;
+
+                @include desktop {
+                    padding: 0.5rem 3rem;
+                }
+        
+                &::after {
+                    opacity: 1;
+                    transition: all 0.5s;
+                    color: #ffffff;
+        
+                }
+            }
+        &--active {
+            background:$color-primary;
+            color: $color-white;
+            font-size: 1rem;
+            padding: 0.5rem 0.5rem;
+            border: 0;
+            transition: all 0.5s;
+            border-radius: 20px;
+            width: 3rem;
+            position: relative;
+            text-align: center;
+           
+            @include desktop {
+                width: 5rem;
+                font-size: 1.5rem;
+                padding: 0.5rem 0.5rem;
+            }
+        
+            &::after {
+                position: absolute;
+                left: 80%;
+                top: 54%;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+        
+            }
+        
+            &:hover {
+                background: $color-primary;
+                transition: all 0.5s;
+                border-radius: 20px;
+                box-shadow: 0px 6px 15px #0000ff61;
+                padding: 0.5rem 3rem;
+                color: #ffffff;
+        
+                @include desktop {
+                    padding: 0.5rem 3rem;
+                }
+
+                &::after {
+                    opacity: 1;
+                    transition: all 0.5s;
+                    color: #ffffff;
+        
+                }
+            }
+        
+        
         }
-    }
-}
+        }
+        
+        }
+    //     @include MH3;
+    //     text-decoration: none;
+    //     color: $color-text;
+    //     padding: 0.25rem;
+    //     text-align: center;
+    //     &:hover {
+    //         color: white;
+    //         display: hidden;
+    //     }
+
+    //     @include tablet {
+    //         @include H2;
+    //     }
+
+    //     &--active {
+    //         @include MH3;
+    //         color: orange;
+    //         padding: 0.25rem;
+    //         text-decoration: underline;
+
+    //         @include tablet {
+    //             @include H2;
+
+    //         }
+    //     }
+    // }
+
+
+

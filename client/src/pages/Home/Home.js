@@ -31,7 +31,7 @@ class Home extends Component {
   render() {
     const { beers } = this.state;
 
-    if (this.state.beers === null) {
+    if (!this.state.beers) {
       return (
         <div>
           <h1 className="loading">Loading beers...</h1>

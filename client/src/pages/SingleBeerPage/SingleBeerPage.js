@@ -14,10 +14,10 @@ class SingleBeerPage extends Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    Promise.all([axios.get(`/api/beers/${id}`)])
-      .then(([res1, res2]) => {
+    axios.get(`/api/beers/${id}`)
+      .then((res) => {
         this.setState({
-          selectedBeer: res1.data,
+          selectedBeer: res.data,
           errorLoading: false,
         });
       })
@@ -74,10 +74,19 @@ class SingleBeerPage extends Component {
     });
   };
 
+  
+  handleEditBeer = (id) => {
+    let beer_id = this.props.match.params.id;
+    axios.put(`api/beers/${beer_id}/edit`)
+    .then(response => {
+      this.getBeerById(beer_id);
+    })
+  }
+
   render() {
     const { selectedBeer } = this.state;
 
-    if (this.state.selectedBeer === null) {
+    if (!this.state.selectedBeer) {
       return (
         <div>
           <h1 className="loading">Loading beers...</h1>
@@ -87,11 +96,12 @@ class SingleBeerPage extends Component {
 
     return (
       <>
-        <BeerDetails beer={selectedBeer} />
+        <BeerDetails beer={selectedBeer} handleEditBeer={this.handleEditBeer} />
         <FoodSection foods={this.state.selectedBeer.dishes} />
         <CommentsForm addComment={this.addComment} />
 
         <div className="single-beer-page__container">
+
           {this.state.selectedBeer.comments ? (
             <CommentsList
               comments={this.state.selectedBeer.comments}
