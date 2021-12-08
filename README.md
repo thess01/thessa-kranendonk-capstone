@@ -16,15 +16,12 @@ Please install node and MySQL beforehand
 5. Run seeds
    $ npx knex seed:run
    
-6. Set environment variables:  
+6. Set environment:  
 
    Rename `.env_sample` to `.env` and change placeholder values with your own.
-   ```shell
+  
    PORT=<PORT_NUMER>
    JWT_SECRET=<SECRET KEY>
-   DB_HOST=<HOST ADDRESS>
-   DB_USER=<YOUR DB USERNAME>
-   DB_PSWD=<YOUR DB PASSWORD>
   
 
 7. Start the server:
