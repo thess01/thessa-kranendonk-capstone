@@ -74,14 +74,20 @@ class SingleBeerPage extends Component {
     });
   };
 
-  
-  handleEditBeer = (id) => {
+
+  handleEditBeer = (data) => {
     let beer_id = this.props.match.params.id;
-    axios.put(`api/beers/${beer_id}/edit`)
-    .then(response => {
-      this.getBeerById(beer_id);
-    })
-  }
+    axios
+      .put(`/api/beers/${beer_id}`, data)
+      .then(() => {
+        this.getBeerById(beer_id);
+
+    },)
+      .catch(err => {console.log(err)
+      })
+    }
+
+
 
   render() {
     const { selectedBeer } = this.state;

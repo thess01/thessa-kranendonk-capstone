@@ -20,6 +20,8 @@ router.get('/:id', beersController.getOneBeer);
 
 router.delete('/:id', beersController.deleteBeer);
 
+router.put('/:id', beersController.editBeer);
+
 router.post('/:id', commentsController.postComment);
 
 router.delete('/:id/comments/:id', commentsController.deleteComment)

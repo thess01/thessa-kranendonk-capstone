@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import {useHistory} from 'react-router-dom';
-import EditBeer from '../EditBeer/EditBeer';
 import axios from "axios";
 import Box from "@mui/material/Box";
 import React from "react";
@@ -11,25 +10,13 @@ import "./BeerDetails.scss";
 const BeerDetails = ({beer, handleEditBeer}) => {
 const [breweryInfo, setBreweryInfo] = useState(null);
 const [open, setOpen] = React.useState(false);
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   console.log(errors);
 
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const onSubmit = (data) => {
-    axios
-      .put(`/api/beers/${beer.id}`, data)
-      .then(() => {
-        alert("Upload Succesful!");
-        handleClose()
-
-    }, [reset])
-      .catch(err => {console.log(err)});
-
-  
-}
 
 useEffect(() => {
     getBreweryData();
@@ -126,7 +113,7 @@ useEffect(() => {
       <h2 className="edit-beer__modal-header">Enter Beer Details</h2>
               <form
                 className="edit-beer__form"
-                onSubmit={handleSubmit(onSubmit)}
+                onSubmit={handleSubmit(handleEditBeer)}
               >
                 <label className="edit-beer__label" htmlFor="beerName">
                   Beer Name
@@ -216,11 +203,7 @@ useEffect(() => {
                   type="flavor"
                   name="flavor"
                   placeholder="Flavour"
-                  {...register("flavor", {
-                    required: true,
-                    pattern:
-                      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                  })}
+                  {...register("flavor", { required: true, maxLength: 100 })}
                 />
                 {errors.flavor && (
                   <p className="edit-beer__error">
