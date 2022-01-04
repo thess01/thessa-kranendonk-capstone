@@ -1,3 +1,5 @@
+To view this page on heroku: http://brews-and-bites.herokuapp.com/
+
 # Installation
 
 To run Brews & Bites follow the following simple steps:  
